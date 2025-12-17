@@ -1,4 +1,4 @@
-cat > render.yaml << 'EOF'
+
 services:
   - type: web
     name: missbliss-site
