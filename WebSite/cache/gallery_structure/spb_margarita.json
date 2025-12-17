@@ -1,0 +1,118 @@
+{
+    "root": {
+        "files": {
+            "margarita@p1x": "jp2",
+            "margarita@1x": "jp2",
+            "margarita@p2x": "jp2",
+            "margarita@2x": "jp2",
+            "margarita@p3x": "jp2",
+            "margarita@3x": "jp2"
+        },
+        "priority_extension": "jp2",
+        "file_count": 6,
+        "folder_path": "spb\/margarita",
+        "generated": true
+    },
+    "folders": {
+        "b": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "jp2",
+                "4": "jp2"
+            },
+            "priority_extension": "jp2",
+            "file_count": 4,
+            "min_number": 1,
+            "max_number": 4,
+            "folder_path": "spb\/margarita\/b",
+            "generated": true
+        },
+        "b3": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "jp2",
+                "4": "jp2"
+            },
+            "priority_extension": "jp2",
+            "file_count": 4,
+            "min_number": 1,
+            "max_number": 4,
+            "folder_path": "spb\/margarita\/b3",
+            "generated": true
+        },
+        "f2": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "jp2",
+                "4": "jp2"
+            },
+            "priority_extension": "jp2",
+            "file_count": 4,
+            "min_number": 1,
+            "max_number": 4,
+            "folder_path": "spb\/margarita\/f2",
+            "generated": true
+        },
+        "f3": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "jp2",
+                "4": "jp2"
+            },
+            "priority_extension": "jp2",
+            "file_count": 4,
+            "min_number": 1,
+            "max_number": 4,
+            "folder_path": "spb\/margarita\/f3",
+            "generated": true
+        },
+        "b2": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "jp2",
+                "4": "jp2"
+            },
+            "priority_extension": "jp2",
+            "file_count": 4,
+            "min_number": 1,
+            "max_number": 4,
+            "folder_path": "spb\/margarita\/b2",
+            "scanned": true
+        }
+    },
+    "scan_time": "2025-11-21 13:18:03",
+    "total_files": 26,
+    "debug_info": {
+        "base_directory": "\/",
+        "trying_b": "spb\/margarita\/b",
+        "found_b": false,
+        "trying_b2": "spb\/margarita\/b2",
+        "found_b2": true,
+        "scanned_folder": "b2",
+        "scanned_data": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "jp2",
+                "4": "jp2"
+            },
+            "file_count": 4,
+            "min_number": 1,
+            "max_number": 4
+        },
+        "detected_extension": "jp2",
+        "detected_file_count": 4,
+        "file_numbers_range": {
+            "min": 1,
+            "max": 4
+        }
+    },
+    "city": "spb",
+    "model_name": "margarita",
+    "display_name": "margarita"
+}

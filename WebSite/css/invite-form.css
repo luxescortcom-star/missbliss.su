@@ -1,0 +1,949 @@
+
+
+/* Стили модального окна */
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: none; /* Скрыто по умолчанию */
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 0;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    max-height: 90vh;
+    overflow-y: auto;
+    margin: 0 auto;
+}
+
+.modal-content h2 {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: white;
+    margin: 0;
+    padding: 25px 30px;
+    font-size: 22px;
+    font-weight: 600;
+    border-radius: 12px 12px 0 0;
+    text-align: center;
+}
+
+.close-2 {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    z-index: 10;
+    background: rgba(255,255,255,0.1);
+}
+	
+	/* Стили для блока с ценой */
+.price-display {
+    margin-top: 10px;
+    padding: 12px 15px;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border: 2px solid #3b82f6;
+    border-radius: 8px;
+    text-align: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.price-amount {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1e40af;
+}
+
+.price-note {
+    display: block;
+    margin-top: 5px;
+    color: #64748b;
+    font-size: 12px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-2:hover {
+    background: rgba(255,255,255,0.2);
+    transform: scale(1.1);
+}
+
+/* Стили формы */
+#inviteForm {
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin: 10px 0 5px 5px;
+    font-weight: 600;
+    color: #1e293b;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+}
+	
+
+.form-group input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+    color: #1e293b;
+    font-family: inherit;
+}
+
+
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+    color: #1e293b;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+	
+/* Стили для поля даты с иконкой */
+.date-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.date-input {
+    padding-left: 50px !important; /* Место для иконки */
+    flex: 1;
+}
+
+.calendar-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Стили для поля времени */
+input[type="time"] {
+    padding: 14px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+    color: #1e293b;
+    font-family: inherit;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="time"]:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Убираем стандартные стрелки у полей даты и времени */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
+
+/* Кастомный вид для поля даты */
+input[type="date"] {
+    position: relative;
+    padding: 14px 16px 14px 50px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+    color: #1e293b;
+    font-family: inherit;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="date"]:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Для Firefox */
+input[type="date"]::-moz-focus-inner {
+    border: 0;
+}
+
+/* Улучшенные стили для всех полей ввода */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #94a3b8;
+    opacity: 1;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+    line-height: 1.5;
+}
+	/* Стили для поля даты и времени с иконкой */
+.datetime-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.datetime-input {
+    padding: 14px 16px 14px 50px !important; /* Место для иконки слева */
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+    color: #1e293b;
+    font-family: inherit;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+}
+
+.datetime-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.calendar-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 22px; /* Крупнее */
+    pointer-events: none;
+    z-index: 2;
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: 6px;
+    padding: 4px;
+    transition: all 0.3s ease;
+}
+
+.datetime-input:focus + .calendar-icon {
+    background: rgba(59, 130, 246, 0.2);
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Убираем стандартный индикатор календаря и делаем поле кликабельным */
+input[type="datetime-local"] {
+    position: relative;
+}
+
+/* Для WebKit браузеров (Chrome, Safari) */
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    z-index: 3;
+}
+
+/* Для Firefox */
+input[type="datetime-local"] {
+    color: transparent; /* Скрываем текст по умолчанию */
+}
+
+input[type="datetime-local"]:valid {
+    color: #1e293b; /* Показываем текст когда есть значение */
+}
+
+/* Кастомное отображение placeholder */
+.datetime-input:invalid:not(:focus) {
+    color: #94a3b8;
+}
+
+/* Убираем стандартные стрелки в Firefox */
+input[type="datetime-local"]::-moz-focus-inner {
+    border: 0;
+}
+
+/* Для Edge */
+input[type="datetime-local"]::-ms-clear {
+    display: none;
+}
+
+/* Улучшаем внешний вид при фокусе */
+.datetime-input-container:focus-within .calendar-icon {
+    background: rgba(59, 130, 246, 0.2);
+}
+
+/* Стили для выпадающих списков */
+.form-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234a5568' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 16px;
+    padding-right: 45px;
+}
+
+/* Стили для скрытых полей */
+#telegram_field,
+#phone_field {
+    margin-top: 8px;
+}
+
+/* Кнопка отправки */
+.btn-submit {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: white;
+    padding: 16px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+    background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+.btn-submit:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Десктопная версия */
+@media (min-width: 768px) {
+    .modal-content {
+        width: 500px;
+        margin: 0 auto;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    /* Альтернативный вариант - прижатие к правому краю */
+    /* Раскомментируйте если хотите прижать к правому краю */
+    /*
+    .modal-content {
+        position: fixed;
+        top: 50%;
+        right: 5%;
+        transform: translateY(-50%);
+        left: auto;
+        margin: 0;
+    }
+    */
+}
+
+/* Еще более левое позиционирование */
+@media (max-width: 767px) {
+    .modal {
+        padding: 0;
+        justify-content: flex-start;
+    }
+    
+    .modal-content {
+        margin: 10px 10px 10px 5px; /* 5px от левого края */
+        width: calc(100% - 15px);
+        border-radius: 8px 12px 12px 8px; /* Закругляем правые углы сильнее */
+    }
+}
+
+
+    
+    #inviteForm {
+        padding: 20px;
+    }
+    
+    .modal-content h2 {
+        padding: 18px 20px;
+        font-size: 18px;
+    }
+    
+    .form-group {
+        margin-bottom: 18px;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 12px 14px;
+        font-size: 16px; /* Увеличиваем для удобства на мобильных */
+    }
+    
+    /* Особые стили для поля даты на мобильных */
+    .datetime-input {
+        padding: 12px 14px 12px 45px !important;
+    }
+    
+    .calendar-icon {
+        left: 12px;
+        font-size: 20px;
+    }
+}
+
+/* Для iPhone и маленьких устройств */
+@media (max-width: 380px) {
+    .modal-content {
+        margin: 5px 5px 5px 2px; /* Еще ближе к левому краю */
+        width: calc(100% - 7px);
+    }
+}
+    
+    .modal-content {
+        margin: 5px;
+        width: calc(100% - 10px);
+        border-radius: 12px;
+    }
+    
+    #inviteForm {
+        padding: 15px;
+    }
+    
+    .modal-content h2 {
+        padding: 15px;
+        font-size: 16px;
+    }
+    
+    .form-group label {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px 12px;
+        font-size: 16px; /* Важно для iOS */
+    }
+    
+    .datetime-input {
+        padding: 10px 12px 10px 40px !important;
+    }
+    
+    .calendar-icon {
+        left: 10px;
+        font-size: 18px;
+    }
+    
+    .btn-submit {
+        padding: 14px 20px;
+        font-size: 15px;
+    }
+}
+
+/* Дополнительные улучшения для мобильного UX */
+@media (max-width: 767px) {
+    /* Убираем анимации для производительности на мобильных */
+    .modal-content {
+        animation: mobileSlideIn 0.3s ease-out;
+    }
+    
+    @keyframes mobileSlideIn {
+        from {
+            opacity: 0;
+            transform: translateX(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    /* Улучшаем скролл на мобильных */
+    .modal-content {
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Увеличиваем область клика для селектов */
+    .form-group select {
+        min-height: 44px; /* Минимальная высота для удобного тапа */
+    }
+}
+
+/* Стили для сообщений */
+.result-message {
+    margin: 20px 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.success-message,
+.error-message {
+    padding: 20px;
+    border-left: 4px solid;
+}
+
+.success-message {
+    background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
+    color: #1e40af;
+    border-left-color: #3b82f6;
+}
+
+.error-message {
+    background: linear-gradient(135deg, #fef2f2 0%, #fef2f2 100%);
+    color: #dc2626;
+    border-left-color: #ef4444;
+}
+
+.success-message h3,
+.error-message h3 {
+    margin: 0 0 12px 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.success-message p,
+.error-message p {
+    margin: 6px 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.success-message a,
+.error-message a {
+    color: inherit;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+/* Индикатор загрузки */
+.btn-submit.loading {
+    position: relative;
+    color: transparent;
+}
+
+.btn-submit.loading::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-right-color: transparent;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+/* Класс для мобильного вида */
+.modal.mobile-view .modal-content {
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+/* Предотвращаем зум при фокусе на мобильных */
+@media (max-width: 767px) {
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 16px; /* Предотвращает зум в iOS */
+    }
+    
+    /* Улучшаем внешний вид на мобильных */
+    .modal-content {
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.1), 0 10px 30px rgba(0,0,0,0.3);
+    }
+}
+	/* Стили для сообщений валидации телефона */
+.error-msg-phone,
+.valid-msg-phone {
+    font-size: 12px;
+    margin-top: 5px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: block;
+}
+
+.error-msg-phone {
+    color: #ef4444;
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+}
+
+.valid-msg-phone {
+    color: #10b981;
+    background-color: #f0fdf4;
+    border: 1px solid #bbf7d0;
+}
+
+.hide {
+    display: none !important;
+}
+
+/* Улучшаем стили для поля телефона */
+.iti {
+    width: 100%;
+}
+
+.iti__flag-container {
+    padding: 0 8px;
+}
+
+/* Анимация для сообщений валидации */
+.error-msg-phone,
+.valid-msg-phone {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.intl-tel-input {
+    width: 100%;
+}
+
+.intl-tel-input .flag-container {
+    width: 100%;
+}
+
+.intl-tel-input .selected-flag {
+    width: 100%;
+    padding: 0 10px;
+}
+
+.intl-tel-input .selected-flag .iti-flag {
+    margin-right: 10px;
+}
+
+.intl-tel-input .selected-flag .iti-arrow {
+    margin-left: 10px;
+}
+
+.intl-tel-input input {
+    padding-left: 70px !important;
+}
+
+/* Для лучшего отображения кода страны */
+.intl-tel-input .selected-dial-code {
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+
+/* Анимации для модального окна */
+@keyframes modalSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes modalSlideUp {
+    from {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px) scale(0.97);
+    }
+}
+
+@keyframes modalContentSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes modalContentSlideUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+}
+
+/* Анимация для уведомлений */
+@keyframes notificationSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes notificationSlideUp {
+    from {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+}
+
+/* Анимация для результата формы */
+@keyframes resultFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Классы для анимаций (если хотите использовать CSS-классы вместо inline) */
+.modal-opening {
+    animation: modalSlideDown 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1) forwards;
+}
+
+.modal-closing {
+    animation: modalSlideUp 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
+}
+
+.modal-content-opening {
+    animation: modalContentSlideDown 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1) 0.1s forwards;
+}
+
+.modal-content-closing {
+    animation: modalContentSlideUp 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
+}
+
+/* Анимация для кнопки отправки */
+.btn-submit.loading::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-right-color: transparent;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Улучшенные transition для плавности */
+.modal {
+    will-change: transform, opacity;
+}
+
+.modal-content {
+    will-change: transform, opacity;
+}
+
+/* Анимация для появления блока с ценой */
+.price-display {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(-10px) scale(0.95); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0) scale(1); 
+    }
+}
+/* Добавьте в конец invite-form.css */
+
+/* Десктопная версия с анимацией сверху в центр */
+@media (min-width: 768px) {
+    .modal-content {
+        transition: opacity 0.4s ease-out, transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    /* Анимация для десктопов */
+    @keyframes desktopModalSlideDown {
+        from {
+            opacity: 0;
+            transform: translate(-50%, -100vh);
+            top: 0%;
+        }
+        to {
+            opacity: 1;
+            transform: translate(-50%, -50%);
+            top: 50%;
+        }
+    }
+    
+    @keyframes desktopModalSlideUp {
+        from {
+            opacity: 1;
+            transform: translate(-50%, -50%);
+            top: 50%;
+        }
+        to {
+            opacity: 0;
+            transform: translate(-50%, -100vh);
+            top: 0%;
+        }
+    }
+    
+    .modal-content.desktop-opening {
+        animation: desktopModalSlideDown 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+    
+    .modal-content.desktop-closing {
+        animation: desktopModalSlideUp 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
+    }
+}
+/* Стили для английской версии примечаний */
+[data-language="en"] .price-note {
+    font-style: italic;
+}
+
+/* Улучшение отображения для разных языков */
+.price-note[data-language="en"] {
+    color: #4f46e5; /* Другой цвет для английской версии */
+}
+
+.price-note[data-language="ru"] {
+    color: #64748b; /* Стандартный цвет для русской версии */
+}
+
+/* Адаптация шрифтов для английской версии */
+@media (min-width: 768px) {
+    [data-language="en"] .modal-content h2 {
+        font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        letter-spacing: 0.5px;
+    }
+    
+    [data-language="en"] .form-group label {
+        font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+}
+
+/* Отладка (можно удалить после тестирования) */
+.debug-language-info {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    z-index: 99999;
+}

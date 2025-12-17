@@ -1,0 +1,67 @@
+[
+    {
+        "date": "2025-11-17 16:39:50",
+        "name": "Youre Name",
+        "comments": "Your brief CV",
+        "email": "E-mail",
+        "phone": "",
+        "city": "не определен",
+        "region": "не определен",
+        "country": "не определена",
+        "ip": "95.161.239.37",
+        "user_agent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36",
+        "reason": "Не введен e-mail"
+    },
+    {
+        "date": "2025-11-17 16:39:56",
+        "name": "Youre Name",
+        "comments": "Your brief CV",
+        "email": "kepko@mail.ru",
+        "phone": "",
+        "city": "не определен",
+        "region": "не определен",
+        "country": "не определена",
+        "ip": "95.161.239.37",
+        "user_agent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36",
+        "reason": "Пустое поле имени"
+    },
+    {
+        "date": "2025-11-17 16:40:08",
+        "name": "Victoria",
+        "comments": "Your brief CV",
+        "email": "kepko@mail.ru",
+        "phone": "",
+        "city": "не определен",
+        "region": "не определен",
+        "country": "не определена",
+        "ip": "95.161.239.37",
+        "user_agent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36",
+        "reason": "не вписан номер телефона"
+    },
+    {
+        "date": "2025-11-17 16:40:54",
+        "name": "Victoria",
+        "comments": "I want a check contact `Forms of Casting",
+        "email": "kepko@mail.ru",
+        "phone": "+7 921 900-03-18",
+        "city": "не определен",
+        "region": "не определен",
+        "country": "не определена",
+        "ip": "95.161.239.37",
+        "user_agent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36",
+        "reason": "Error sending to Telegram"
+    },
+    {
+        "date": "2025-11-17 17:22:20",
+        "name": "Il tuo nome",
+        "comments": "Il tuo breve CV",
+        "email": "E-mail",
+        "phone": "",
+        "city": "не определен",
+        "region": "не определен",
+        "country": "не определена",
+        "ip": "95.161.239.37",
+        "user_agent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36",
+        "reason": "Не введен e-mail"
+    }
+]

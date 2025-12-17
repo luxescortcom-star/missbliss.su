@@ -1,0 +1,302 @@
+<?php
+ob_start("ob_gzhandler");
+require_once $_SERVER['DOCUMENT_ROOT'] . '/geoip/geoplugin.class.php';
+$geoplugin=new geoPlugin();
+$geoplugin->locate();
+$city_code=$geoplugin->city;
+$countryCode=$geoplugin->countryCode;
+$countryCode=strtolower($countryCode);
+
+if ($countryCode.'.'.$city_code=='ru.St Petersburg')
+{
+$css='/min/g=profile';
+$flink='m-b.su/spb';
+$blink='m-b.su/spb';
+}
+elseif (($countryCode=='kz')OR($countryCode=='az')OR($countryCode=='ge')OR($countryCode=='by')OR($countryCode=='ua')OR($countryCode=='ru'))
+{
+$css='/min/g=profile-msk';
+$flink='m-b.su/spb';
+$blink='pic.m-b.su/spb';
+}
+elseif (($countryCode=='us')OR($countryCode=='ca')OR($countryCode=='mx')OR($countryCode=='ag')OR($countryCode=='br')OR($countryCode=='cl'))
+{
+$css='/min/g=profile-us';
+$flink='m-b.su/spb';
+$blink='m-b.su/spb';
+}
+elseif (($countryCode=='fi')OR($countryCode=='lt')OR($countryCode=='ee')OR($countryCode=='lv'))
+{
+$css='/min/g=profile';
+$flink='m-b.su/spb';
+$blink='m-b.su/spb';
+}
+else
+{
+$css='/min/g=profile-de';
+$flink='m-b.su/spb';
+$blink='m-b.su/spb';
+}
+?>
+<!DOCTYPE html>
+<html lang="ru">
+<head prefix="og: http://ogp.me/ns#">
+<meta name="theme-color" content="#050f35">
+<meta name="robots" content="index,follow">
+<meta charset="utf-8">
+<link rel="alternate" hreflang="en" href="https://missbliss.ru/en/spb/favorites/natasha" />
+<!--[if ie]><meta http-equiv='X-UA-Compatible' content="IE=edge,IE=9,IE=8,chrome=1" /><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+<title>Наташа - красивая и обворожительная спутница в Санкт-Петербурге</title>
+<meta name="keywords" content="VIP эскорт, элитный эскорт, мастер и маргарита, элитная спутница петербург, Наташа эскорт">
+<meta name="description" content="Роскошная девушка, Наташа, красивая и обворожительная, она станет комфортной спутницей VIP или бизнесмена в Санкт-Петербурге">
+<link rel="canonical" href="https://missbliss.ru/spb/favorites/natasha"/>
+<meta property="og:url" content="https://missbliss.ru/spb/favorites/natasha">
+<meta property="og:locale" content="ru_RU" />
+<meta property="og:site_name" content="Агентство МиссБлисс">
+<meta property="og:title" content="Наташа - красивая и обворожительная спутница в Санкт-Петербурге" />
+<meta property="og:type" content="profile" />
+<meta property="og:description" content="нтеллигентная, милая, добрая, с отличным чувством юмора, со спокойным и нежным характером. Люблю разные шалости эксперименты. Легкая на подъем. Без вредных привычек, с позитивным взглядом на жизнь. Люблю добрых воспитанных людей" />
+<meta property="og:image" content="https://<?=$flink ?>/natasha/natasha@1x.jpg" />
+	<meta property="og:image:width" content="504" />
+<meta property="og:image" content="https://<?=$flink ?>/natasha/natasha@2x.jpg" />
+	<meta property="og:image:width" content="1008" />
+<meta property="og:image" content="https://<?=$flink ?>/natasha/natasha@3x.jpg" />
+<meta property="og:image:secure_url" content="https://<?=$flink ?>/natasha/natasha@2x.jpg" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="нтеллигентная, милая, добрая, с отличным чувством юмора, со спокойным и нежным характером. Люблю разные шалости эксперименты. Легкая на подъем. Без вредных привычек, с позитивным взглядом на жизнь. Люблю добрых воспитанных людей" />
+<meta name="twitter:title" content="Наташа - красивая и обворожительная спутница в Санкт-Петербурге" />
+<meta name="twitter:image" content="https://<?=$flink ?>/natasha/natasha@2x.jpg" />
+<meta name=author content="vk.com/missbliss.ru">
+<link rel="preload stylesheet" href="<?=$css ?>" as="style" type="text/css">
+<link rel="preload" href="/css/webfonts/fa-solid-900.woff2" as="font" crossorigin="anonymous">
+<link rel="preload" href="/css/webfonts/fa-brands-400.woff2" as="font" crossorigin="anonymous">
+</head>
+<div class="all-elements">
+<div id="perspective" class="perspective effect-airbnb">
+<div class="outer-nav">
+<div class="inner-nav">
+<div class="nav-item"> <a href='javascript:location.assign("/")' class="active-item">МиссБлисс</a>
+</div>
+<div class="nav-item">
+  <!--noindex--><a href="#" rel="nofollow" class="deploy-nav-sub-item active-item">Модели</a><!--/noindex-->
+  <div class="nav-sub-item">
+    <a href="/escorts/">Все наши девушки</a>
+	<a href='javascript:location.assign("/favorites/")'>Фаворитки</a>
+    <a href='javascript:location.assign("/attractive/")'>Фотомодели</a>
+</div>
+</div>
+<div class="nav-item">
+<!--noindex--><a href="#" rel="nofollow" class="deploy-nav-sub-item active-item">Санкт-Петербург</a><!--/noindex-->
+  <div class="nav-sub-item">	<a href='javascript:location.assign("/spb/")'>Все Модели</a>
+    <a href='javascript:location.assign("/spb/favorites/")'>Фаворитки</a>
+    <a href='javascript:location.assign("/spb/attractive/")'>Фотомодели</a>
+</div>
+</div>
+  <div class="nav-item"><!--noindex--><a href="#" rel="nofollow" class="deploy-nav-sub-item">Москва </a><!--/noindex-->	
+<div class="nav-sub-item">
+<a href='javascript:location.assign("/moscow/")' >Все Модели</a>
+<a href='javascript:location.assign("/moscow/favorites/")' >Фаворитки</a>
+<a href='javascript:location.assign("/moscow/attractive/")'>Фотомодели</a>
+</div>
+</div>
+  <div class="nav-item">
+    <!--noindex--><a href="#" rel="nofollow" class="deploy-nav-sub-item ">Кастинг</a><!--/noindex-->
+	  <div class="nav-sub-item">
+	<p>Приглашаем девушек <br>проживающих<br> в следующих городах России</p>
+	<a href='javascript:location.assign("/casting/")'>Москва</a>
+	<a href='javascript:location.assign("/casting/")'>Санкт-Петербург</a>
+	<a href='javascript:location.assign("/casting/")'>Краснодар</a>
+	<a href='javascript:location.assign("/casting/")'>Ростов</a>
+	<a href='javascript:location.assign("/casting/")'>Сочи</a>
+	<a href='javascript:location.assign("/casting/")'>Екатеринбург</a>
+	<a href='javascript:location.assign("/casting/")'>Самара</a>
+	<a href='javascript:location.assign("/casting/")'>Казань</a>
+	<a href='javascript:location.assign("/casting/")'>Новосибирск</a>
+	<a href='javascript:location.assign("/casting/")' >Владивосток</a>
+	<a href='javascript:location.assign("/casting/")' >Калининград</a>
+</div>
+</div><div class="nav-item">
+  <a href='javascript:location.assign("/contact/")' >Контакт</a>
+</div>
+ <div class="nav-item">
+  <!--noindex--><a id="closeMenu" href="#" rel="nofollow">Закрыть</a><!--/noindex-->
+</div>
+</div>
+</div>
+<div class="perspective_container">
+<div id="header-bg"></div>
+<div id="sub-header-bg"></div>
+<div id="body-wrapper" class="wrapper">
+<div id="header">
+<!--noindex--><a href="#" rel="nofollow" id="logo"></a><!--/noindex--> 
+<ul id="navigation">
+<li><a href="/about>Услуги</a>
+<li class="current"><a href="/escorts/" title="эскорт модели">Модели</a>
+<ul>
+<li><a href="/moscow/" title="Эскорт модели, фаворитки, эскортницы Москвы, эскорт агентство МиссБлисс">Москва</a>
+<li><a href="/spb/" title="Эскорт модели, фаворитки, эскортницы в Санкт-Петербурге, эскорт-агентство МиссБлисс">Санкт-Петербург</a>
+</ul>
+<li><a href="/rates/" title="Цены, стоимость эскорт услуг, эскорт агентства МиссБлисс">Цены</a>
+<li><a href="/casting/" title="работа для девушек в Спб">Вакансии</a>
+<li><a href="/contact/" title="Агентство МиссБлисс, Контакты">Контакт</a>
+<li class="flag"><a href="/en/spb/favorites/natasha/" title="English"><i id="flag_en"></i>English</a>
+</ul>
+</div>
+<div id="content" class="container clearfix">
+<nav id="page-title">
+<p><a href="/spb/attractive/maria/" title=Мария><i class="scr"></i></a>
+</p><p><a href="/spb/" title="Эскортницы эскорт модели девушки Санкт-петербург МиссБлисс"><i class="scli"></i></a>
+</p><p><a href="../vlada/" title=Влада><i class="scl"></i></a>
+</p><h1>Наташа. <span>Санкт-</span>Петербург</h1>
+</nav>
+<div id="main">
+<div class="project-image portfolio">
+<div class="flexslider">
+<ul class="slides">
+<li><a href=https://<?=$flink ?>/natasha/3.jpg class="pP[l]" title=Natasha><img src=https://<?=$blink ?>/natasha/b/3.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/6.jpg class="pP[l]" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/6.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/7.jpg class="pP[l]" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/7.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/9.jpg class="pP[l]" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/9.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/10.jpg class="pP[l]" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/10.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/12.jpg class="pP[l]" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/12.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/13.jpg class="pP[l]" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/13.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/14.jpg class="pP[l]" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/14.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/15.jpg class="pP[l]" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/15.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/16.jpg class="pP[l]" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/16.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/17.jpg class="pP[l]" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/17.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/18.jpg class="pP[l]" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/18.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/19.jpg class="pP[l]" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/19.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/20.jpg class="pP[l]" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/20.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/21.jpg class="pP[l]" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/21.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/22.jpg class="pP[l]" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/22.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/23.jpg class="pP[l]" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/23.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/24.jpg class="pP[l]" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/24.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/25.jpg class="pP[l]" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/25.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/26.jpg class="pP[l]" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/26.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/27.jpg class="pP[l]" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/27.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/28.jpg class="pP[l]" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/28.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/29.jpg class="pP[l]" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/29.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/30.jpg class="pP[l]" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/30.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/31.jpg class="pP[l]" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/31.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/32.jpg class="pP[l]" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/32.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/33.jpg class="pP[l]" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/33.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/34.jpg class="pP[l]" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/34.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/35.jpg class="pP[j]"/" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/35.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/36.jpg class="pP[j]"/" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/36.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/37.jpg class="pP[j]"/" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/37.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/38.jpg class="pP[j]"/" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/38.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/39.jpg class="pP[j]"/" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/39.jpg alt=Natasha></a>
+<li><a href=https://<?=$flink ?>/natasha/40.jpg class="pP[j]"/" title=Natasha><img class="get"  data-src=https://<?=$blink ?>/natasha/b/40.jpg alt=Natasha></a>
+</ul>
+</div></div>
+</div>
+<div id="sidebar">
+<div class="widget">
+<h2>Наташа</h2>
+<div class="accBut first">Анкета</div>
+<div class="accCon"><p>Город:<span>Санкт-Петербург</span></p><p>Выезды<span>Москва, Европа</span></p><p>Возраст:<span>21 год</span></p><p> Рост:<span>164</span></p><p>Вес:<span>48 кг</span></p><p> Объемы:<span>90/63/90 см </span></p><p>Размер груди<span>3 (75C)</span></p><p>Цвет глаз<span>Зелено-Голубые</span></p><p>Цвет волос<span>Черный</span></p><p>Размер одежды<span>42-44</span></p><p> Ориентация<span>Bisexual </span></p><p>Языки<span>Русский, Английкий(бедный)</span></p><p>Отношение к курению<span>Не курю</span></p><p> Знак зодиака<span>&#9808; Скорпион</span></p></div>
+<div class="accBut">Предпочтения</div>
+<div class="accCon"><i class="fa fa-check" aria-hidden="true"></i> Русская и европейская кухни<br><i class="fa fa-check" aria-hidden="true"></i> Виски.</div>
+<div class="accBut">Стиль</div>
+<div class="accCon"><i class="far fa-star"></i>Элегантный Casual<br><i class="far fa-star"></i> Сексуальная женственность<br><i class="far fa-star"></i> Классика, модерн.<br><br><i class="fa fa-check" aria-hidden="true"></i>  Тело чистое, ухоженное</div>
+<div class="accBut">Хобби</div>
+<div class="accCon">Ароматерапия, дизайн, чтение книг, массаж, посещение музеев и выставок, психология</div>
+ <div class="accBut">Отзывы</div>
+<div class="accCon"><h4>Обо мне...</h4><p>Интеллигентная, милая, добрая, с отличным чувством юмора, со спокойным и нежным характером. Люблю разные шалости эксперименты. Легкая на подъем. Без вредных привычек, с позитивным взглядом на жизнь. Люблю добрых воспитанных людей</p><h4>Оценка агентства...</h4><p>Интересная нежная милая девушка. Очень красивая.</p><br><h4><a href="mailto:office@missbliss.ru?subject=Я%20хочу%20оставить%20отзыв%20об%20Наташе%20https://missbliss.ru/spb/favorites/natasha/"><i class="fa fa-certificate" aria-hidden="true"></i> Оставить отзыв</a> <i class="far fa-thumbs-up"></i></h4><br><h4>Отзывы...</h4><p>"Оценка 10 по пятибальной шкале!" <br> Михаил 07.11.2020 </p></div>
+<div class="accBut">Вознаграждение</div>
+<div class="accCon"><div class="column last">
+<div class=table-title>
+</div>
+<div class="fee">
+<h3><a href='javascript:location.assign("/spb/favorites/")'>Фаворитки</a></h3>
+<h4><span>35000р</span> Свидание 2 ч.</h4>
+</div>
+<ul>
+<li><b>25000р</b> Первое впечатление 60 мин.
+<li><b>70000р</b> романтичное свидание (6ч.)
+<li><br><!--noindex--><a href="#fee" title="Подробные цены" rel="nofollow" class="btn fee"><i class="fas fa-ruble-sign"></i> Подробные цены </a><!--/noindex-->
+</ul>
+   <!--noindex--><a href="#x" class="overlay" rel="nofollow" id="fee"></a><!--/noindex-->
+   <div class="popup">
+   <div class="pricing-table-second clearfix">
+     <h2>Наташа</h2>
+<div class="fee">
+<h3><span>35000</span>р. Свидание 2 ч.</h3>
+</div>
+<ul class="more">
+<li><span>25000</span><b>Первое впечатление 60 мин.</b>
+<li><span>40000</span><b>Немного больше времени (3ч.)</b>
+<li><span>50000</span><b>Свидание с ужином (4ч.)</b>
+<li><span>70000</span><b>Романтичное свидание (6ч.)</b>
+<li><span>90000</span><b>От заката до рассвета (12ч.)</b>
+<li><span>110000</span><b>В омут с головой (24 часа)</b>
+<li><span>70000</span><b>Каждая следующая ночь *</b>
+<li><p>* при заказе от 5 дней - 50000р за каждые сутки<br>
+** со второго свидания, скидка - 10%.<br>*** c третьего свидания и далее, скидка - 20%</p>
+</ul><br>
+<div class="footer">
+<a href="whatsapp://send?phone=79219000318?text=Здравствуйте!%20Я%20хотел%20бы%20пригласить%20Наташу%20https://missbliss.ru/spb/favorites/natasha/" onclick="gtag('event', 'click', {'event_category': 'button'});" class="btn-image" ><i class="fas fa-cocktail"></i>Пригласить  Наташу</a>
+</div> </div>
+    <!--noindex--><a class="close" title="сlose" rel="nofollow" href="#close"></a><!--/noindex-->
+    </div>
+</div>
+</div>
+<div class="widget clearfix">
+<hr>
+<div class="testimonial">
+<blockquote><p>Претендуешь на счастье? Так соответствуй!</p></blockquote>
+<blockquote><p>Не умеющие рыдать от всего сердца не умеют и смеяться от души.</p></blockquote>
+<blockquote><p>Я хорошая девочка, но иногда мне нужно быть плохой.</p></blockquote>
+</div>
+ <audio controls loop preload='metadata'>
+ <source src="https://<?=$flink ?>/natasha/music.mp3" type="audio/mpeg">
+ Тег audio не поддерживается вашим браузером. 
+ <a href="https://<?=$flink ?>/natasha/music.mp3">Скачайте музыку</a>.
+</audio>
+</div>
+</div>
+<a class="btn-image" href="whatsapp://send?phone=79219000318?text=Здравствуйте!%20Я%20хотел%20бы%20пригласить%20Наташу%20https://missbliss.ru/spb/favorites/natasha/" onclick="gtag('event', 'click', {'event_category': 'button'});"><i class="fas fa-cocktail"></i> ПригласитьНаташу</a>
+</div>
+</div>
+</div>
+<div id="footer" class="clearfix">
+<div id="footer-center" class="container">
+<div class="footer-left">
+<ul class="footer-menu">
+<li class="current"><a href="/favorites/" title="Фаворитки, элитные эскорт модели, вип эскорт, эскорт агентство МиссБлисс">Фаворитки</a>
+<li><a href="/attractive/" title="Эскорт модели Москвы и Санкт-Петербурга">Фотомодели</a>
+<li><a href="/about/" title="Услуги эскорт агентства МиссБлисс">Услуги</a>
+<li><a href='javascript:location.assign("/casting/")' title="Работа для девушек в эскорт агентстве МиссБлисс">Кастинг</a>
+<li><a href='javascript:location.assign("/contact/")' title="Контакты эскорт агентства МиссБлисс">Контакт</a>
+<li class="footer-last"><a href='javascript:location.assign("/vip/")' title="вип эскорт">VIP каталог</a>
+</ul>
+<ul class="footer-address">
+<li><i class="fab fa-fort-awesome"></i> <a href='javascript:location.assign("/moscow/")' title="Эскорт агентство в Москве, Эскорт услуги от агентства МиссБлисс Москва">Москва</a>
+<li class="current"><i class="fas fa-university"></i> <a href='javascript:location.assign("/spb/")' title="Эскорт улсуги, эскорт агентство в Санкт-Петербурге, агентство МиссБлисс">Санкт-Петербург</a> 
+<li><i class="fab fa-apple"></i><a href=tel:+79219000318>iPhone</a>
+<li><i class="fa fa-comments" aria-hidden="true"></i><a href=sms:+79219000318>SMS</a>
+<li><i class="fab fa-whatsapp"></i><a href="whatsapp://send?phone=79219000318?text=Здравствуйте!%20Я%20хотел%20бы%20пригласит%20Наташу%20https://missbliss.ru/spb/favorites/natasha/">WhatsApp</a>
+<li><a href="/spb/favorites/natasha/" title="Natasha - a beautiful and charming escort"><i class="en-icon"></i></a>
+</ul>
+</div>
+</div>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/footer-bottom.php'; ?>
+</div>
+</div>
+</div><!-- /pc -->
+</div><!-- /p -->
+
+<script  src="/min/g=jsmin" ></script>
+<script src="/min/g=js-profile"></script>
+<script>$(document).ready(function(){$("a[class^='pP']").prettyPhoto();$(".portfolio:first a[class^='pP']").prettyPhoto({animation_speed:'fast',theme:'pp_default',slideshow:4000,opacity:0.50,deeplinking:false,overlay_gallery:!0,autoplay_slideshow:false});});</script>
+<script>$(document).ready(function(){$("#back-top").hide();$(function(){$(window).scroll(function(){if($(this).scrollTop()>100){$('#back-top').fadeIn();}else{$('#back-top').fadeOut();}});$('#back-top a').click(function(){$('body,html').animate({scrollTop:0},800);return false;});});});</script>
+<script>$(window).load(function(){$(".flexslider").flexslider({touch:!0,animation:"fade",slideshow:!0,initDelay:0,start:function(t){t.count-1;$(t).find("img.get:eq(0)").each(function(){var t=$(this).attr("data-src");$(this).attr("src",t).removeAttr("data-src")})},before:function(t){var a=t.slides,i=t.animatingTo,n=$(a[i]),r=(n.find("img[data-src]"),i),e=r+1,s=r-1;n.parent().find("img.get:eq("+r+"), img.get:eq("+s+"), img.get:eq("+e+")").each(function(){var t=$(this).attr("data-src");$(this).attr("src",t).removeAttr("data-src")})}})});
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110076757-1"></script>
+<script>window.dataLayer=window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-110076757-1');</script>
+ 
+
+</html>

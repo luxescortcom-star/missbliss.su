@@ -1,0 +1,22 @@
+[
+    {
+        "date": "2025-12-06 20:52:01",
+        "model_name": "Милена",
+        "model_url": "http:\/\/su.test\/vip-models\/moscow\/favorites\/milena\/#",
+        "model_category": "vip",
+        "is_vip": true,
+        "invite_date": "2025-12-06T22:51",
+        "duration": "2",
+        "place_type": "отель",
+        "address": "Арбат",
+        "contact_method": "phone",
+        "client_name": "Сергей",
+        "contact": "+79219000318",
+        "invite_comments": "Проверяю форму заказа на сайте",
+        "city": "не определен",
+        "region": "не определен",
+        "country": "",
+        "ip": "192.168.1.6",
+        "user_agent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36"
+    }
+]

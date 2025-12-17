@@ -1,0 +1,287 @@
+<?php 
+ob_start("ob_gzhandler");
+require_once('geoip/geoplugin.class.php');
+$geoplugin = new geoPlugin();
+$geoplugin->locate();
+$city_code = $geoplugin->city;
+$countryCode = $geoplugin->countryCode;
+$countryCode = strtolower($countryCode);
+
+if ($countryCode.'.'.$city_code=='ru.St Petersburg')
+{
+$css='/min/g=casting';
+$flink='m-b.su';
+$ilink='ic.m-b.su/';
+}
+elseif ($countryCode.'.'.$city_code=='ru.Moscow')
+{
+$css='/min/g=casting-msk';
+$flink='m-b.su';
+$ilink='ic.m-b.su';
+}
+elseif ($countryCode=='ru')
+{
+$css='/min/g=casting';
+$flink='m-b.su';
+$ilink='ic.m-b.su/';
+}
+elseif ($countryCode=='us')
+{
+$css='/min/g=casting-us';
+$flink='missbliss.us';
+$ilink='missbliss.us/i';
+}
+elseif ($countryCode=='ca')
+{
+$css='/min/g=casting-us';
+$flink='missbliss.us';
+$ilink='missbliss.us/i';
+}
+elseif ($countryCode=='mx')
+{
+$css='/min/g=casting-us';
+$flink='missbliss.us';
+$ilink='missbliss.us/i';
+}
+elseif ($countryCode=='ag')
+{
+$css='/min/g=casting-us';
+$flink='missbliss.us';
+$ilink='missbliss.us/i';
+}
+elseif ($countryCode=='br')
+{
+$css='/min/g=casting-us';
+$flink='missbliss.us';
+$ilink='missbliss.us/i';
+}
+elseif ($countryCode=='cl')
+{
+$css='/min/g=casting-us';
+$flink='missbliss.us';
+$ilink='missbliss.us/i';
+}
+elseif ($countryCode=='fi')
+{
+$css='/min/g=casting';
+$flink='m-b.su';
+$ilink='ic.m-b.su/';
+}
+elseif ($countryCode=='ee')
+{
+$css='/min/g=casting';
+$flink='m-b.su';
+$ilink='ic.m-b.su/';
+}
+elseif ($countryCode=='lv')
+{
+$css='/min/g=casting';
+$flink='m-b.su';
+$ilink='ic.m-b.su/';
+}
+elseif ($countryCode=='lt')
+{
+$css='/min/g=casting-msk';
+$flink='m-b.su';
+$ilink='ic.m-b.su';
+}
+elseif ($countryCode=='ua')
+{
+$css='/min/g=casting-msk';
+$flink='m-b.su';
+$ilink='ic.m-b.su';
+}
+elseif ($countryCode=='by')
+{
+$css='/min/g=casting-msk';
+$flink='m-b.su';
+$ilink='ic.m-b.su';
+}
+elseif ($countryCode=='ge')
+{
+$css='/min/g=casting-msk';
+$flink='m-b.su';
+$ilink='ic.m-b.su';
+}
+elseif ($countryCode=='az')
+{
+$css='/min/g=casting-msk';
+$flink='m-b.su';
+$ilink='ic.m-b.su';
+}
+elseif ($countryCode=='kz')
+{
+$css='/min/g=casting-msk';
+$flink='m-b.su';
+$ilink='ic.m-b.su';
+}
+
+else
+{
+$css='/min/g=casting-de';
+$flink='m-b.su';
+$ilink='ic.m-b.su';
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+<meta name="theme-color" content="#050f35">
+<meta name=robots content="index,follow">
+<meta charset=utf-8>
+<link rel="alternate" hreflang="ru" href="/spb/contact" />
+<!--[if ie]><meta http-equiv='X-UA-Compatible' content="IE=edge,IE=9,IE=8,chrome=1" /><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+<title>Contacts The MissBliss Agency, Escort St. Petersburg, Russia</title>
+<meta name=keywords content="escort agency, escort st petersburg, escort russia, contacts"/>
+<meta name=description content="Here are our contacts, here you can write us a letter or order escort. +79219000318">
+<link rel="canonical" href="/en/contact"/>
+<meta property="og:url" content="https://spb.missbliss.su/contact">
+<meta property="og:locale" content="en" />
+<meta property="og:site_name" content="The MissBliss Agency">
+<meta property="og:title" content="Keep in touch" />
+<meta property="og:type" content="profile" />
+<meta property="og:description" content="Never stop dreaming" />
+<meta property="og:image" content="https://<?=$ilink ?>/contact.jpg" />
+<meta property="og:image:secure_url" content="https://<?=$ilink ?>/contact.jpg" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="Never stop dreaming" />
+<meta name="twitter:title" content="Keep in touch" />
+<meta property="og:image" content="https://<?=$ilink ?>/contact.jpg" />
+<meta name="author" content="https://vk.com/missbliss.ru">
+<link rel=stylesheet  href="<?=$css ?>">
+<script>
+  function onSubmit(token) {
+    alert('thanks ' + document.getElementById('contactform').value);
+  }
+
+  function validate(event) {
+    event.preventDefault();
+    if (!document.getElementById('recaptcha').value) {
+    
+    } else {
+      grecaptcha.execute();
+    }
+	 
+  }
+
+  function onload() {
+    var element = document.getElementById('contactform');
+    element.onload = validate;
+  }
+</script>
+</head>
+<div id=header-bg></div>
+<div id=shb></div>
+<div id=body-wrapper>
+<div id=header>
+<a href=/en/ id=logo></a>
+<ul id=navigation>
+<li><a href=/en/about>About</a>
+<li><a href=/en/escorts/ title="Russian Escorts">All Models</a>
+<ul>
+<li><a href=http://moscow.missbliss.su/ title="Moscow Escorts">Moscow</a>
+<li><a href="/spb/" title="St Petersburg Escorts">St Petersburg</a>
+</ul>
+<li><a href=/fee>Fee</a>
+<li><a href=/en/employment>Employment</a>
+<li class="current"><a href=/contact>Contacts</a>
+</ul>
+</div>
+<div id=content class="container clearfix">
+<p id=back-top style="display: block;">
+<a href=#top><span></span></a>
+</p>
+<nav id=page-title>
+<h1>Contacts</h1>
+</nav>
+</div>
+</div>
+
+<div id=contact-map>
+<div id=contact-info>
+<div class=one-fourth>
+<div id=contact-details>
+<h4>Our contacts:</h4>
+<p> Saint-Petersburg:<br>
+24/7 Escort Service<br>
+
+<a href=tel:+79219000318>iPhone: +7 (921) 9000-318</a><br><br>
+
+<a href="https://telegram.im/@The_MissBliss_Agency" target="_blank" class="telegramim_button telegramim_shadow telegramim_pulse" style="font-size:14px;width:110px;background:#eeeeee;box-shadow:1px 1px 3px #eeeeee;color:#666666;border-radius:2px;" title="We care about your privacy"><i></i> Telegram</a>
+<br>
+
+Email: <a href="mailto:office@missbliss.su?subject=Contacts">office@missbliss.su</a>
+
+
+</p>
+</div>
+</div>
+<div class="three-fourth last">
+<div id=contact-form>
+	<h4><a href="https://telegram.im/@The_MissBliss_Agency"  >Order Escort:</a></h4><a href=tel:+79219000318>iPhone: +7 (921) 9000-318</a><br>
+<div id=message></div>
+ <form method="post" action="/contact.php" name="contactform" id="contactform">
+ <input name="name" type="text" id="name" size="30"  onfocus="if(this.value == 'Name') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Name'; }" value="Name" >
+ <input name="email" type="text" id="email" size="30" onfocus="if(this.value == 'E-mail') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'E-mail'; }" value="E-mail" >
+ <input name="phone" type="text" id="phone" size="30" onfocus="if(this.value == 'Phone') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Phone'; }" value="Phone" class="last" >
+<textarea name="comments" cols="40" rows="3" id="comments" onfocus="if(this.value == 'Message') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Message'; }" value="Message">Message</textarea>
+<div id="recaptcha" class="g-recaptcha" data-sitekey="6LfuQ2gUAAAAACaC7XdGyPgiU42onfn2IiCWHjTi" data-callback="onSubmit" data-size="invisible"></div>
+ <input type="submit" class="btn-image" id="submit" value="Submit" />
+</form>
+</div>
+</div>
+</div>
+<iframe width="100%" height=800 frameborder=0 scrolling=no marginheight=0 marginwidth=0 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d64058.55463456347!2d30.38444842762515!3d59.885174386936505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1489769580885"></iframe>
+</div>
+<div id="footer" class="clearfix">
+<div id="footer-center" class="container">
+<div class="footer-left">
+<ul class="footer-menu">
+<li><a href="/en/favorites" title="Favorites escorts from Moscow and Saint-Petersburg, The MissBliss Escort Agency">Favorites</a>
+<li><a href="/en/attractive/" title="Attractive escorts, Escorts from St Petersburg and Moscow, The MissBliss Agency Present">Attractive</a>
+<li><a href=/en/escorts/ title="Russian Escorts">All Models</a>
+<li><a href=/en/employment>Employment</a>
+<li class="footer-last current"><a href=#Contact>Contacts</a>
+<li><a href=https://missbliss.vip/>VIP Gate</a>
+</ul>
+<ul class="footer-address">
+<li><i class=home-icon></i> <a href=https://moscow.missbliss.su/ title="Moscow escorts, The MissBliss Agency Moscow">Moscow</a> &#9679; <a href=https://spb.missbliss.su/ title="Spb Escorts">Saint-Petersburg</a>, Russia</li>
+<li><i class=phone-icon></i><a href=tel:+79219000318>+7 (921) 9000-318</a>
+<li><i class=email-icon></i><a href="mailto:office@missbliss.su?subject=Contacts">office@missbliss.su</a>
+<li><a href=/spb/contact ><i class=ru-icon></i>Русский</a>
+</ul>
+</div>
+</div>
+<div id="footer-bottom">
+<div id="footer-center-bottom" class="container">
+<ul class="copyright">
+<li><a href=/en/about>2003 - 2020 © The MissBliss Agency - Precious Dream</a>
+</ul>
+
+</div>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" ></script>
+<script>
+window.jQuery || document.write('<script src="min/g=jsmin"><\/script>');
+</script>
+<script src="/min/g=js-c"></script>
+<script>$(document).ready(function(){$("#back-top").hide();$(function(){$(window).scroll(function(){if($(this).scrollTop()>100){$('#back-top').fadeIn();}else{$('#back-top').fadeOut();}});$('#back-top a').click(function(){$('body,html').animate({scrollTop:0},800);return false;});});});</script>
+<script >(function() {var script=document.createElement("script");script.type="text/javascript";script.async =true;script.src="https://telegram.im/widget-button/index.php?id=@The_MissBliss_Agency";document.getElementsByTagName("head")[0].appendChild(script);})();</script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<!-- Rating@Mail.ru counter -->
+<script >
+var _tmr = _tmr || [];
+_tmr.push({id: "1193665", type: "pageView", start: (new Date()).getTime()});
+(function (d, w) {
+   var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true;
+   ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+   var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+   if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window);
+</script><noscript><div style="position:absolute;left:-10000px;">
+<img src="//top-fwz1.mail.ru/counter?id=1193665;js=na" style="border:0;" height="1" width="1" alt="�������@Mail.ru" />
+</div></noscript>
+<!-- //Rating@Mail.ru counter -->
+</html>

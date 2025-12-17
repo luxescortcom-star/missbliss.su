@@ -1,0 +1,136 @@
+{
+    "root": {
+        "files": {
+            "diana@p1x": "jpg",
+            "diana@1x": "jpg",
+            "diana@p2x": "jpg",
+            "diana@2x": "jpg",
+            "diana@p3x": "jpg",
+            "diana@3x": "jpg"
+        },
+        "priority_extension": "jpg",
+        "file_count": 6,
+        "folder_path": "spb\/diana_blondie",
+        "generated": true
+    },
+    "folders": {
+        "b": {
+            "files": {
+                "1": "jpg",
+                "2": "jpg",
+                "3": "jpg",
+                "4": "jpg",
+                "5": "jpg",
+                "6": "jpg",
+                "7": "jpg"
+            },
+            "priority_extension": "jpg",
+            "file_count": 7,
+            "min_number": 1,
+            "max_number": 7,
+            "folder_path": "spb\/diana_blondie\/b",
+            "generated": true
+        },
+        "b3": {
+            "files": {
+                "1": "jpg",
+                "2": "jpg",
+                "3": "jpg",
+                "4": "jpg",
+                "5": "jpg",
+                "6": "jpg",
+                "7": "jpg"
+            },
+            "priority_extension": "jpg",
+            "file_count": 7,
+            "min_number": 1,
+            "max_number": 7,
+            "folder_path": "spb\/diana_blondie\/b3",
+            "generated": true
+        },
+        "f2": {
+            "files": {
+                "1": "jpg",
+                "2": "jpg",
+                "3": "jpg",
+                "4": "jpg",
+                "5": "jpg",
+                "6": "jpg",
+                "7": "jpg"
+            },
+            "priority_extension": "jpg",
+            "file_count": 7,
+            "min_number": 1,
+            "max_number": 7,
+            "folder_path": "spb\/diana_blondie\/f2",
+            "generated": true
+        },
+        "f3": {
+            "files": {
+                "1": "jpg",
+                "2": "jpg",
+                "3": "jpg",
+                "4": "jpg",
+                "5": "jpg",
+                "6": "jpg",
+                "7": "jpg"
+            },
+            "priority_extension": "jpg",
+            "file_count": 7,
+            "min_number": 1,
+            "max_number": 7,
+            "folder_path": "spb\/diana_blondie\/f3",
+            "generated": true
+        },
+        "b2": {
+            "files": {
+                "1": "jpg",
+                "2": "jpg",
+                "3": "jpg",
+                "4": "jpg",
+                "5": "jpg",
+                "6": "jpg",
+                "7": "jpg"
+            },
+            "priority_extension": "jpg",
+            "file_count": 7,
+            "min_number": 1,
+            "max_number": 7,
+            "folder_path": "spb\/diana_blondie\/b2",
+            "scanned": true
+        }
+    },
+    "scan_time": "2025-11-21 13:17:09",
+    "total_files": 41,
+    "debug_info": {
+        "base_directory": "\/",
+        "trying_b": "spb\/diana_blondie\/b",
+        "found_b": false,
+        "trying_b2": "spb\/diana_blondie\/b2",
+        "found_b2": true,
+        "scanned_folder": "b2",
+        "scanned_data": {
+            "files": {
+                "1": "jpg",
+                "2": "jpg",
+                "3": "jpg",
+                "4": "jpg",
+                "5": "jpg",
+                "6": "jpg",
+                "7": "jpg"
+            },
+            "file_count": 7,
+            "min_number": 1,
+            "max_number": 7
+        },
+        "detected_extension": "jpg",
+        "detected_file_count": 7,
+        "file_numbers_range": {
+            "min": 1,
+            "max": 7
+        }
+    },
+    "city": "spb",
+    "model_name": "diana_blondie",
+    "display_name": "diana"
+}

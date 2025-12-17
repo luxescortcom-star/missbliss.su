@@ -1,0 +1,328 @@
+<?php
+
+ob_start("ob_gzhandler");
+
+$now_hours=date('G');
+if($now_hours<8){$time='Good%20night';}
+elseif($now_hours<12 && $now_hours>=8 ) {$time='Good%20morning';}
+elseif($now_hours>=12 && $now_hours<17){$time='Good%20day';}
+elseif($now_hours>=17 && $now_hours<=23){$time='Good%2evening';}
+
+require_once $_SERVER['DOCUMENT_ROOT'] . '/mobile-detect/Mobile_Detect.php';
+$detect=new Mobile_Detect;
+
+if ( $detect->isMobile() ) {
+    $folder='b2';
+    $viber='<a href="viber://chat?number=79219000318">Viber</a>';
+} else {
+    $folder='b3';
+    $viber='<a title="Должен быть устоновлен Viber для ПК" href="viber://chat?number=+79219000318">Viber</a>';
+};
+
+require_once $_SERVER['DOCUMENT_ROOT'] . '/geoip/geoplugin.class.php';
+$geoplugin=new geoPlugin();
+$geoplugin->locate();
+$city_code=$geoplugin->city;
+$countryCode=$geoplugin->countryCode;
+$countryCode=strtolower($countryCode);
+
+if ($countryCode.'.'.$city_code=='ru.St Petersburg')
+{
+$css='/min/g=first-page';
+$ilink='ic.4il.us';
+$iPhone='+7 (921) 9000-318';
+$phone='79219000318';
+$telegram='JoyProvocateur';
+$city2='%20in%20Saint-Petersburg';
+$city='in Saint-Petersburg';
+}
+elseif ($countryCode.'.'.$city_code=='ru.Moscow')
+{
+$css='/min/g=first-page-msk';
+$ilink='msk.4il.us/i';
+$iPhone='+7 (921) 9000-318';
+$phone='79219000318';
+$telegram='AndrewAngels';
+$city2='%20in%20Moscow';
+$city='in Moscow';
+}
+elseif (($countryCode=='kz')OR($countryCode=='az')OR($countryCode=='ge')OR($countryCode=='by')OR($countryCode=='ru'))
+{
+$css='/min/g=first-page-us';
+$ilink='msk.4il.us/i';
+$iPhone='+7 (921) 9000-318';
+$phone='79219000318';
+$telegram='AndrewAngels';
+$city2='%20in%20Russia';
+$city='Moscow and Saint-Petersburg';
+}
+elseif (($countryCode=='us')OR($countryCode=='ca')OR($countryCode=='mx')OR($countryCode=='ag')OR($countryCode=='br')OR($countryCode=='cl'))
+{
+$css='/min/g=first-page-de';
+$ilink='4il.us';
+$iPhone='+7 (921) 9000-318';
+$phone='79219000318';
+$telegram='JoyProvocateur';
+$city2='%20in%20USA';
+$city='If you stay in USA';
+}
+elseif (($countryCode=='fi')OR($countryCode=='lt')OR($countryCode=='ee')OR($countryCode=='lv'))
+{
+$css='/min/g=first-page';
+$ilink='ic.4il.us';
+$iPhone='+7 (921) 9000-318';
+$phone='79219000318';
+$telegram='JoyProvocateur';
+$city2='%20The%20Baltic%20states';
+$city='The Baltic states';
+}
+else
+{
+$css='/min/g=first-page-de';
+$ilink='ic.m-b.su';
+$iPhone='+7 (921) 9000-318';
+$phone='79219000318';
+$telegram='JoyProvocateur';
+$city2='%20in%20Europe';
+$city='If you stay in Europe';
+}
+?>
+<!DOCTYPE HTML>
+<html lang=en-us>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+<meta charset=utf-8>
+<link rel="alternate" hreflang="en" href="https://missbliss.ru/vip-access/" />
+<link rel="alternate" hreflang="x-default" href="https://missbliss.ru/en/" />	
+<!--[if ie]><meta http-equiv='X-UA-Compatible' content="IE=edge,IE=9,IE=8,chrome=1" /><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+<meta name=robots content="index,follow">
+<title>Access to escorts catalog</title>
+<meta name=keywords content="escorts catalog">
+<meta name=description content="Access to escorts catalog">
+<link rel="canonical" href="https://missbliss.ru/en/"/>
+<meta property="og:url" content="https://missbliss.ru/vip-ingress/">
+<meta property="og:locale" content="en" />
+<meta property="og:site_name" content="The MissBliss Agency">
+<meta property="og:title" content="Access to escorts catalog" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Access to escorts catalog" />
+<meta property="og:image" content="https://<?=$slink ?>/vip/1.jpg" />
+<meta property="og:image:secure_url" content="https://<?=$slink ?>/vip/1.jpg" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="Access to escorts catalog" />
+<meta name="twitter:title" content="Saint-Petersburg VIP Escort" />
+<meta name="twitter:image" content="https://<?=$slink ?>/vip/1.jpg" />
+<meta name="author" content="https://vk.com/missbliss_agency">
+<link rel=icon type=image/png async="true" href=/favicon_b.png />
+<link rel=apple-touch-icon async="true" href=/favicon_b.png />
+<link rel="stylesheet" href="<?=$css ?>"  type="text/css">
+<link rel="preload" href="/css/fonts/futuris-cyrillic.woff" as="font" crossorigin="anonymous">
+<link rel="preload" href="/css/webfonts/fa-solid-900.woff2" as="font" crossorigin="anonymous">
+<link rel="preload" href="/css/webfonts/fa-brands-400.woff2" as="font" crossorigin="anonymous">
+</head>
+<div class="all-elements">
+<div id="perspective" class="perspective effect-airbnb">
+<div class="outer-nav">
+<div class="inner-nav">
+ <div class="nav-item">
+  <a href='javascript:location.assign("/en/")'  class="active-item">The MissBliss</a>
+</div>
+ <div class="nav-item">
+  <!--noindex--><a href="#" rel="nofollow" class="deploy-nav-sub-item active-item">Escorts</a><!--/noindex-->
+  <div class="nav-sub-item">
+    <a href='javascript:location.assign("/en/escorts/")'>All Our Escorts</a>
+	<a href='javascript:location.assign("/en/favorites/")'>Favorites</a>
+    <a href='javascript:location.assign("/en/attractive/")'>Attractive</a>
+</div>
+</div>
+<div class="nav-item">
+  <!--noindex--><a href="#" rel="nofollow" class="deploy-nav-sub-item active-item">St Petersburg</a><!--/noindex-->
+  <div class="nav-sub-item">
+	<a href='javascript:location.assign("/en/spb/")'>All Escorts</a>
+    <a href='javascript:location.assign("/en/spb/favorites/")'>Favorites</a>
+    <a href='javascript:location.assign("/en/spb/attractive")'>Attractive</a>
+</div>
+</div>
+  <div class="nav-item">
+    <!--noindex--><a href="#" rel="nofollow" class="deploy-nav-sub-item">Moscow</a><!--/noindex-->
+	<div class="nav-sub-item">
+	<a href='javascript:location.assign("/en/moscow/")'>All Escorts</a>
+    <a href='javascript:location.assign("/en/moscow/favorites/")'>Favorites</a>
+    <a href='javascript:location.assign("/en/moscow/favorites/")'>Attractive</a>
+</div>
+</div>
+  <div class="nav-item">
+    <!--noindex--><a href="#" rel="nofollow" class="deploy-nav-sub-item ">Casting</a><!--/noindex-->
+	<div class="nav-sub-item">
+	<a href="https://4il.us/casting/">USA</a>
+	<a href='javascript:location.assign("/en/casting/")'>Europe</a>
+	<a href="/en/occupazione/">Italy</a>
+	<a href='javascript:location.assign("/en/casting/")'>Other Countries</a>
+</div>
+</div>
+  <div class="nav-item">
+  <a href='javascript:location.assign("/en/contact/")' >Contact</a>
+</div>
+ <div class="nav-item">
+  <!--noindex--><a id="closeMenu" rel="nofollow" href="#">Close</a><!--/noindex-->
+</div>
+</div>
+</div>
+
+<div class="perspective_container">
+<div id="header-bg"></div>
+
+<div id="body-wrapper" class="wrapper">
+<div id="header">
+<!--noindex--><a href="#" rel="nofollow" id="logo"></a><!--/noindex-->
+<ul id="navigation">
+<li class="current"><a href="/en/" title="The MissBliss Agency">Agency</a>
+<ul>
+<li><a href="/en/about/" title="About The MissBliss Agency">About</a>
+</ul>
+<li><a href="/en/escorts/" title="Russian Escorts, The MissBliss Escort Agency, Moscow and St-Petersbug Escorts">Escorts</a>
+<ul>
+<li><a href="/en/moscow/" title="Moscow Escorts">Moscow</a>
+<li><a href="/en/spb/" title="St Petersburg Escorts">St Petersburg</a>
+</ul>
+<li><a href="/en/rates/" title="Rates of Escorts">Rates</a>
+<li><a href="/en/casting/" title="Employment Girls for Escorts">Casting</a>
+<li><a href="/en/contact/" title="Contacts of The MissBliss Escort Agency">Contacts</a>
+<li class="flag"><a href="/vip/" title="Агентство &laquo;МиссБлисс&raquo;  Элитный Эскорт в Москве и Питере"><i id="flag_ru"></i>Русский</a>
+</ul>
+</div>
+</div>
+<div id=slider>
+<div class=fullwidthbanner-container>
+<div class=fullwidthbanner>
+<ul>
+
+<li data-transition="fade" data-slotamount=50 data-thumb="https://<?=$ilink ?>/thumbs/1.jpg">
+<img src="https://<?=$ilink ?>/slides/thumb9.jpg"  alt="">
+<div class="caption sfl" data-x=200 data-y=0 data-speed=1500 data-start=10 data-easing=easeOutBack><img src="https://<?=$ilink ?>/pen.jpg" width=292 height=500 alt="Penelopa"></div>
+<div class="caption lft big_white"  data-x=550 data-y=150 data-speed=400 data-start=10 data-easing=easeOutExpo>Limited Access</div>
+<div class="caption lfl medium-white" data-x=550 data-y=250 data-speed=400 data-start=100 data-easing=easeOutExpo>For our VIP only!</div>
+<div class="caption sfb" data-x=550 data-y=340 data-speed=1000 data-start=1800 data-easing=easeOutBack><a href=/en/vip/escorts/ class="btn-image-black">VIP Access</a></div>
+</li>
+
+
+</ul>
+</div>
+</div>
+</div>
+<div id="body-wrap">
+<div id="content" class="container clearfix">
+<hr class=50>
+<div id=features>
+<div class="feature one-fourth">
+<div class=feature-icon><i class=services_icon_11></i></div>
+<div class="feature-description">
+<h2><a href='javascript:location.assign("/en/escorts/")' >Escorts <span>Models</span></a></h2>
+<p>We know which <strong>escort models</strong> you like to invite. Selecting worthy girls, we ourselves arrange photo shoots. In the profiles there are only 100&#37; real photos and we are constantly updating the catalog.<br><a href='javascript:location.assign("/en/escorts/")' title="Moscow and St Petersburg Escorts" onclick="gtag('event', 'click', {'event_category': 'button'});" class="btn-blue" > Watch <span>photos of</span>girls</a></p>
+</div>
+</div>
+<div class="feature one-fourth second">
+<div class=feature-icon><i class=services_icon_15></i></div>
+<div class="feature-description">
+<h2><a href="/en/about/"><span>Escort</span> Agency</a></h2>
+<p><strong>The MissBliss Escort Agency</strong> has existed since 2003. We care about our reputation, so be calm, we will do everything to make your amazing date live up to expectations.<br><a href="/en/about/" title="About The MissBliss Escort Agency" onclick="gtag('event', 'click', {'event_category': 'button'});" class="btn-blue-low" ><span>Detailed</span>About Agency</a></p>
+</div>
+</div>
+<div class="feature one-fourth">
+<div class=feature-icon><i class=services_icon_18></i></div>
+<div class="feature-description">
+<h2><a href='javascript:location.assign("/en/casting/")'>Casting <span>for Girls</span></a></h2>
+<p><strong>Highly paid work for girls</strong>! How nice to relax and get a lot of money for it? Why is an Escort Agency the best way to find a man? Interesting? We invite you to cooperation! <br><a href='javascript:location.assign("/en/casting/")' title="We hire a new models to escort agency MissBliss" onclick="gtag('event', 'click', {'event_category': 'button'});" class="btn-blue-low" ><span>Detailed about</span>Casting</a></p>
+</div>
+</div>
+<div class="feature one-fourth">
+<div class=feature-icon><i class=services_icon_15></i></div>
+<div class=feature-description>
+<h2><a href='javascript:location.assign("/vip/en/")'>VIP Access</a></h2>
+<p>VIP catalog is only for those who have already used our services At least once. The VIP directory More profiles of girls and there are unique models.<br><a href='javascript:location.assign("/vip/en/")' title="We hire a new models to escort agency MissBliss" onclick="gtag('event', 'click', {'event_category': 'button'});" class="btn-blue-low" ><span>Detailed about</span>Casting</a></p>
+</div>
+</div>	
+<div class="feature one-fourth last">
+<div class=feature-icon><i class=services_icon_07></i></div>
+<div class="feature-description">
+<h2><a href='javascript:location.assign("/en/contact/")'>Contacts</a></h2>
+<p>24/7 <?=$city ?><br>You can contact us in any way.<br><a href="tel:+<?=$phone ?>"><i class="fab fa-apple"></i> <?=$iPhone ?></a>.<br><a href="https://wa.me/<?=$phone ?>?text=<?=$time ?>%20I%20would%20licke%20invite%20nice%20one%20or...%20https://missbliss.ru/en/"><i class="fab fa-whatsapp"></i> WhatsApp</a><br><i class="fab fa-viber"></i> <?=$viber ?><br><a href="https://telegram.im/@<?=$telegram ?>"><i class="fab fa-telegram-plane"></i> Telegram</a><br><a href='javascript:location.assign("/en/contact/")' onclick="gtag('event', 'click', {'event_category': 'button'});" title="The MissBliss Escort Agency Contacts" class="btn-blue" ><span>Detailed</span>Contacts</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-center" class="container">
+<div class="footer-left">
+<ul class="footer-menu">
+<li><a href="/en/favorites/" title="Favorite models, hi-class escorts, The MissBliss Escort Agency">Favorites</a>
+<li><a href="/en/attractive/" title="Attractive models, russian escort girls, The MissBliss  Escort Agency">Attractive</a>
+<li><a href='javascript:location.assign("/en/rates/")' title="Rates of Escort Agency MissBliss">Rates</a>
+<li><a href='javascript:location.assign("/en/casting/")' title="We hire a new models to escort agency MissBliss">Casting</a>
+<li><a href='javascript:location.assign("/en/contact/")' title="All possibility to contact with The MissBliss Escort Agency">Contact</a>
+<li class="footer-last"><a href='javascript:location.assign("https://missbliss.vip/en/")' title="For Our VIP Members ONLY">The VIP Gate</a>
+
+</ul>
+<ul class="footer-address">
+<li><i class="fab fa-fort-awesome"></i> <a href='javascript:location.assign("/en/moscow/")' title="Moscow escorts, The MissBliss Agency Moscow">Moscow</a>
+<li><i class="fas fa-university"></i> <a href='javascript:location.assign("/en/spb/")' title="Saint-Petersburg Escorts">Saint-Petersburg</a>
+<li><i class="fab fa-apple"></i><a href="tel:+<?=$phone ?>"><?=$iPhone ?></a>
+<li><i class="fa fa-comments" aria-hidden="true"></i><a href="sms:+<?=$phone ?>">SMS</a>
+<li><i class="fab fa-whatsapp"></i><a href="https://wa.me/<?=$phone ?>?text=<?=$time ?>%20I%20would%20licke%20invite%20nice%20one%20or...%20https://missbliss.ru/en/">WhatsApp</a>
+<li><i class="fab fa-telegram-plane"></i><a href="https://telegram.im/@<?=$telegram ?>">Telegram</a>
+<li><i class="fab fa-viber"></i> <?=$viber ?>
+<li><a href="/vip/" title="Агентство &laquo;МиссБлисс&raquo;  Элитный Эскорт в Москве и Питере"><i class="ru-icon"></i></a>
+</ul>
+</div>
+</div>
+<div id="footer-bottom">
+<div id="footer-center-bottom" class="container">
+<ul class="copyright">
+<li><a href="/en/about/">2003 - 2021 © The MissBliss Agency - Precious dream</a>
+</ul>
+</div>
+</div>
+</div>
+</div><!-- /pc -->
+</div><!-- /p -->
+
+
+<script  src="/min/g=jsmin"  ></script>
+
+<script   src="/min/g=js" ></script>
+
+<link rel="preconnect" href="https://www.google-analytics.com" crossorigin="anonymous">
+
+<script>var tpj=jQuery;tpj.noConflict();tpj(document).ready(function(){if(tpj.fn.cssOriginal!=undefined)
+tpj.fn.css=tpj.fn.cssOriginal;tpj('.fullwidthbanner').revolution({delay:9000,startwidth:1280,startheight:500,onHoverStop:"on",thumbWidth:100,thumbHeight:50,thumbAmount:3,hideThumbs:200,navigationType:"bullet",navigationArrows:"verticalcentered",navigationStyle:"round",touchenabled:"on",navOffsetHorizontal:0,navOffsetVertical:20,stopAtSlide:-1,stopAfterLoops:-1,fullWidth:"on",shadow:0});});</script>
+
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(62220193, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/62220193" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110081699-1"></script>
+<script>
+  window.dataLayer=window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-110081699-1');
+</script>
+
+
+</html>
+

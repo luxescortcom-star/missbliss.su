@@ -1,0 +1,36 @@
+version: "3.8"
+
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: missbliss-nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./var/www/html
+      - ./etc/nginx/nginx.conf:ro
+      - /var/cache/nginx
+      - /run
+    restart: unless-stopped
+    depends_on:
+      - php
+    networks:
+      - missbliss-network
+
+  php:  # ← ЭТО ДОЛЖНО БЫТЬ НА УРОВНЕ nginx:
+    image: php:8.2-fpm-alpine
+    container_name: missbliss-php
+    volumes:
+      - ./var/www/html
+    environment:
+      - PHP_ERROR_REPORTING=22527  # E_ALL & ~E_WARNING & ~E_NOTICE
+      - display_errors=0
+    networks:
+      - missbliss-network
+
+networks:
+  missbliss-network:
+    driver: bridge
+
+volumes:
+  nginx_cache:  # ← Убрать "null"

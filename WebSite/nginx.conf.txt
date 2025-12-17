@@ -1,0 +1,88 @@
+events {
+    worker_connections 1024;
+}
+
+http {
+    include /etc/nginx/mime.types;
+    default_type application/octet-stream;
+    
+    # Определяем, нужно ли добавлять слеш
+    map $uri $should_add_slash {
+        # По умолчанию - не добавляем
+        default 0;
+        
+        # Добавляем слеш если:
+        # 1. Не заканчивается на расширение файла
+        # 2. Не заканчивается уже на слеш
+        "~.*\.(php|html)$" 0;
+        "~.*/$" 0;
+        "~.*[^/]$" 1;
+    }
+    
+    server {
+        listen 80;
+        server_name localhost;
+        root /var/www/html;
+        index index.php index.html index.htm;
+        
+        absolute_redirect off;
+        port_in_redirect off;
+        
+        # ЛОГИКА В ПОРЯДКЕ СПЕЦИФИЧНОСТИ:
+        
+        # 1. Самые специфичные - статические файлы
+        location ~* \.(css|js|json|jpg|png|gif|ico|svg|otf|ttf|woff|woff2|html)$ {
+            expires 30d;
+            try_files $uri =404;
+        }
+		
+		
+    # Центральный блок обработки URL
+    location / {
+        # 1. Попытка найти файл (с расширением или без) или директорию
+        # Для запроса /page Nginx попробует найти:
+        # - /var/www/page.html
+        # - /var/www/page.php
+        # - /var/www/page/ (директория)
+		access_log /var/log/nginx/debug.log;
+        try_files $uri.html $uri.php $uri/ $uri =404;
+		
+	 }
+        
+        # 2. PHP файлы
+        location ~ \.php$ {
+            try_files $uri =404;
+            fastcgi_pass php:9000;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+			fastcgi_param PHP_VALUE "display_errors=0\nerror_reporting=22527";
+            include fastcgi_params;
+        }
+        
+        # 3. Clean URL обработка (заменяет if проверку)
+        location ~ ^/(?<page_name>[^/]+)/$ {
+            # Проверяем существование PHP файла
+            try_files /$page_name.php @try_index_files;
+            
+            # Если PHP файл найден - выполняем
+            fastcgi_pass php:9000;
+            fastcgi_param SCRIPT_FILENAME $document_root/$page_name.php;
+            include fastcgi_params;
+        }
+        
+
+       # 5. Редирект с расширений на clean URL
+        location ~ ^/(?<page>[^/]+)\.(php|html)$ {
+            return 301 /$page/;
+			try_files /$page.php @try_index_files;
+        }
+   
+	    # Добавление завершающего слэша к "чистым" URL, если это не файл (например, изображение)
+    # Это помогает предотвратить дублирование контента для /page и /page/
+		  if ($uri !~ "\.") {
+        rewrite ^(.*[^/])$ $1/ permanent;
+    }	
+	
+        
+    
+    }
+}

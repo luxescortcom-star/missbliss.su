@@ -1,0 +1,15 @@
+AuthName "For our members only."
+AuthUserFile /home/z/zzz180/luxescorts.com/public_html/zero/ladies_pass//.htpasswd
+AuthGroupFile /home/z/zzz180/luxescorts.com/public_html/zero/ladies_pass//.htgroup
+AuthType basic
+<Limit GET>
+Require group Admin Models
+</Limit>
+Order deny,allow
+Deny from all
+Satisfy Any
+
+
+
+
+

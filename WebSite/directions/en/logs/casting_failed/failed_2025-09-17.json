@@ -1,0 +1,15 @@
+[
+    {
+        "date": "2025-09-17 00:05:49",
+        "name": null,
+        "comments": null,
+        "email": null,
+        "phone": null,
+        "city": null,
+        "region": null,
+        "country": null,
+        "ip": null,
+        "user_agent": null,
+        "reason": "Неверное имя"
+    }
+]

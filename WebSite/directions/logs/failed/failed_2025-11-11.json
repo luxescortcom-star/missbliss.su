@@ -1,0 +1,22 @@
+[
+    {
+        "date": "2025-11-11 04:45:45",
+        "name": null,
+        "comments": null,
+        "email": null,
+        "phone": null,
+        "ip": null,
+        "user_agent": null,
+        "reason": "Неверное имя"
+    },
+    {
+        "date": "2025-11-11 14:57:37",
+        "name": null,
+        "comments": null,
+        "email": null,
+        "phone": null,
+        "ip": null,
+        "user_agent": null,
+        "reason": "Неверный формат e-mail"
+    }
+]

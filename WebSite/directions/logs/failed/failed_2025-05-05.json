@@ -1,0 +1,32 @@
+[
+    {
+        "date": "2025-05-05 07:43:43",
+        "name": null,
+        "comments": null,
+        "email": null,
+        "phone": null,
+        "ip": null,
+        "user_agent": null,
+        "reason": "Неверный формат e-mail"
+    },
+    {
+        "date": "2025-05-05 08:58:25",
+        "name": null,
+        "comments": null,
+        "email": null,
+        "phone": null,
+        "ip": null,
+        "user_agent": null,
+        "reason": "Не введен e-mail"
+    },
+    {
+        "date": "2025-05-05 08:58:32",
+        "name": null,
+        "comments": null,
+        "email": null,
+        "phone": null,
+        "ip": null,
+        "user_agent": null,
+        "reason": "Не введен e-mail"
+    }
+]

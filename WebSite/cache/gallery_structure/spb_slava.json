@@ -1,0 +1,142 @@
+{
+    "root": {
+        "files": {
+            "slava@p1x": "avif",
+            "slava@1x": "avif",
+            "slava@p2x": "avif",
+            "slava@2x": "avif",
+            "slava@p3x": "avif",
+            "slava@3x": "avif"
+        },
+        "priority_extension": "avif",
+        "file_count": 6,
+        "folder_path": "spb\/slava",
+        "generated": true
+    },
+    "folders": {
+        "b": {
+            "files": {
+                "1": "avif",
+                "2": "avif",
+                "3": "avif",
+                "4": "avif",
+                "5": "avif",
+                "6": "avif",
+                "7": "avif",
+                "8": "avif"
+            },
+            "priority_extension": "avif",
+            "file_count": 8,
+            "min_number": 1,
+            "max_number": 8,
+            "folder_path": "spb\/slava\/b",
+            "generated": true
+        },
+        "b3": {
+            "files": {
+                "1": "avif",
+                "2": "avif",
+                "3": "avif",
+                "4": "avif",
+                "5": "avif",
+                "6": "avif",
+                "7": "avif",
+                "8": "avif"
+            },
+            "priority_extension": "avif",
+            "file_count": 8,
+            "min_number": 1,
+            "max_number": 8,
+            "folder_path": "spb\/slava\/b3",
+            "generated": true
+        },
+        "f2": {
+            "files": {
+                "1": "avif",
+                "2": "avif",
+                "3": "avif",
+                "4": "avif",
+                "5": "avif",
+                "6": "avif",
+                "7": "avif",
+                "8": "avif"
+            },
+            "priority_extension": "avif",
+            "file_count": 8,
+            "min_number": 1,
+            "max_number": 8,
+            "folder_path": "spb\/slava\/f2",
+            "generated": true
+        },
+        "f3": {
+            "files": {
+                "1": "avif",
+                "2": "avif",
+                "3": "avif",
+                "4": "avif",
+                "5": "avif",
+                "6": "avif",
+                "7": "avif",
+                "8": "avif"
+            },
+            "priority_extension": "avif",
+            "file_count": 8,
+            "min_number": 1,
+            "max_number": 8,
+            "folder_path": "spb\/slava\/f3",
+            "generated": true
+        },
+        "b2": {
+            "files": {
+                "1": "avif",
+                "2": "avif",
+                "3": "avif",
+                "4": "avif",
+                "5": "avif",
+                "6": "avif",
+                "7": "avif",
+                "8": "avif"
+            },
+            "priority_extension": "avif",
+            "file_count": 8,
+            "min_number": 1,
+            "max_number": 8,
+            "folder_path": "spb\/slava\/b2",
+            "scanned": true
+        }
+    },
+    "scan_time": "2025-11-21 13:15:15",
+    "total_files": 46,
+    "debug_info": {
+        "base_directory": "\/",
+        "trying_b": "spb\/slava\/b",
+        "found_b": false,
+        "trying_b2": "spb\/slava\/b2",
+        "found_b2": true,
+        "scanned_folder": "b2",
+        "scanned_data": {
+            "files": {
+                "1": "avif",
+                "2": "avif",
+                "3": "avif",
+                "4": "avif",
+                "5": "avif",
+                "6": "avif",
+                "7": "avif",
+                "8": "avif"
+            },
+            "file_count": 8,
+            "min_number": 1,
+            "max_number": 8
+        },
+        "detected_extension": "avif",
+        "detected_file_count": 8,
+        "file_numbers_range": {
+            "min": 1,
+            "max": 8
+        }
+    },
+    "city": "spb",
+    "model_name": "slava",
+    "display_name": "slava"
+}

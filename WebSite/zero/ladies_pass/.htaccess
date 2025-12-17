@@ -1,0 +1,21 @@
+Options -Indexes  +FollowSymLinks
+
+ErrorDocument 404 /404/
+ErrorDocument 401 /404/
+ErrorDocument 403 /403/
+
+DirectoryIndex index.html index.php
+
+AuthUserFile /home/z/zzz180/luxescorts.com/public_html/zero/ladies_pass//.htpasswd
+AuthGroupFile /home/z/zzz180/luxescorts.com/public_html/zero/ladies_pass//.htgroup
+AuthName "For VIP members only!"
+AuthType Basic
+<Limit GET>
+Require group Members Admin
+</Limit>
+Order deny,allow
+deny from all
+
+
+Satisfy Any
+

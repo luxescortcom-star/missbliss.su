@@ -1,0 +1,14 @@
+ErrorDocument 404 /en/404/
+ErrorDocument 401 /en/access/
+ErrorDocument 403 /en/access/
+
+
+
+<FilesMatch "(contact|rates|about|index|casting|404|accupazione)\.html$">
+Order allow,deny
+allow from all
+Satisfy Any
+ </FilesMatch>
+
+
+

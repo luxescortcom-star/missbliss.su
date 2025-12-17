@@ -1,0 +1,148 @@
+{
+    "root": {
+        "files": {
+            "adele@p1x": "avif",
+            "adele@1x": "avif",
+            "adele@p2x": "avif",
+            "adele@2x": "avif",
+            "adele@p3x": "avif",
+            "adele@3x": "avif"
+        },
+        "priority_extension": "avif",
+        "file_count": 6,
+        "folder_path": "adele",
+        "generated": true
+    },
+    "folders": {
+        "b": {
+            "files": {
+                "1": "avif",
+                "2": "avif",
+                "3": "avif",
+                "4": "avif",
+                "5": "avif",
+                "6": "avif",
+                "7": "avif",
+                "8": "avif",
+                "9": "avif"
+            },
+            "priority_extension": "avif",
+            "file_count": 9,
+            "min_number": 1,
+            "max_number": 9,
+            "folder_path": "adele\/b",
+            "generated": true
+        },
+        "b3": {
+            "files": {
+                "1": "avif",
+                "2": "avif",
+                "3": "avif",
+                "4": "avif",
+                "5": "avif",
+                "6": "avif",
+                "7": "avif",
+                "8": "avif",
+                "9": "avif"
+            },
+            "priority_extension": "avif",
+            "file_count": 9,
+            "min_number": 1,
+            "max_number": 9,
+            "folder_path": "adele\/b3",
+            "generated": true
+        },
+        "f2": {
+            "files": {
+                "1": "avif",
+                "2": "avif",
+                "3": "avif",
+                "4": "avif",
+                "5": "avif",
+                "6": "avif",
+                "7": "avif",
+                "8": "avif",
+                "9": "avif"
+            },
+            "priority_extension": "avif",
+            "file_count": 9,
+            "min_number": 1,
+            "max_number": 9,
+            "folder_path": "adele\/f2",
+            "generated": true
+        },
+        "f3": {
+            "files": {
+                "1": "avif",
+                "2": "avif",
+                "3": "avif",
+                "4": "avif",
+                "5": "avif",
+                "6": "avif",
+                "7": "avif",
+                "8": "avif",
+                "9": "avif"
+            },
+            "priority_extension": "avif",
+            "file_count": 9,
+            "min_number": 1,
+            "max_number": 9,
+            "folder_path": "adele\/f3",
+            "generated": true
+        },
+        "b2": {
+            "files": {
+                "1": "avif",
+                "2": "avif",
+                "3": "avif",
+                "4": "avif",
+                "5": "avif",
+                "6": "avif",
+                "7": "avif",
+                "8": "avif",
+                "9": "avif"
+            },
+            "priority_extension": "avif",
+            "file_count": 9,
+            "min_number": 1,
+            "max_number": 9,
+            "folder_path": "adele\/b2",
+            "scanned": true
+        }
+    },
+    "scan_time": "2025-11-20 19:21:05",
+    "total_files": 51,
+    "debug_info": {
+        "initial_directory": "\/",
+        "trying_b": "adele\/b",
+        "found_b": false,
+        "trying_b2": "adele\/b2",
+        "found_b2": true,
+        "scanned_folder": "b2",
+        "scanned_data": {
+            "files": {
+                "1": "avif",
+                "2": "avif",
+                "3": "avif",
+                "4": "avif",
+                "5": "avif",
+                "6": "avif",
+                "7": "avif",
+                "8": "avif",
+                "9": "avif"
+            },
+            "file_count": 9,
+            "min_number": 1,
+            "max_number": 9
+        },
+        "detected_extension": "avif",
+        "detected_file_count": 9,
+        "file_numbers_range": {
+            "min": 1,
+            "max": 9
+        }
+    },
+    "city": "msk",
+    "model_name": "adele",
+    "display_name": "adele"
+}

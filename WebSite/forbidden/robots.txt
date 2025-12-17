@@ -1,0 +1,82 @@
+Sitemap: https://missbliss.ru/sitemap.xml
+Host: https://missbliss.ru/
+
+
+
+User-agent: GoogleBot
+Allow: /
+Disallow: /cache/
+Disallow: /enter.html
+Disallow: /xxx/
+Disallow: /rates_test.html
+Disallow: /en/rates_test.html
+Disallow: /cgi-bin/
+Disallow: /fonts/
+Disallow: /admin/
+Disallow: /video/
+Disallow: /geoip/
+Disallow: /less/
+Disallow: /scss/
+Disallow: /test/
+Disallow: /directions/
+Disallow: /css/
+Disallow: /js/
+Disallow: /min/
+Disallow: /mobile-detect/
+Disallow: /forbidden/
+Disallow: /images/erotica/
+
+
+
+
+
+User-agent: Yandex
+Allow: /
+Disallow: /cache/
+Disallow: /enter.html
+Disallow: /xxx/
+Disallow: /cgi-bin/
+Disallow: /rates_test.html
+Disallow: /en/rates_test.html
+Disallow: /fonts/
+Disallow: /admin/
+Disallow: /video/
+Disallow: /geoip/
+Disallow: /less/
+Disallow: /scss/
+Disallow: /test/
+Disallow: /directions/
+Disallow: /css/
+Disallow: /js/
+Disallow: /min/
+Disallow: /mobile-detect/
+Disallow: /forbidden/
+Disallow: /images/erotica/
+
+
+
+User-agent: *
+Allow: /
+Disallow: /cache/
+Disallow: /xxx/
+Disallow: /enter.html
+Disallow: /cgi-bin/
+Disallow: /fonts/
+Disallow: /rates_test.html
+Disallow: /en/rates_test.html
+Disallow: /admin/
+Disallow: /video/
+Disallow: /geoip/
+Disallow: /less/
+Disallow: /scss/
+Disallow: /test/
+Disallow: /directions/
+Disallow: /css/
+Disallow: /js/
+Disallow: /min/
+Disallow: /mobile-detect/
+Disallow: /forbidden/
+Disallow: /images/erotica/
+
+
+

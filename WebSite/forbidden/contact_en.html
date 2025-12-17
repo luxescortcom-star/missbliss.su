@@ -1,0 +1,392 @@
+<?php
+ob_start("ob_gzhandler");
+
+ function check_mobile_device() {
+    $mobile_agent_array = array('ipad', 'iphone', 'android', 'pocket', 'palm', 'windows ce', 'windowsce', 'cellphone', 'opera mobi', 'ipod', 'small', 'sharp', 'sonyericsson', 'symbian', 'opera mini', 'nokia', 'htc_', 'samsung', 'motorola', 'smartphone', 'blackberry', 'playstation portable', 'tablet browser');
+    $agent = strtolower($_SERVER['HTTP_USER_AGENT']);
+    foreach ($mobile_agent_array as $value) {
+        if (strpos($agent, $value) !== false) return true;
+    };
+    return false;
+};
+
+
+require_once('../geoip/geoplugin.class.php');
+$geoplugin = new geoPlugin();
+$geoplugin->locate();
+$city_code = $geoplugin->city;
+$countryCode = $geoplugin->countryCode;
+$countryCode = strtolower($countryCode);
+
+if (($countryCode.'.'.$city_code=='ru.St Petersburg')OR($countryCode=='fi')OR($countryCode=='fi')OR($countryCode=='ee')OR($countryCode=='lv'))
+{
+$phone='79219000318';
+$phone2='7(921)9000318';
+$file='ensmail.php';
+$city='St Petersburg';
+$telegram='<?=$telegram ?>';
+$map='1d64058.55463456347!2d30.38444842762515!3d59.885174386936505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1489769580885';
+$ilink='ic.4il.us/';
+$css='/min/g=contact';
+$email='spb@bliss.ag';
+}
+elseif ($countryCode.'.'.$city_code=='ru.Moscow')
+{
+$phone='79214248822';
+$phone2='7(921)4248822';
+$file='directions/en/enmmail.php';
+$telegram='AndrewAngels';
+$city='Moscow';
+$map='1d2383448.8960303725!2d39.48916629577635!3d54.311256593593136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1497308409417';
+$ilink='msk.4il.us/i';
+$css='/min/g=contact-msk';
+$email='moscow@bliss.ag';
+}
+elseif (($countryCode=='kz')OR($countryCode=='az')OR($countryCode=='ge')OR($countryCode=='by')OR($countryCode=='ua')OR($countryCode=='ru'))
+{
+$phone='79214248822';
+$phone2='7(921)4248822';
+$file='directions/en/enmail.php';
+$telegram='<?=$telegram ?>';
+$city='St Petersburg and Moscow';
+$map='1d9142635.00863228!2d93.32569945705353!3d57.10375184991994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1567039282170!5m2!1sru!2sru';
+$ilink='msk.4il.us/i';
+$css='/min/g=contact-msk';
+$email='office@bliss.ag';
+}
+
+elseif (($countryCode=='us')OR($countryCode=='ca')OR($countryCode=='mx')OR($countryCode=='ag')OR($countryCode=='br')OR($countryCode=='cl'))
+{
+$phone='79219000318';
+$phone2='7(921)9000318';
+$file='directions/en/enmail.php';
+$telegram='<?=$telegram ?>';
+$city='Moscow and St Petersburg';
+$map='1d9142635.00863228!2d93.32569945705353!3d57.10375184991994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1567039282170!5m2!1sru!2sru';
+$ilink='missbliss.us/i';
+$css='/min/g=contact-us';
+$email='office@bliss.ag';
+}
+
+
+else
+{
+$phone='79219000318';
+$phone2='7(921)9000318';
+$file='directions/en/enmail.php';
+$telegram='<?=$telegram ?>';
+$city='Moscow and St Petersburg';
+$map='1d9142635.00863228!2d93.32569945705353!3d57.10375184991994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1567039282170!5m2!1sru!2sru';
+$ilink='ic.m-b.su';
+$css='/min/g=contact-de';
+$email='office@bliss.ag';
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+<meta name="theme-color" content="#050f35">
+<meta name="robots" content="index,follow">
+<meta charset="utf-8">
+<link rel="alternate" hreflang="ru" href="https://missbliss.ru/contact/" />
+<!--[if ie]><meta http-equiv='X-UA-Compatible' content="IE=edge,IE=9,IE=8,chrome=1" /><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+<title>Contacts of The MissBliss Agency <?=$city ?></title>
+<meta name="keywords" content="escort agency contacts, missbliss agency contacts, russian escorts contacts,call girls contacts"/>
+<meta name="description" content="Never stop dreaming, Keep in touch: iPhone +<?=$phone2 ?>">
+<link rel="canonical" href="https://missbliss.ru/en/contact/"/>
+<meta property="og:url" content="https://missbliss.ru/en/contact/">
+<meta property="og:locale" content="en" />
+<meta property="og:site_name" content="The MissBliss Agency">
+<meta property="og:title" content="Never stop dreaming" />
+<meta property="og:type" content="profile" />
+<meta property="og:description" content="Never stop dreaming" />
+<meta property="og:image" content="https://<?=$ilink ?>/contact.jpg" />
+<meta property="og:image:secure_url" content="https://<?=$ilink ?>/contact.jpg" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="Keep in touch: iPhone +<?=$phone2 ?>" />
+<meta name="twitter:title" content="Never stop dreaming" />
+<meta property="og:image" content="https://<?=$ilink ?>/contact.jpg" />
+
+<link rel="stylesheet" href="<?=$css ?>"  type="text/css">
+<link rel="stylesheet" href="../build/css/intlTelInput.css">
+<link rel="preload" href="/css/fonts/futuris-cyrillic.woff" as="font" crossorigin="anonymous">
+<link rel="preload" href="/css/webfonts/fa-solid-900.woff2" as="font" crossorigin="anonymous">
+<link rel="preload" href="/css/webfonts/fa-brands-400.woff2" as="font" crossorigin="anonymous">
+
+<script>
+  function onSubmit(token) {
+    alert('thanks ' + document.getElementById('contactform').value);
+  }
+
+  function validate(event) {
+    event.preventDefault();
+    if (!document.getElementById('contactform').value) {
+
+    } else {
+      grecaptcha.execute();
+    }
+
+  }
+
+  function onload() {
+    var element = document.getElementById('contactform');
+    element.onload = validate;
+  }
+</script>
+</head>
+ <div class="all-elements">
+<div id="perspective" class="perspective effect-airbnb">
+<div class="outer-nav">
+<div class="inner-nav">
+ <div class="nav-item">
+  <a href='javascript:location.assign("/en/")'  class="active-item">The MissBliss</a>
+</div>
+ <div class="nav-item">
+  <!--noindex--><a href="#" rel="nofollow" class="deploy-nav-sub-item active-item">Escorts</a><!--/noindex-->
+  <div class="nav-sub-item">
+    <a href='javascript:location.assign("/en/escorts/")'>All Our Escorts</a>
+	<a href='javascript:location.assign("/en/favorites/")'>Favorites</a>
+    <a href='javascript:location.assign("/en/attractive/")'>Attractive</a>
+</div>
+</div>
+<div class="nav-item">
+  <!--noindex--><a href="#" rel="nofollow" class="deploy-nav-sub-item active-item">St Petersburg</a><!--/noindex-->
+  <div class="nav-sub-item">
+	<a href='javascript:location.assign("/en/spb/")'>All Escorts</a>
+    <a href='javascript:location.assign("/en/spb/favorites/")'>Favorites</a>
+    <a href='javascript:location.assign("/en/spb/attractive")'>Attractive</a>
+</div>
+</div>
+  <div class="nav-item">
+    <!--noindex--><a href="#" rel="nofollow" class="deploy-nav-sub-item">Moscow</a><!--/noindex-->
+	<div class="nav-sub-item">
+	<a href='javascript:location.assign("/en/moscow/")'>All Escorts</a>
+    <a href='javascript:location.assign("/en/moscow/favorites/")'>Favorites</a>
+    <a href='javascript:location.assign("/en/moscow/favorites/")'>Attractive</a>
+</div>
+</div>
+  <div class="nav-item">
+    <!--noindex--><a href="#" rel="nofollow" class="deploy-nav-sub-item ">Casting</a><!--/noindex-->
+	<div class="nav-sub-item">
+	<a href="https://missbliss.us/casting/">USA</a>
+	<a href='javascript:location.assign("/en/casting/")'>Europe</a>
+	<a href="/en/occupazione/">Italy</a>
+	<a href='javascript:location.assign("/en/casting/")'>Other Countries</a>
+</div>
+</div>
+  <div class="nav-item">
+  <a href='javascript:location.assign("/en/contact/")' >Contact</a>
+</div>
+ <div class="nav-item">
+  <!--noindex--><a id="closeMenu" rel="nofollow" href="#">Close</a><!--/noindex-->
+</div>
+</div>
+</div>
+<div class="perspective_container">
+<div id="header-bg"></div>
+<div id="sub-header-bg"></div>
+<div id="body-wrapper" class="wrapper">
+<div id="header">
+<!--noindex--><a href="#" rel="nofollow" id="logo"></a><!--/noindex-->
+<ul id="navigation">
+<li><a href="/en/" title="The MissBliss Agency">Agency</a>
+<ul>
+<li><a href="/en/about/" title="About The MissBliss Agency">About</a>
+</ul>
+<li><a href="/en/escorts/" title="Russian Escorts, The MissBliss Escort Agency, Moscow and St-Petersbug Escorts">Escorts</a>
+<ul>
+<li><a href="/en/moscow/" title="Moscow Escorts">Moscow</a>
+<li><a href="/en/spb/" title="St Petersburg Escorts">St Petersburg</a>
+</ul>
+<li><a href="/en/rates/" title="Rates for Escorts of The MissBliss Agency">Rates</a>
+<li><a href='javascript:location.assign("/en/casting/")' title="We hire a new models to escort agency MissBliss">Casting</a>
+<li class="current"><a href='javascript:location.assign("/en/contact/")'>Contacts</a>
+<li class="flag"><a href="/contact/" title="Контакты агентства МиссБлисс"><i id="flag_ru"></i>Русский</a>
+</ul>
+</div>
+<div id="content" class="container clearfix">
+<p id="back-top" style="display: block;">
+<!--noindex--><a href="#top" rel="nofollow"><span></span></a><!--/noindex-->
+</p>
+<nav id="page-title">
+<h1> Contacts <span>of The </span>MissBliss <span>Escort </span>Agency. <span>Keep in Touch!</span></h1>
+</nav>
+</div>
+</div>
+
+<div id=contact-map>
+<div id=contact-info>
+<div class=one-fourth>
+<div id=contact-details>
+<h4>Contacts:</h4>
+<p> 24/7 Friendly Support<br> <?=$city ?>:<br>
+<a href="tel:+<?=$phone ?>"><i class="fab fa-apple"></i> iPhone +<?=$phone2 ?></a>
+
+<br><br>
+<a href="https://telegram.im/@<?=$telegram ?>" target="_blank" class="telegramim_button telegramim_shadow telegramim_pulse" style="font-size:14px;width:110px;background:#eeeeee;box-shadow:1px 1px 3px #eeeeee;color:#666666;border-radius:2px;" title="We care about your privacy"><i></i> Telegram</a>
+<br>
+Email: <a href="mailto:<?=$email ?>?subject=missbliss.ru/en/contact/"><?=$email ?></a>
+
+</p>
+</div>
+</div>
+<div class="three-fourth last">
+
+<div id=contact-form>
+<h4><a href="https://telegram.im/@<?=$telegram ?>"  >Make an order:</a></h4><a href="tel:+<?=$phone ?>"><i class="fab fa-apple"></i> +<?=$phone2 ?></a>    <a href="https://wa.me/<?=$phone ?>" target="_blank"><i class="fab fa-whatsapp"></i> WhatsUp!</a><br>
+<br>
+<div id=message></div>
+<form method="post" action="../ensmail.php" name="contactform" id="contactform">
+ <input name="name" type="text" id="name" size="30"  onfocus="if(this.value == 'Name') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Name'; }" value="Name" >
+ <input name="email" type="text" id="email" size="30" onfocus="if(this.value == 'E-mail') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'E-mail'; }" value="E-mail" >
+<input id="phone" type="tel" placeholder="Phone" size="30" name="Phone" value="" class="last"><input id="intlTelInputHidden" type="hidden" name="phone-full">
+<span id="valid-msg" class="hide">✓ Correct</span>
+<span id="error-msg" class="hide">Incorrect phone number</span>
+<textarea name="comments" cols="40" rows="3" id="comments" onfocus="if(this.value == 'Message') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Message'; }" value="Message">Message</textarea>
+<div id='recaptcha' class="g-recaptcha" data-sitekey="6LfuQ2gUAAAAACaC7XdGyPgiU42onfn2IiCWHjTi" data-callback="onSubmit" data-size="invisible"></div>
+<input type="submit" class="btn-image" id="submit"  value="Submit" />
+</form>
+<script>onload();</script>
+</div>
+</div>
+</div>
+<iframe width="100%" height=800 frameborder=0 scrolling=no marginheight=0 marginwidth=0 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!<?=$map ?>"></iframe>
+</div>
+<div id="footer" class="clearfix">
+<div id="footer-center" class="container">
+<div class="footer-left">
+<ul class="footer-menu">
+<li><a href="/en/favorites/" title="Favorites escorts from Moscow and Saint-Petersburg, The MissBliss Escort Agency">Favorites</a>
+<li><a href="/en/attractive/" title="Attractive escorts, Escorts from St Petersburg and Moscow, The MissBliss Agency Present">Attractive</a>
+<li><a href='javascript:location.assign("/en/casting/")' title="We hire a new models to escort agency MissBliss">Casting</a>
+<li class="current"><a href='javascript:location.assign("/en/contact/")' title="All possibility to contact with The MissBliss Escort Agency">Contact</a>
+<li class="footer-last"><a href='javascript:location.assign("https://missbliss.vip/en/")' title="For Our VIP Members ONLY">The VIP Gate</a>
+</ul>
+<ul class="footer-address">
+<li><i class="fab fa-fort-awesome"></i> <a href='javascript:location.assign("/en/moscow/")' title="Moscow escorts, The MissBliss Agency Moscow">Moscow</a>
+<li><i class="fas fa-university"></i><a href='javascript:location.assign("/en/spb/")' title="Saint-Petersburg Escorts">Saint-Petersburg</a>
+<li><i class="fab fa-apple"></i><a href="tel:+<?=$phone ?>" title="24/7 friendly support">iPhone</a>
+<li><i class="fa fa-comments" aria-hidden="true"></i><a href="sms:+<?=$phone ?>" title="For free iMessage">SMS</a>
+<li><i class="fab fa-whatsapp"></i><a href="https://wa.me/<?=$phone ?>?text=Hello!%20I%20want%20some%20Joy,%20can%20you%20help%20me?...%20https://missbliss.ru/en/contact/" target="_blank">WhatsApp</a>
+<li><i class="fab fa-telegram-plane"></i><a href="https://telegram.im/@<?=$telegram ?>">Telegram</a>
+<li><i class="fab fa-viber"></i><? if(check_mobile_device()) :?>
+  <a href="viber://chat?number=<?=$phone ?>">Viber</a>
+<? else : ?>
+  <a title="You need install Viber for PC or Mac" href="viber://chat?number=+<?=$phone ?>">Viber</a>
+<? endif; ?>
+<li> <a href='javascript:location.assign("/contact/")' title="Контакты эскорт агентства МиссБлисс"><i class="ru-icon"></i></a>
+</ul>
+<div class="fee">
+<!--noindex--><a href="#x" class="overlay" rel="nofollow" id="spam"></a><!--/noindex-->
+   <div class="popup">
+   <div class="pricing-table-second clearfix">
+     <h3>Email Processing Rules</h3>
+<p></p>Due to the large flow of spam, we were forced to prohibit the insertion of links in the feedback form. <br><i class="fas fa-exclamation-triangle"></i> Also, we do not call back numbers<br><i class="fas fa-exclamation-triangle"></i> We do not need any client bases<br><i class="fas fa-exclamation-triangle"></i> We do not buy counterfeit money<br><i class="fas fa-exclamation-triangle"></i> And we do not need spam mailings.<br><i class="fas fa-fingerprint"></i> If you are not a robot, if you are a living person and want to send a link to the profile of the girl you are interested in, use the instant messenger directly <a href="https://wa.me/<?=$phone ?>" target="_blank"><i class="fab fa-whatsapp"></i> WhatsUp!</a> <br>or another messenger to our number. <br><br> <a href="tel:+<?=$phone ?>">iPhone: +<?=$phone2 ?></a><br>
+<br><br></div>
+    <!--noindex--><a class="close" title="сlose" rel="nofollow" href="#close"></a><!--/noindex-->
+    </div>
+</div>
+<div class=mail>
+<a href="#x" class="overlay" id="rules"></a>
+   <div class="popup">
+   <div class="pricing-table-second clearfix">
+     <h3>How to order fast?</h3>
+<p>If you want to invite a girl, write: <br><br> 1. When, what day and at what time would you like to meet a girl?<br><br> 2. When, what day and at what time would you like to meet a girl? <br>Or maybe you want us to book a hotel for you?<br><br> 3. Write the name or names of the beauties you like. <br><br> Detailed information will help us give a quick answer with detailed information about free models..<br><br> It is important for us to understand both time and place. Not all girls may be available at certain times and not all girls will be able to come to a specific place. If you write everything in detail, you can get a quick, comprehensive answer.</p></div>
+    <!--noindex--><a class="close" title="сlose" rel="nofollow" href="#close"></a><!--/noindex-->
+    </div>
+</div>
+</div>
+</div>
+<div id="footer-bottom">
+<div id="footer-center-bottom" class="container">
+<ul class="copyright">
+<li><a href='javascript:location.assign("/en/about/")'>2003 - 2020 © The MissBliss Agency - Precious Dream</a>
+</ul>
+
+</div>
+</div>
+</div>
+    </div><!-- /p c -->
+
+</div><!-- /p -->
+
+<script src="/min/g=jsmin" ></script>
+
+<script  rel="preconnect"  src="/min/g=js-c-en" ></script>
+
+<script src="../build/js/intlTelInput.js"></script>
+
+<script>$(document).ready(function(){$("#back-top").hide();$(function(){$(window).scroll(function(){if($(this).scrollTop()>100){$('#back-top').fadeIn();}else{$('#back-top').fadeOut();}});$('#back-top a').click(function(){$('body,html').animate({scrollTop:0},800);return false;});});});</script>
+<script type="text/javascript">(function() {var script=document.createElement("script");script.type="text/javascript";script.async =true;script.src="https://telegram.im/widget-button/index.php?id=@<?=$telegram ?>";document.getElementsByTagName("head")[0].appendChild(script);})();</script>
+
+ <script>
+
+     $("#phone").intlTelInput({
+  defaultCountry: "auto",
+  geoIpLookup: function(callback) {
+    $.get('https://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+      var countryCode = (resp && resp.country) ? resp.country : "";
+      callback(countryCode);
+    });
+  },
+  utilsScript: "../build/js/utils.js"
+});</script>
+
+<script>
+ $("#phone").intlTelInput({
+  utilsScript: "../build/js/utils.js"
+});
+
+$("form").submit(function() {
+  $("#intlTelInputHidden").val($("#phone").intlTelInput("getNumber"));
+});
+  </script>
+
+<script>
+var telInput = $("#phone"),
+  errorMsg = $("#error-msg"),
+  validMsg = $("#valid-msg");
+
+
+telInput.intlTelInput({
+utilsScript: "../build/js/utils.js"
+});
+
+
+telInput.blur(function() {
+  if ($.trim(telInput.val())) {
+    if (telInput.intlTelInput("isValidNumber")) {
+      validMsg.removeClass("hide");
+    } else {
+      telInput.addClass("error");
+      errorMsg.removeClass("hide");
+      validMsg.addClass("hide");
+    }
+  }
+});
+
+telInput.keydown(function() {
+  telInput.removeClass("error");
+  errorMsg.addClass("hide");
+  validMsg.addClass("hide");
+});
+
+ </script>
+
+
+
+
+<script src="https://www.google.com/recaptcha/api.js" async defer> </script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110081699-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-110081699-1');
+</script>
+
+
+</html>

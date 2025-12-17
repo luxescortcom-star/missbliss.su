@@ -1,0 +1,12 @@
+[
+    {
+        "date": "2025-07-23 21:44:45",
+        "name": null,
+        "comments": null,
+        "email": null,
+        "phone": null,
+        "ip": null,
+        "user_agent": null,
+        "reason": "Неверный формат e-mail"
+    }
+]

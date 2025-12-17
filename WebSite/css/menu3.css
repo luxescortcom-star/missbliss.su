@@ -1,0 +1,414 @@
+#showMenu{
+	position:absolute;
+	z-index:9999;
+	width:60px;
+	height:60px;
+	left:0px;
+	top:10px;
+	line-height:60px;
+	text-align:center;
+	color:#ffffff;
+	font-size:20px;
+
+}
+
+#edge-indicator {
+    position: fixed;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 100px;
+    background: rgba(108, 108, 108, 0.88);
+    border-radius: 0 4px 4px 0;
+    z-index: 9999;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+#edge-indicator:hover {
+    background: rgba(7, 7, 7, 0.88);
+    width: 10px;
+}
+
+@media (min-width:768px){
+	.all-elements{
+		background-color:#fff;
+	}
+
+	#perspective{
+		width:100%;
+		overflow:visible;
+
+
+	}
+
+	.effect-airbnb {
+		width:101%;
+	}
+
+}
+
+.nav-item a{
+	color:#CCC;
+	font-family:'Futuris Cyrillic', arial;
+	font-size: 18px;
+	padding-bottom:15px;
+	padding-top:15px;
+	font-weight:400!important;
+	transition:all 400ms ease!important;
+}
+.nav-sub-item p{
+	color:#CCC;
+	font-family:'Futuris Cyrillic', arial;
+	font-size:16px;
+	padding-bottom:10px;
+	padding-top:10px;
+	font-weight:400!important;
+	transition:all 400ms ease!important;
+}
+
+.nav-item a:hover{
+	color:red;
+	transition:all 400ms ease!important;
+}
+
+
+.nav-sub-item{
+	padding-left:10px;
+	display:none;
+}
+
+.nav-sub-item a{
+	font-size:18px;
+	padding-bottom:10px;
+	padding-top:10px;
+	opacity:0.9!important;
+}
+
+
+
+
+
+@media (min-width:768px){
+	.nav-item a{
+		font-size:18px;
+		padding-top:15px;
+		padding-bottom:15px;
+	}
+
+	.nav-sub-item a{
+		font-size:16px;
+		padding-bottom:12px;
+		padding-top:12px;
+	}
+
+	.outer-nav{
+		top:48%!important;
+	}
+}
+
+html, body, .perspective {
+	display: block;
+	width: 100%;
+	height: 100%;
+
+}
+
+.perspective{
+	overflow:visible;
+	background: #aaa;
+}
+
+.perspective_container {
+	background: #fff;
+	height: 100%;
+	position: relative;
+	outline: 1px solid rgba(0,0,0,0);
+	z-index: 10;
+
+
+}
+
+.perspective_container::after {
+	content: '';
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0px;
+	opacity: 0;
+	background: rgba(0,0,0,0.2);
+	/* the transition delay of the height needs to be synced with the perspective_container transition time */
+	-webkit-transition: opacity 0.8s, height 0s 0.8s;
+	transition: opacity 0.8s, height 0s 0.8s;
+}
+
+
+
+
+.component {
+	margin: 0 auto;
+	width: 60%;
+	text-align: justify;
+	font-size: 1.5em;
+}
+
+/* Modal view */
+.perspective.modalview {
+	position: relative;
+	-webkit-perspective: 1000px;
+	perspective: 1000px;
+
+}
+
+.modalview .perspective_container {
+	position:relative;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.modalview .body-wrapper {
+	-webkit-transform: translateZ(-1px); /* solves a rendering bug in Chrome on Windows */
+}
+
+.animate .perspective_container::after {
+	opacity: 1;
+	height: 101%;
+	-webkit-transition: opacity 0.8s;
+	transition: opacity 0.8s;
+}
+
+/* Outer Nav */
+.outer-nav {
+	position: absolute;
+	height: auto;
+	top: 48%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	overflow:scroll;
+	overflow-x:hidden;
+	width:400px;
+	height:75%;
+	transition:all 800ms ease;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.outer-nav::-webkit-scrollbar {
+    display: none;
+}
+
+.inner-nav{
+	width:400px;
+	overflow:hidden;
+}
+
+.inner-nav a{
+	margin-bottom:0px;
+	margin-top:0px;
+	padding-left:10%;
+	display:block;
+	width:100%;
+	text-decoration:none;
+}
+
+.outer-nav a {
+	display: inline-block;
+	white-space: nowrap;
+	font-weight: 400;
+	color: #cacaca;
+	-webkit-transition: color 0.8s;
+	transition: color 0.8s;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.outer-nav a:hover {
+	color: #FFFFFF;
+}
+
+
+
+
+.outer-nav a::before {
+	display: inline-block;
+	font-family: 'typicons';
+	speak: auto;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	margin-right: 10px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+/* Effect airbnb */
+.effect-airbnb {
+	background-image:url(https://ic.m-b.su/bgp.jp2);
+	background-size:cover;
+	
+
+}
+@media (max-width:760px){
+	.effect-airbnb .perspective_container {
+		-webkit-transition: -webkit-transform 0.8s;
+		transition: transform 0.8s;
+		-webkit-transform-origin: 10% 10%;
+		transform-origin: 10% 10%;
+	}
+
+	.effect-airbnb.animate .perspective_container {
+		-webkit-transform: translateZ(-10px) translateX(55%) translateY(0%) rotateY(-30deg);
+		transform: translateZ(-10px) translateX(55%) translateY(0%) rotateY(-30deg);
+
+	}
+}
+
+@media (min-width:761px){
+	.effect-airbnb .perspective_container {
+		-webkit-transition: -webkit-transform 0.8s;
+		transition: transform 0.8s;
+		-webkit-transform-origin: 50% 50%;
+		transform-origin: 50% 50%;
+	}
+
+	.effect-airbnb.animate .perspective_container {
+		-webkit-transform: translateZ(-100px) translateX(12%) translateY(0%) rotateY(-30deg);
+		transform: translateZ(-100px) translateX(12%) translateY(0%) rotateY(-30deg);
+
+
+	}
+
+}
+
+@media only screen and  (min-width:558px) and (max-width:760px) {
+
+
+
+	.effect-airbnb.animate .perspective_container {
+		-webkit-transform: translateZ(-80px) translateX(45%) translateY(0%) rotateY(-30deg);
+		transform: translateZ(-80px) translateX(45%) translateY(0%) rotateY(-30deg);
+
+
+	}
+
+}
+
+@media only screen and  (min-width:761px) and (max-width:1473px) {
+
+.inner-nav a{
+	padding-left:15%;
+
+}
+
+	.effect-airbnb.animate .perspective_container {
+			-webkit-transform: translateZ(-50px) translateX(30%) translateY(0%) rotateY(-25deg);
+		transform: translateZ(-50px) translateX(30%) translateY(0%) rotateY(-25deg);
+
+
+	}
+
+}
+
+@media only screen and  (min-width:1474px) and (max-width:2398px) {
+
+.inner-nav a{
+	padding-left:18%;
+
+}
+
+	.effect-airbnb.animate .perspective_container {
+		-webkit-transform: translateZ(-50px) translateX(10%) translateY(0%) rotateY(-10deg);
+		transform: translateZ(-50px) translateX(10%) translateY(0%) rotateY(-10deg);
+
+	}
+
+}
+
+@media only screen and (min-width:2399px) {
+
+	.inner-nav{
+	width:500px;
+	overflow:hidden;
+
+}
+
+.inner-nav a{
+	padding-left:10%;
+
+}
+	.nav-item a{
+	font-size:22px;
+	padding-bottom:20px;
+	padding-top:20px;
+	font-weight:400!important;
+	transition:all 1000ms ease!important;
+}
+	.nav-sub-item p{
+    font-size:16px;
+	padding-bottom:15px;
+	padding-top:15px;
+	font-weight:400!important;
+	transition:all 1000ms ease!important;
+
+}
+	.nav-sub-item{
+	padding-left:40px;
+	display:none;
+}
+
+.nav-sub-item a{
+	font-size:18px;
+	padding-bottom:12px;
+	padding-top:12px;
+	opacity:0.9!important;
+}
+	.effect-airbnb .perspective_container {
+		-webkit-transition: -webkit-transform 0.8s;
+		transition: transform 0.8s;
+		-webkit-transform-origin: 50% 50%;
+		transform-origin: 50% 50%;
+
+	}
+
+	.effect-airbnb.animate .perspective_container {
+		-webkit-transform: translateZ(0px) translateX(5%) translateY(0%) rotateY(-8deg);
+		transform: translateZ(0px) translateX(5%) translateY(0%) rotateY(-8deg);
+
+
+	}
+
+}
+
+
+.no-csstransforms3d .effect-airbnb.animate .perspective_container {
+	left:75%;
+}
+
+.effect-airbnb .outer-nav a {
+	opacity: 0;
+	-webkit-transform: translateX(-200px);
+	transform: translateX(-200px);
+	-webkit-transition: -webkit-transform 0.8s, opacity 0.8s;
+	transition: transform 0.8s, opacity 0.8s;
+}
+
+.effect-airbnb.animate .outer-nav a {
+	opacity: 1;
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+}

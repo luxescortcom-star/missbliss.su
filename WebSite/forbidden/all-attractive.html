@@ -1,0 +1,943 @@
+<?php
+
+ob_start("ob_gzhandler");
+
+require_once '../mobile-detect/Mobile_Detect.php';
+$detect = new Mobile_Detect;
+
+if ( $detect->isMobile() ) {
+    $folder='b2';
+    $lazy='class="lazyload"';
+    $data='data-';
+    $viber='<a href="viber://chat?number=79219000318">Viber</a>';
+} else {
+    $folder='b3';
+    $viber='<a title="Должен быть устоновлен Viber для ПК" href="viber://chat?number=+79219000318">Viber</a>';
+}
+
+if( $detect->isTablet() ){
+    $folder='b3';
+    $lazy='class="lazyload"';
+    $data='data-';
+}
+
+
+
+
+$now_hours = date('G');
+if($now_hours<8){$time='Доброй%20ночи';}
+elseif($now_hours<12 && $now_hours>=8 ) {$time='Доброе%20утро';}
+elseif($now_hours>=12 && $now_hours<17){$time='Добрый%20день';}
+elseif($now_hours>=17 && $now_hours<=23){$time='Добрый%20вечер';}
+
+require_once('../geoip/geoplugin.class.php');
+$geoplugin = new geoPlugin();
+$geoplugin->locate();
+$city_code = $geoplugin->city;
+$countryCode = $geoplugin->countryCode;
+$countryCode = strtolower($countryCode);
+
+if ($countryCode.'.'.$city_code=='ru.St Petersburg')
+{
+$css='/min/g=portfolio';
+$link1='4il.us/spb';
+$link2='m-b.su/spb';
+$link3='m-b.su/spb';
+$link4='m-b.su/msk';
+$link5='pic.4il.us/msk';
+$link6='msk.4il.us/msk';
+$redir5='jasmin/jasmin';
+$ilink='ic.4il.us';
+$slink='4il.us/social';
+$phone='79219000318';
+$iPhone='+7 (921) 9000-318';
+$telegram='The_MissBliss_Agency';
+$masha_spb='hide';
+}
+
+
+elseif ($countryCode.'.'.$city_code=='ru.Moscow')
+{
+$css='/min/g=portfolio-msk';
+$link1='msk.4il.us/spb';
+$link2='pic.4il.us/spb';
+$link3='4il.us/spb';
+$link4='msk.4il.us/msk';
+$link5='pic.4il.us/msk';
+$link6='m-b.su/msk';
+$redir5='jasmin/jasmin';
+$ilink='msk.4il.us/i';
+$slink='msk.4il.us/social';
+$telegram='AndrewAngels';
+$phone='79214248822';
+$iPhone='+7 (921) 424-88-22';
+}
+elseif (($countryCode.'.'.$city_code=='ru.Stavropol')OR($countryCode.'.'.$city_code=='ru.Kemerovo'))
+{
+$css='/min/g=portfolio-msk';
+$link1='msk.4il.us/spb';
+$link2='pic.4il.us/spb';
+$link3='4il.us/spb';
+$link4='msk.4il.us/msk';
+$link5='pic.4il.us/msk';
+$link6='m-b.su/msk';
+$ilink='msk.4il.us/i';
+$slink='msk.4il.us/social';
+$telegram='AndrewAngels';
+$veronica='hide';
+$phone='79214248822';
+$iPhone='+7 (921) 424-88-22';
+}
+
+elseif (($countryCode=='kz')OR($countryCode=='az')OR($countryCode=='ge')OR($countryCode=='by')OR($countryCode=='ru'))
+{
+$css='/min/g=portfolio-msk';
+$link1='msk.4il.us/spb';
+$link2='pic.4il.us/spb';
+$link3='4il.us/spb';
+$link4='msk.4il.us/msk';
+$link5='pic.4il.us/msk';
+$link6='m-b.su/msk';
+$redir5='jasmin/jasmin';
+$ilink='msk.4il.us/i';
+$slink='msk.4il.us/social';
+$phone='79214248822';
+$iPhone='+7 (921) 424-88-22';
+
+$telegram='The_MissBliss_Agency';
+}
+
+
+elseif (($countryCode=='us')OR($countryCode=='ca')OR($countryCode=='mx')OR($countryCode=='ag')OR($countryCode=='br')OR($countryCode=='cl'))
+{
+$css='/min/g=portfolio-us';
+$link1='missbliss.us/spb';
+$link2='missbliss.us/spb';
+$link3='missbliss.us/spb';
+$link4='missbliss.us/msk';
+$link5='missbliss.us/msk';
+$link6='missbliss.us/msk';
+$redir5='jasmin/jasmin';
+$ilink='missbliss.us/i';
+$slink='missbliss.us/social';
+$phone='79214248822';
+$iPhone='+7 (921) 424-88-22';
+$telegram='The_MissBliss_Agency';
+}
+elseif (($countryCode=='fi')OR($countryCode=='lt')OR($countryCode=='ee')OR($countryCode=='lv'))
+{
+$css='/min/g=portfolio';
+$link1='4il.us/spb';
+$link2='m-b.su/spb';
+$link3='m-b.su/spb';
+$link4='m-b.su/msk';
+$link5='pic.4il.us/msk';
+$link6='msk.4il.us/msk';
+$redir5='jasmin/jasmin';
+$ilink='ic.4il.us';
+$slink='4il.us/social';
+$phone='79219000318';
+$iPhone='+7 (921) 9000-318';
+$telegram='The_MissBliss_Agency';
+}
+else
+{
+$css='/min/g=portfolio-de';
+$link1='m-b.su/spb';
+$link2='m-b.su/spb';
+$link3='m-b.su/spb';
+$link4='m-b.su/msk';
+$link5='m-b.su/msk';
+$link6='m-b.su/msk';
+$redir5='jasmin/jasmin';
+$ilink='ic.m-b.su';
+$slink='m-b.su/social';
+$phone='79214248822';
+$iPhone='+7 (921) 424-88-22';
+$telegram='The_MissBliss_Agency';
+}
+?>
+<!DOCTYPE html>
+<html lang="ru">
+<head prefix="og: http://ogp.me/ns#">
+<meta name="theme-color" content="#050f35">
+<meta name=robots content="index,follow">
+<meta charset="utf-8">
+<link rel="alternate" hreflang="en" href="https://missbliss.ru/en/attractive/" />
+<link rel="alternate" hreflang="x-default" href="https://missbliss.ru/en/attractive/"/>
+<!--[if ie]><meta http-equiv='X-UA-Compatible' content="IE=edge,IE=9,IE=8,chrome=1" /><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+<title>Модели, эскортницы, эскорт модели | Эскорт Агентство &laquo;МиссБлисс&raquo; Москва и Санкт-Петербург</title>
+<meta name=keywords content="эскорт модели, эскортницы, модели эскорта,модели эскорта москва, экскорт модели москва, эскорт модели спб, эскорт модели мисс блисс">
+<meta name=description content="Модели, эскортницы, эскорт модели.  Эскорт Агентство &laquo;МиссБлисс&raquo; в Москва и Санкт-Петербурге предлагает красивых моделей для эскорта">
+<meta name=author content="vk.com/precious.dream">
+<link rel="canonical" href="https://missbliss.ru/about/" >
+<meta property="og:url" content="https://missbliss.ru/attractive/" >
+<meta property="og:locale" content="ru" />
+<meta property="og:site_name" content="Эскорт Агентство &laquo;МиссБлисс&raquo;">
+<meta property="og:title" content="Модели, эскортницы, эскорт модели" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Модели, эскортницы, эскорт модели.  Эскорт Агентство &laquo;МиссБлисс&raquo; в Москва и Санкт-Петербурге предлагает красивых моделей для эскорта. Лови Момент! iPhone: +7(921)9000318" />
+<meta property="og:image" content="https://<?=$slink ?>/rita/rita@2x.jpg" />
+<meta property="og:image:secure_url" content="https://<?=$slink ?>/rita/rita@2x.jpg" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="Если хочешь иметь досуг, не теряй времени даром. Лови Момент! iPhone: +7(921)9000318" />
+<meta name="twitter:title" content="Молодые и красивые девушки" />
+<meta name="twitter:image" content="https://<?=$slink ?>/mrita/rita@2x.jpg" />
+<link rel="preload stylesheet" href="<?=$css ?>" as="style" type="text/css">
+<link rel="preload stylesheet" href="/min/g=fonts" as="style" type="text/css">
+<link rel="preload" href="/css/fonts/futuris-cyrillic.woff" as="font" crossorigin="anonymous">
+<link rel="preload" href="/css/fonts/rosa.ttf" as="font" crossorigin="anonymous">
+<link rel="preload" href="/css/webfonts/fa-solid-900.woff2" as="font" crossorigin="anonymous">
+<link rel="preload" href="/css/webfonts/fa-brands-400.woff2" as="font" crossorigin="anonymous">
+
+</head>
+<div class="all-elements">
+<div id="perspective" class="perspective effect-airbnb">
+<div class="outer-nav"><div class="inner-nav">
+<div class="nav-item"> <a href='javascript:location.assign("/")' class="active-item">МиссБлисс</a>
+</div>
+<div class="nav-item">
+  <!--noindex--><a href="#" rel="nofollow" class="deploy-nav-sub-item active-item">Модели</a><!--/noindex-->
+  <div class="nav-sub-item">
+    <a href='javascript:location.assign("/escorts/")'>Все наши девушки</a>
+	<a href='javascript:location.assign("/favorites/")'>Фаворитки</a>
+    <a href='javascript:location.assign("/attractive/")'>Фотомодели</a>
+</div>
+</div>
+<div class="nav-item">
+<a href="#" class="deploy-nav-sub-item active-item">Санкт-Петербург</a><div class="nav-sub-item">	<a href='javascript:location.assign("/spb/")'>Все Модели</a>
+    <a href='javascript:location.assign("/spb/favorites/")'>Фаворитки</a>
+    <a href='javascript:location.assign("/spb/attractive/")'>Фотомодели</a>
+</div>
+</div>
+  <div class="nav-item">    <!--noindex--><a href="#" rel="nofollow" class="deploy-nav-sub-item">Москва </a><!--/noindex-->
+<div class="nav-sub-item">
+<a href='javascript:location.assign("/moscow/")' >Все Модели</a>
+<a href='javascript:location.assign("/moscow/favorites/")' >Фаворитки</a>
+<a href='javascript:location.assign("/moscow/attractive/")'>Фотомодели</a>
+</div>
+</div>
+  <div class="nav-item">    <!--noindex--><a href="#" rel="nofollow" class="deploy-nav-sub-item ">Кастинг</a><!--/noindex-->
+	<div class="nav-sub-item">	<p>Приглашаем девушек <br>проживающих<br> в следующих городах России</p>	<a href='javascript:location.assign("/casting/")'>Москва</a>
+	<a href='javascript:location.assign("/casting/")'>Санкт-Петербург</a>
+	<a href='javascript:location.assign("/casting/")'>Краснодар</a>
+	<a href='javascript:location.assign("/casting/")'>Ростов</a>
+	<a href='javascript:location.assign("/casting/")'>Сочи</a>
+	<a href='javascript:location.assign("/casting/")'>Екатеринбург</a>
+	<a href='javascript:location.assign("/casting/")'>Самара</a>
+	<a href='javascript:location.assign("/casting/")'>Казань</a>
+	<a href='javascript:location.assign("/casting/")'>Новосибирск</a>
+	<a href='javascript:location.assign("/casting/")' >Владивосток</a>
+	<a href='javascript:location.assign("/casting/")' >Калининград</a>
+</div>
+</div><div class="nav-item">
+  <a href='javascript:location.assign("/contact/")' >Контакт</a>
+</div> <div class="nav-item">
+  <!--noindex--><a id="closeMenu" href="#" rel="nofollow">Закрыть</a><!--/noindex-->
+</div>
+</div>
+</div>
+<div class="perspective_container">
+<div id="top-m" class="default">
+<ul class="filter group">
+<li class="current all"><!--noindex--><a href="#модели" rel="nofollow">Модели</a><!--/noindex-->
+<li class="мск"><!--noindex--><a href="#мск" rel="nofollow">Москва</a><!--/noindex-->
+<li class="спб"><!--noindex--><a href="#спб" rel="nofollow">Санкт-Петербург</a><!--/noindex-->
+<li class="новенькая"><!--noindex--><a href="#новенькие" rel="nofollow">новенькие</a><!--/noindex-->
+<li class="блондинка"><!--noindex--><a href="#блондинки" rel="nofollow">блондинки</a><!--/noindex-->
+<li class="брюнетка"><!--noindex--><a href="#брюнетки" rel="nofollow">брюнетки</a><!--/noindex-->
+<li class="busty"><!--noindex--><a href="#busty" rel="nofollow" >Busty</a><!--/noindex-->
+<li class="би"><!--noindex--><a href="#би-секси" rel="nofollow">Би-секси</a><!--/noindex-->
+<li class="рекомендую"><!--noindex--><a href="#рекомендую" rel="nofollow">Рекомендую!</a><!--/noindex-->
+</ul>
+</div>
+<div id="header-bg"></div>
+<div id="sub-header-bg"></div>
+<div id="body-wrapper" class="wrapper">
+<div id="header">
+<a href="#" rel="nofollow" id="logo"></a>
+<ul id="navigation">
+<li><a href="/" title="Эскорт агентство МиссБлисс, Эскорт в Москве и Санкт-Петербурге">Агентство</a>
+<ul>
+<li><a href="/about/" title="Услуги эскорт агентства МиссБлисс">Услуги</a>
+</ul>
+<li class="current"><a href="/escorts/" title="Эскорт Модели, фаворитки Москвы и Санкт-Петербурга, эскорт агентство МиссБлисс">Модели</a>
+<ul>
+<li><a href="/moscow/" title="Эскорт модели, фаворитки, эскортницы Москвы, эскорт агентство МиссБлисс">Москва</a>
+<li><a href="/spb/" title="Эскорт модели, фаворитки, эскортницы в Санкт-Петербурге, эскорт-агентство МиссБлисс">Санкт-Петербург</a>
+</ul>
+<li><a href="/rates/" title="Цены, стоимость эскорт услуг, эскорт агентства МиссБлисс">Цены</a>
+<li><a href="/casting/" title="Вакансии для девушек в эскорт-агентстве МиссБлисс">Вакансии</a>
+<li><a href="/contact/" title="Агентство МиссБлисс, Контакты">Контакт</a>
+<li class="flag"><a href="/en/attractive/" title="Attractive Escort Models of The MissBliss Agency"><i id="flag_en"></i>English</a>
+</ul>
+</div>
+<div id="content" class="container clearfix">
+<p id="back-top" style="display: block;">
+<a href="#top"><span></span></a>
+</p>
+<ul class="filter group">
+<li class="current all"><!--noindex--><a href="#модели" rel="nofollow">Модели</a><!--/noindex-->
+<li class="мск"><!--noindex--><a href="#мск" rel="nofollow">Москва</a><!--/noindex-->
+<li class="спб"><!--noindex--><a href="#спб" rel="nofollow">Санкт-Петербург</a><!--/noindex-->
+<li class="новенькая"><!--noindex--><a href="#новенькие" rel="nofollow">новенькие</a><!--/noindex-->
+<li class="блондинка"><!--noindex--><a href="#блондинки" rel="nofollow">блондинки</a><!--/noindex-->
+<li class="брюнетка"><!--noindex--><a href="#брюнетки" rel="nofollow">брюнетки</a><!--/noindex-->
+<li class="busty"><!--noindex--><a href="#busty" rel="nofollow" >Busty</a><!--/noindex-->
+<li class="би"><!--noindex--><a href="#би-секси" rel="nofollow">Би-секси</a><!--/noindex-->
+<li class="рекомендую"><!--noindex--><a href="#рекомендую" rel="nofollow">Рекомендую!</a><!--/noindex-->
+</ul>
+<div id="projects3">
+<ul class="portfolio group">
+
+<li class="item" data-id=id-39 data-type="новенькая модель busty брюнетка спб"><!-- Анфиса -->
+<div class="view overlay">
+<picture>
+ <source rel="preconnect" media="(max-width: 499px)  and  (orientation: portrait)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link3 ?>/anfisa/anfisa@p1x.jp2, https://<?=$link2 ?>/anfisa/anfisa@p2x.jp2 2x, https://<?=$link1 ?>/anfisa/anfisa@p3x.jp2 3x"   />
+  <source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link2 ?>/anfisa/anfisa@1x.jp2, https://<?=$link2 ?>/anfisa/anfisa@2x.jp2 2x, https://<?=$link2 ?>/anfisa/anfisa@3x.jp2 3x" />
+ <img alt="Анфиса, шикарная с красивой фигурой, молодая эмоциональная и нежная в душе Леди. МиссБлисс Санкт-Петербург" <?=$lazy ?> <?=$data ?>src="https://<?=$link2 ?>/anfisa/anfisa@1x.jp2" title="Анфиса, шикарная с красивой фигурой, молодая эмоциональная и нежная в душе Леди. МиссБлисс Санкт-Петербург" longdesc="/spb/attractive/anfisa/#description">
+</picture>
+<a href="/spb/attractive/anfisa/" title="Анфиса, шикарная с красивой фигурой, молодая эмоциональная и нежная в душе Леди. МиссБлисс Санкт-Петербург">
+<div class="mask">
+<h3>Анфиса</h3> <h5>Санкт-Петербург</h5><p>23 года, рост: 171, вес: 80 кг</p>
+</div>
+</a>
+<a href="https://<?=$link1 ?>/anfisa/6.jp2" class="pP[MissBliss]" rel="preconnect" title="Анфиса">
+<i class="fas fa-gem"></i></a>
+</div>
+
+<li class="item <?=$nika ?>" data-id=id-38 data-type="новенькая молодая модель рекомендую брюнетка мск"><!-- Ника -->
+<div class="view overlay">
+<picture>
+<source rel="preconnect" as="image" media="(max-width: 499px)  and  (orientation: portrait)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link6 ?>/nika/nika@p1x.jp2, https://<?=$link6 ?>/nika/nika@p2x.jp2 2x, https://<?=$link6 ?>/nika/nika@p3x.jp2 3x"     />
+<source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link6 ?>/nika/nika@1x.jp2, https://<?=$link6 ?>/nika/nika@2x.jp2 2x, https://<?=$link6 ?>/nika/nika@3x.jp2 3x"   /> <img alt="Ника, красивая юная искусительница" rel="preconnect" <?=$lazy ?> <?=$data ?>src="https://<?=$link6 ?>/nika/nika@1x.jp2" title="Ника, красивая юная искусительница" longdesc="/moscow/attractive/nika/#description">
+</picture>
+<a href="/moscow/attractive/nika/" title="Ника, красивая юная искусительница">
+<div class="mask">
+<h3>Ника</h3><h6>Москва</h6><p>20 лет, рост: 167 см, вес: 47 кг</p>
+</div>
+</a>
+<a href="https://<?=$link6 ?>/nika/10.jp2" class="pP[MissBliss]" rel="preconnect" title="Ника">
+<i class="fas fa-gem"></i></a>
+</div>
+
+<li class="item" data-id=id-37 data-type="взрослая модель рекомендую блондинка мск"><!-- Варвара -->
+<div class="view overlay">
+<picture>
+<source rel="preconnect" media="(max-width: 499px)  and  (orientation: portrait)" <?=$data ?>srcset="https://<?=$link4 ?>/varvara/varvara@p1x.jpg, https://<?=$link4 ?>/varvara/varvara@p2x.jpg 2x, https://<?=$link4 ?>/varvara/varvara@p3x.jpg 3x" <?=$lazy ?>/>
+<source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$data ?>srcset="https://<?=$link4 ?>/varvara/varvara@1x.jpg, https://<?=$link4 ?>/varvara/varvara@2x.jpg 2x, https://<?=$link4 ?>/varvara/varvara@3x.jpg 3x" <?=$lazy ?> />
+<img alt="Варя" <?=$lazy ?> <?=$data ?>src="https://<?=$link4 ?>/varvara/varvara@1x.jpg" rel="preconnect"
+title="Варя, красивая любвеобильная блондинка" longdesc="/moscow/attractive/varvara/#description">
+</picture>
+<a href="/moscow/attractive/varvara/" title="Варя, красивая любвеобильная блондинка">
+<div class="mask">
+<h3>Варя</h3><h6>Москва</h6><p>26 лет, рост: 171 cm, вес: 55 кг</p>
+</div>
+</a>
+<a href="https://<?=$link4 ?>/varvara/7.jpg" class="pP[MissBliss]"  rel="preconnect" title="Варя">
+<i class="fas fa-gem"></i></a>
+</div>
+
+<li class="item" data-id=id-36 data-type="взрослая модель би рекомендую брюнетка спб"><!-- Рита -->
+<div class="view overlay">
+<picture>
+<source rel="preconnect"  media="(max-width: 499px)  and  (orientation: portrait)" <?=$data ?>srcset="https://<?=$link3 ?>/rita/rita@p1x.jpg, https://<?=$link3 ?>/rita/rita@p2x.jpg 2x, https://<?=$link3 ?>/rita/rita@p3x.jpg 3x" <?=$lazy ?> />
+<source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$data ?>srcset="https://<?=$link3 ?>/rita/rita@1x.jpg, https://<?=$link3 ?>/rita/rita@2x.jpg 2x, https://<?=$link3 ?>/rita/rita@3x.jpg 3x" <?=$lazy ?> />
+<img alt="Рита" <?=$lazy ?> <?=$data ?>src="https://<?=$link1 ?>/rita/rita@1x.jpg" rel="preconnect"
+title="Рита, очень красивая, милая и нежная девушка" longdesc="/spb/attractive/rita/#description">
+</picture>
+<a href="/spb/attractive/rita/" title="Рита, очень красивая, милая и нежная девушка">
+<div class="mask">
+<h3>Рита</h3><h5>Санкт-Петербург</h5><p>25 лет, рост: 169, вес: 53 кг</p>
+</div>
+</a>
+<a href="https://<?=$link1 ?>/rita/15.jpg" class="pP[MissBliss]"  rel="preconnect" title="Rita">
+<i class="fas fa-gem"></i></a>
+</div>
+
+<li class="item" data-id=id-35 data-type="новенькая модель рекомендую би брюнетка спб"><!-- Катя -->
+<div class="view overlay">
+<picture>
+<source rel="preconnect" media="(max-width: 499px)  and  (orientation: portrait)" <?=$data ?>srcset="https://<?=$link2 ?>/katy/katy@p1x.jp2, https://<?=$link2 ?>/katy/katy@p2x.jp2 2x, https://<?=$link2 ?>/katy/katy@p3x.jp2 3x" <?=$lazy ?>   />
+<source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$data ?>srcset="https://<?=$link2 ?>/katy/katy@1x.jp2, https://<?=$link2 ?>/katy/katy@2x.jp2 2x, https://<?=$link2 ?>/katy/katy@3x.jp2 3x" <?=$lazy ?>   />
+<img alt="Катя красивая сексуальная малышка в Санкт-Петербурге. Агентство МиссБлисс - элитный досуг" <?=$lazy ?> <?=$data ?>src="https://<?=$link3 ?>/katy/katy@1x.jp2"
+  title="Катя красивая сексуальная малышка в Санкт-Петербурге. Агентство МиссБлисс - элитный досуг" longdesc="/spb/attractive/katy/#description">
+</picture>
+<a href="/spb/attractive/katy/" title="Катя красивая сексуальная малышка в Санкт-Петербурге. Агентство МиссБлисс - элитный досуг">
+<div class="mask">
+	<h3>Катя</h3> <h5>Санкт-Петербург</h5><p>19 лет, рост: 155, вес: 49 кг</p>
+</div>
+</a>
+<a href="https://<?=$link2 ?>/katy/13.jp2" class="pP[MissBliss]" rel="preconnect" title="Катя">
+<i class="fas fa-gem"></i></a>
+</div>
+
+
+
+<li class="item <?=$mila ?>" data-id=id-33 data-type="молодая модель блондинка мск"><!-- Мила -->
+<div class="view overlay">
+<picture>
+<source rel="preconnect" as="image" media="(max-width: 499px)  and  (orientation: portrait)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link6 ?>/mila/mila@p1x.jp2, https://<?=$link6 ?>/mila/mila@p2x.jp2 2x, https://<?=$link6 ?>/mila/mila@p3x.jp2 3x"     />
+<source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link6 ?>/mila/mila@1x.jp2, https://<?=$link6 ?>/mila/mila@2x.jp2 2x, https://<?=$link6 ?>/mila/mila@3x.jp2 3x"   /> <img alt="Мила, уникальная прекрасная девушка, малышка на миллион" rel="preconnect" <?=$lazy ?> <?=$data ?>src="https://<?=$link6 ?>/mila/mila@1x.jp2" title="Мила, уникальная прекрасная девушка, малышка на миллион" longdesc="/moscow/attractive/mila/#description">
+</picture>
+<a href="/moscow/attractive/mila/" title="Мила, уникальная прекрасная девушка, малышка на миллион">
+<div class="mask">
+<h3>Мила</h3><h6>Москва</h6><p>18 лет, рост: 168 см, вес: 53 кг</p>
+</div>
+</a>
+<a href="https://<?=$link6 ?>/mila/17.jp2" class="pP[MissBliss]" rel="preconnect" title="Мила">
+<i class="fas fa-gem"></i></a>
+</div>
+
+
+<li class="item" data-id=id-31 data-type="молодая модель би брюнетка рекомендую мск"><!-- Евгения -->
+<div class="view overlay">
+<picture>
+<source rel="preconnect"  media="(max-width: 499px)  and  (orientation: portrait)" <?=$data ?>srcset="https://<?=$link6 ?>/genie/genie@p1x.jpg, https://<?=$link6 ?>/genie/genie@p2x.jpg 2x, https://<?=$link6 ?>/genie/genie@p3x.jpg 3x" <?=$lazy ?> />
+<source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$data ?>srcset="https://<?=$link6 ?>/genie/genie@1x.jpg, https://<?=$link5 ?>/genie/genie@2x.jpg 2x, https://<?=$link6 ?>/genie/genie@3x.jpg 3x" <?=$lazy ?> />
+<img alt="Евгения" <?=$lazy ?> <?=$data ?>src="https://<?=$link6 ?>/genie/genie@1x.jpg" rel="preconnect"
+  title="Евгения, знойная аппетитная красавица" longdesc="/moscow/attractive/genie/#description">
+</picture>
+<a href="/moscow/attractive/genie/" title="Евгения, знойная аппетитная красавица">
+<div class="mask">
+<h3>Евгения</h3><h6>Москва</h6><p>21 год, рост: 171, вес: 56 кг</p>
+</div>
+</a>
+<a href="https://<?=$link6 ?>/genie/6.jpg" class="pP[MissBliss]"  rel="preconnect" title="Евгения">
+<i class="fas fa-gem"></i></a>
+</div>
+
+
+<li class="item" data-id=id-30 data-type="новенькая модель брюнетка рекомендую спб"><!-- Софи -->
+<div class="view overlay">
+<picture>
+<source rel="preconnect" media="(max-width: 499px)  and  (orientation: portrait)" <?=$data ?>srcset="https://<?=$link2 ?>/sofy/sofy@p1x.jp2, https://<?=$link2 ?>/sofy/sofy@p2x.jp2 2x, https://<?=$link2 ?>/sofy/sofy@p3x.jp2 3x" <?=$lazy ?>   />
+<source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$data ?>srcset="https://<?=$link2 ?>/sofy/sofy@1x.jp2, https://<?=$link2 ?>/sofy/sofy@2x.jp2 2x, https://<?=$link2 ?>/sofy/sofy@3x.jp2 3x" <?=$lazy ?>   />
+<img alt="София, роскошная стильная любовница в Санкт-Петербурге" <?=$lazy ?> <?=$data ?>src="https://<?=$link3 ?>/sofy/sofy@1x.jp2"
+  title="София, роскошная стильная любовница в Санкт-Петербурге" longdesc="/spb/attractive/sofy/#description">
+</picture>
+<a href="/spb/attractive/sofy/" title="София, роскошная стильная любовница в Санкт-Петербурге">
+<div class="mask">
+	<h3>София</h3> <h5>Санкт-Петербург</h5><p>25 лет, рост: 163, вес: 41 кг</p>
+</div>
+</a>
+<a href="https://<?=$link2 ?>/sofy/2.jp2" class="pP[MissBliss]" rel="preconnect" title="София">
+<i class="fas fa-gem"></i></a>
+</div>
+
+
+<li class="item" data-id=id-29 data-type="новенькая взрослая busty модель блондинка спб"><!--  Виктория -->
+<div class="view overlay">
+<picture>
+<source rel="preconnect" media="(max-width: 499px)  and  (orientation: portrait)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link3 ?>/victoria/victoria@p1x.jp2, https://<?=$link3 ?>/victoria/victoria@p2x.jp2 2x, https://<?=$link3 ?>/victoria/victoria@p3x.jp2 3x"  />
+<source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link3 ?>/victoria/victoria@1x.jp2, https://<?=$link3 ?>/victoria/victoria@2x.jp2 2x, https://<?=$link3 ?>/victoria/victoria@3x.jp2 3x"  />
+<img alt="Виктория, шикарная с красивой фигурой, взрослая эмоциональная и молодая в душе Леди. МиссБлисс Санкт-Петербург" <?=$lazy ?> <?=$data ?>src="https://<?=$link1 ?>/victoria/victoria@1x.jp2" rel="preconnect" title="Виктория, шикарная с красивой фигурой, взрослая эмоциональная и молодая в душе Леди. МиссБлисс Санкт-Петербург" longdesc="/spb/attractive/victoria/#description">
+</picture>
+<a href="/spb/attractive/victoria/" title="Виктория, шикарная с красивой фигурой, взрослая эмоциональная и молодая в душе Леди. МиссБлисс Санкт-Петербург">
+<div class="mask">
+<h3>Виктория</h3> <h5>Санкт-Петербург</h5><p>32 года, рост: 153 см, вес: 56 кг</p>
+</div>
+</a>
+<a href="https://<?=$link2 ?>/victoria/9.jp2" class="pP[MissBliss]"  rel="preconnect" title="Виктория">
+<i class="fas fa-gem"></i></a>
+</div>
+
+  <li class="item <?=$vera ?>" data-id=id-28 data-type="новенькая молодая модель блондинка мск"><!-- Вера -->
+<div class="view overlay">
+<picture>
+<source rel="preload" as="image" media="(max-width: 499px)  and  (orientation: portrait)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link6 ?>/vera/vera@p1x.jp2, https://<?=$link6 ?>/vera/vera@p2x.jp2 2x, https://<?=$link6 ?>/vera/vera@p3x.jp2 3x"     />
+<source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link6 ?>/vera/vera@1x.jp2, https://<?=$link6 ?>/vera/vera@2x.jp2 2x, https://<?=$link6 ?>/vera/vera@3x.jp2 3x"   /> <img alt="Вера, яркая красивая блондинка" rel="preconnect" <?=$lazy ?> <?=$data ?>src="https://<?=$link6 ?>/vera/vera@1x.jp2" title="Вера, яркая красивая блондинка" longdesc="/moscow/attractive/vera/#description">
+</picture>
+<a href="/moscow/attractive/vera/" title="Вера, яркая красивая блондинка">
+<div class="mask">
+<h3>Вера</h3><h6>Москва</h6><p>18 лет, рост: 170 см, вес: 55 кг</p>
+</div>
+</a>
+<a href="https://<?=$link6 ?>/vera/12.jp2" class="pP[MissBliss]" rel="preconnect" title="Вера">
+<i class="fas fa-gem"></i></a>
+</div>
+
+
+<li class="item" data-id=id-27 data-type="модель би брюнетка рекомендую спб"><!-- Алекса -->
+<div class="view overlay">
+<picture>
+ <source rel="preconnect" media="(max-width: 499px)  and  (orientation: portrait)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link3 ?>/alexa/alexa@p1x.jp2, https://<?=$link2 ?>/alexa/alexa@p2x.jp2 2x, https://<?=$link1 ?>/alexa/alexa@p3x.jp2 3x"   />
+  <source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link2 ?>/alexa/alexa@1x.jp2, https://<?=$link2 ?>/alexa/alexa@2x.jp2 2x, https://<?=$link2 ?>/alexa/alexa@3x.jp2 3x" />
+ <img alt="Алекса" <?=$lazy ?> <?=$data ?>src="https://<?=$link2 ?>/alexa/alexa@1x.jp2" title="Алекса, яркая красивая Модель" longdesc="/spb/attractive/alexa/#description">
+</picture>
+<a href="/spb/attractive/alexa/" title="Алекса, яркая красивая Модель">
+<div class="mask">
+<h3>Алекса</h3> <h5>Санкт-Петербург</h5><p>28 лет, рост: 168, вес: 54 кг</p>
+</div>
+</a>
+<a href="https://<?=$link1 ?>/alexa/10.jp2" class="pP[MissBliss]" rel="preconnect" title="Алекса">
+<i class="fas fa-gem"></i></a>
+</div>
+
+<li class="item <?=$goldie ?>" data-id=id-26 data-type="новенькая молодая модель блондинка мск"><!-- Злата -->
+<div class="view overlay">
+<picture>
+<source rel="preload" as="image" media="(max-width: 499px)  and  (orientation: portrait)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link5 ?>/goldie/goldie@p1x.jp2, https://<?=$link5 ?>/goldie/goldie@p2x.jp2 2x, https://<?=$link5 ?>/goldie/goldie@p3x.jp2 3x"     />
+<source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link4 ?>/goldie/goldie@1x.jp2, https://<?=$link5 ?>/goldie/goldie@2x.jp2 2x, https://<?=$link5 ?>/goldie/goldie@3x.jp2 3x"   /> <img alt="Маша, роскошная красивая искусительница" rel="preconnect" <?=$lazy ?> <?=$data ?>src="https://<?=$link5 ?>/goldie/goldie@1x.jp2" title="Злата, юная стройная миниатюрная красивая модель в Москве" longdesc="/moscow/attractive/goldie/#description">
+</picture>
+<a href="/moscow/attractive/goldie/" title="Злата, юная стройная миниатюрная красивая модель в Москве">
+<div class="mask msk">
+<h3>Злата</h3><h6>Москва</h6><p>18 лет, рост: 160 см, вес: 50 кг</p>
+</div>
+</a>
+<a href="https://<?=$link5 ?>/goldie/9.jp2" class="pP[MissBliss]" rel="preconnect" title=Злата>
+<i class="fas fa-gem"></i></a>
+</div>
+
+<li class="item <?=$masha_msk ?>" data-id=id-25 data-type="новенькая молодая модель би брюнетка мск"><!-- Маша -->
+<div class="view overlay">
+<picture>
+<source rel="preconnect" media="(max-width: 499px)  and  (orientation: portrait)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link5 ?>/masha/masha@p1x.jp2, https://<?=$link5 ?>/masha/masha@p2x.jp2 2x, https://<?=$link5 ?>/masha/masha@p3x.jp2 3x"     />
+<source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link4 ?>/masha/masha@1x.jp2, https://<?=$link5 ?>/masha/masha@2x.jp2 2x, https://<?=$link5 ?>/masha/masha@3x.jp2 3x"   /> <img alt="Маша, роскошная красивая искусительница" rel="preconnect" <?=$lazy ?> <?=$data ?>src="https://<?=$link5 ?>/masha/masha@1x.jp2" title="Маша, роскошная красивая искусительница" longdesc="/moscow/attractive/masha/#description">
+</picture>
+<a href="/moscow/attractive/masha/" title="Маша, роскошная красивая искусительница">
+<div class="mask">
+<h3>Маша</h3><h6>Москва</h6> <p>22 года, рост: 166 см, вес: 50 кг</p>
+</div>
+</a>
+<a href="https://<?=$link5 ?>/masha/25.jp2" class="pP[MissBliss]" rel="preconnect" title=Маша>
+<i class="fas fa-gem"></i></a>
+</div>
+
+<li class="item" data-id=id-24 data-type="модель брюнетка рекомендую би мск"><!-- Ульяна -->
+<div class="view overlay">
+<picture>
+<source rel="preconnect" media="(max-width: 499px)  and  (orientation: portrait)" <?=$data ?>srcset="https://<?=$link4 ?>/ulyana/ulyana@p1x.jpg, https://<?=$link4 ?>/ulyana/ulyana@p2x.jpg 2x, https://<?=$link4 ?>/ulyana/ulyana@p3x.jpg 3x" <?=$lazy ?> />
+<source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$data ?>srcset="https://<?=$link4 ?>/ulyana/ulyana@1x.jpg, https://<?=$link4 ?>/ulyana/ulyana@2x.jpg 2x, https://<?=$link4 ?>/ulyana/ulyana@3x.jpg 3x" <?=$lazy ?> />
+<img rel="preconnect" alt="Ульяна" <?=$lazy ?> <?=$data ?>src="https://<?=$link4 ?>/ulyana/ulyana@1x.jpg" title="Ульяна, уникальная прекрасная девушка, юная супермодель" longdesc="/moscow/attractive/ulyana/#description">
+</picture>
+<a  href="/moscow/attractive/ulyana/" title="Ульяна, уникальная прекрасная девушка, юная супермодель">
+<div class="mask">
+<h3>Ульяна</h3><h6>Москва</h6><p>18 лет, рост: 170, вес: 54 кг</p>
+</div>
+</a>
+<a rel="preconnect" href="https://<?=$link4 ?>/ulyana/4.jpg" class="pP[MissBliss]"  rel="preconnect" title="Ульяна">
+<i class="fas fa-gem"></i></a>
+</div>
+
+<li class="item <?=$alyona ?>" data-id=id-23 data-type="новенькая молодая модель брюнетка мск"><!-- Алёна -->
+<div class="view overlay">
+<picture>
+<source rel="preconnect" as="image" media="(max-width: 499px)  and  (orientation: portrait)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link6 ?>/alyona/alyona@p1x.jp2, https://<?=$link6 ?>/alyona/alyona@p2x.jp2 2x, https://<?=$link6 ?>/alyona/alyona@p3x.jp2 3x"     />
+<source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link6 ?>/alyona/alyona@1x.jp2, https://<?=$link6 ?>/alyona/alyona@2x.jp2 2x, https://<?=$link6 ?>/alyona/alyona@3x.jp2 3x"   /> <img alt="Вера, яркая красивая блондинка" rel="preconnect" <?=$lazy ?> <?=$data ?>src="https://<?=$link6 ?>/alyona/alyona@1x.jp2" title="Вера, яркая красивая блондинка" longdesc="/moscow/attractive/alyona/#description">
+</picture>
+<a href="/moscow/attractive/alyona/" title="Ника, красивая юная искусительница">
+<div class="mask">
+<h3>Алёна</h3><h6>Москва</h6><p>29 лет, рост: 165 см, вес: 55 кг</p>
+</div>
+</a>
+<a href="https://<?=$link6 ?>/alyona/6.jp2" class="pP[MissBliss]" rel="preconnect" title=Алёна>
+<i class="fas fa-gem"></i></a>
+</div>
+
+
+<li class="item <?=$sofy ?>" data-id=id-22 data-type="молодая модель  busty би брюнетка мск"><!-- София -->
+<div class="view overlay">
+<picture>
+<source rel="preload" as="image" media="(max-width: 499px)  and  (orientation: portrait)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link4 ?>/sofy/sofy@p1x.jpg, https://<?=$link4 ?>/sofy/sofy@p2x.jpg 2x, https://<?=$link4 ?>/sofy/sofy@p3x.jpg 3x"     />
+<source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link4 ?>/sofy/sofy@1x.jpg, https://<?=$link4 ?>/sofy/sofy@2x.jpg 2x, https://<?=$link4 ?>/sofy/sofy@3x.jpg 3x"   /> <img alt="София, стильная юная брюнетка" rel="preconnect" <?=$lazy ?> <?=$data ?>src="https://<?=$link4 ?>/sofy/sofy@1x.jpg" title="София, стильная юная брюнетка" longdesc="/moscow/attractive/sofy/#description">
+</picture>
+<a href="/moscow/attractive/sofy/" title="София, стильная юная брюнетка">
+<div class="mask">
+<h3>София</h3> <h6>Москва</h6><p>20 лет, рост: 163 см, вес: 50 кг</p>
+</div>
+</a>
+<a href="https://<?=$link4 ?>/sofy/11.jpg" class="pP[MissBliss]" rel="preconnect" title=София>
+<i class="fas fa-gem"></i></a>
+</div>
+
+<li class="item <?=$camilla ?>" data-id=id-21 data-type="взрослая модель блондинка мск"><!-- Камилла -->
+<div class="view overlay">
+<picture>
+<source rel="preconnect" media="(max-width: 499px)  and  (orientation: portrait)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link4 ?>/camilla/camilla@p1x.jpg, https://<?=$link4 ?>/camilla/camilla@p2x.jpg 2x, https://<?=$link4 ?>/camilla/camilla@p3x.jpg 3x"     />
+<source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link4 ?>/camilla/camilla@1x.jpg, https://<?=$link4 ?>/camilla/camilla@2x.jpg 2x, https://<?=$link4 ?>/camilla/camilla@3x.jpg 3x"   /> <img alt="Камилла, достойная красивая блондинка" rel="preconnect" <?=$lazy ?> <?=$data ?>src="https://<?=$link4 ?>/camilla/camilla@1x.jpg" title="Камилла, достойная красивая блондинка" longdesc="/moscow/attractive/camilla/#description">
+</picture>
+<a rel="preconnect" href="/moscow/attractive/camilla/" title="Камилла, достойная красивая блондинка">
+<div class="mask">
+<h3>Камилла</h3><h6>Москва</h6><p>29 лет, рост: 170 см, вес: 54 кг</p>
+</div>
+</a>
+<a rel="preconnect" href="https://<?=$link4 ?>/camilla/6.jpg" class="pP[MissBliss]" rel="preconnect" title=Алина>
+<i class="fas fa-gem"></i></a>
+</div>
+
+<li class="item" data-id=id-20 data-type="взрослая модель би брюнетка мск"><!-- Элина -->
+<div class="view overlay">
+<picture>
+ <source rel="preconnect" media="(max-width: 499px)  and  (orientation: portrait)" <?=$data ?>srcset="https://<?=$link4 ?>/elina/elina@p1x.jp2, https://<?=$link4 ?>/elina/elina@p2x.jp2 2x, https://<?=$link4 ?>/elina/elina@p3x.jp2 3x" <?=$lazy ?> />
+ <source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link5 ?>/elina/elina@1x.jp2, https://<?=$link5 ?>/elina/elina@2x.jp2 2x, https://<?=$link5 ?>/elina/elina@3x.jp2 3x"   />     <img alt="Элина" <?=$lazy ?> <?=$data ?>src="https://<?=$link4 ?>/elina/elina@1x.jp2", <?=$data ?>srcset="https://<?=$link4 ?>/elina/elina@2x.jp2 2x, https://<?=$link4 ?>/elina/elina@3x.jp2 3x" <?=$lazy ?>
+title="Элина, роскошная красивая брюнетка" longdesc="/moscow/attractive/elina/#description">
+</picture>
+<a href="/moscow/attractive/elina/" title="Элина, роскошная красивая брюнетка">
+<div class="mask">
+<h3>Элина</h3><h6>Москва</h6><p>23 года, рост: 170 cm, вес: 55 кг</p>
+</div>
+</a>
+<a rel="preconnect" href="https://<?=$link4 ?>/elina/19.jp2" class="pP[MissBliss]"   title="Элина">
+<i class="fas fa-gem"></i></a>
+</div>
+
+
+<li class="item" data-id=id-18 data-type="молодая модель би брюнетка мск"><!-- Мэри -->
+<div class="view overlay">
+<picture>
+<source rel="preconnect" media="(max-width: 499px)  and  (orientation: portrait)" <?=$data ?>srcset="https://<?=$link5 ?>/mary/mary@p1x.jpg, https://<?=$link5 ?>/mary/mary@p2x.jpg 2x, https://<?=$link5 ?>/mary/mary@p3x.jpg 3x" <?=$lazy ?> />
+<source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$data ?>srcset="https://<?=$link4 ?>/mary/mary@1x.jpg, https://<?=$link4 ?>/mary/mary@2x.jpg 2x, https://<?=$link4 ?>/mary/mary@3x.jpg 3x" <?=$lazy ?> />
+ <img rel="preconnect" alt="Мэри" <?=$lazy ?> <?=$data ?>src="https://<?=$link5 ?>/mary/mary@1x.jpg" title="Мэри, юная стройкая красивая и веселая эскортница" longdesc="/moscow/attractive/mary/#description">
+</picture>
+<a href="/moscow/attractive/mary/" title="Мэри, юная стройкая красивая и веселая эскортница">
+<div class="mask">
+<h3>Мэри</h3><h6>Москва</h6><p>18 лет, рост: 170 cm, вес: 54 кг</p>
+</div>
+</a>
+<a href="https://<?=$link4 ?>/mary/3.jpg" class="pP[MissBliss]"  rel="preconnect" title="Мэри">
+<i class="fas fa-gem"></i></a>
+</div>
+
+<li class="item" data-id=id-17 data-type="молодая модель би busty рекомендую брюнетка мск"><!-- Милена -->
+<div class="view overlay">
+<picture>
+<source rel="preconnect"  media="(max-width: 499px)  and  (orientation: portrait)" <?=$data ?>srcset="https://<?=$link4 ?>/milena/milena@p1x.jpg, https://<?=$link4 ?>/milena/milena@p2x.jpg 2x, https://<?=$link4 ?>/milena/milena@p3x.jpg 3x" <?=$lazy ?> />
+<source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$data ?>srcset="https://<?=$link4 ?>/milena/milena@1x.jpg, https://<?=$link4 ?>/milena/milena@2x.jpg 2x, https://<?=$link4 ?>/milena/milena@3x.jpg 3x" <?=$lazy ?> />
+<img alt="Милена"rel="preconnect"   <?=$lazy ?> <?=$data ?>src="https://<?=$link4 ?>/milena/milena@1x.jpg" title="Милена, яркая красивая девушка с шикарной фигурой" longdesc="/moscow/attractive/milena/#description">
+</picture>
+<a href="/moscow/attractive/milena/" title="Милена, яркая красивая девушка с шикарной фигурой">
+<div class="mask">
+<h3>Милена</h3><h6>Москва</h6><p>21 год, рост: 167 cm, вес: 58 кг</p>
+</div>
+</a>
+<a href="https://<?=$link4 ?>/milena/10.jpg" class="pP[MissBliss]"  rel="preconnect" title="Милена">
+<i class="fas fa-gem"></i></a>
+</div>
+
+<li class="item" data-id=id-16 data-type="взрослая модель busty би блондинка спб"><!--  Алиса -->
+<div class="view overlay">
+<picture>
+<source rel="preconnect"  media="(max-width: 499px)  and  (orientation: portrait)" <?=$data ?>srcset="https://<?=$link3 ?>/alice/alice@p1x.jpg, https://<?=$link3 ?>/alice/alice@p2x.jpg 2x, https://<?=$link3 ?>/alice/alice@p3x.jpg 3x" <?=$lazy ?> />
+<source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$data ?>srcset="https://<?=$link3 ?>/alice/alice@1x.jpg, https://<?=$link3 ?>/alice/alice@2x.jpg 2x, https://<?=$link3 ?>/alice/alice@3x.jpg 3x" <?=$lazy ?> />
+<img alt="Алиса" <?=$lazy ?> <?=$data ?>src="https://<?=$link3 ?>/alice/alice@1x.jpg" rel="preconnect"
+title="Алиса - женственная нежная любовница" longdesc="/spb/attractive/alice/#description">
+</picture>
+<a href="/spb/attractive/alice/" title="Алиса - женственная нежная любовница">
+<div class="mask">
+<h3>Алиса</h3><h5>Санкт-Петербург</h5><p>25 лет, рост: 165 см, вес: 50 кг</p>
+</div>
+</a>
+<a href="https://<?=$link3 ?>/alice/13.jpg" class="pP[MissBliss]"  rel="preconnect" title="Алиса">
+<i class="fas fa-gem"></i></a>
+</div>
+
+<li class="item" data-id=id-15 data-type="взрослая модель busty рекомендую брюнетка спб"><!-- Яна -->
+<div class="view overlay">
+<picture>
+<source rel="preconnect"  media="(max-width: 499px)  and  (orientation: portrait)" <?=$data ?>srcset="https://<?=$link3 ?>/yana/yana@p1x.jpg, https://<?=$link3 ?>/yana/yana@p2x.jpg 2x, https://<?=$link3 ?>/yana/yana@p3x.jpg 3x" <?=$lazy ?> />
+<source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$data ?>srcset="https://<?=$link3 ?>/yana/yana@1x.jpg, https://<?=$link3 ?>/yana/yana@2x.jpg 2x, https://<?=$link3 ?>/yana/yana@3x.jpg 3x" <?=$lazy ?> />
+<img alt="Яна" <?=$lazy ?> <?=$data ?>src="https://<?=$link3 ?>/yana/yana@1x.jpg" rel="preconnect"
+title="Яна, красивая знойная брюнетка" longdesc="/spb/attractive/yana/#description">
+</picture>
+<a href="/spb/attractive/yana/" title="Яна, красивая знойная брюнетка">
+<div class="mask">
+<h3>Яна</h3><h5>Санкт-Петербург</h5><p>23 года, рост: 165 см, вес: 58 кг</p>
+</div>
+</a>
+<a href="https://<?=$link3 ?>/yana/9.jpg" class="pP[MissBliss]"  rel="preconnect" title="Яна">
+<i class="fas fa-gem"></i></a>
+</div>
+
+
+<li class="item" data-id=id-14 data-type="молодая би модель блондинка спб"><!-- Луна -->
+<div class="view overlay">
+<picture>
+<source rel="preconnect"  media="(max-width: 499px)  and  (orientation: portrait)" <?=$data ?>srcset="https://<?=$link1 ?>/luna/luna@p1x.jpg, https://<?=$link1 ?>/luna/luna@p2x.jpg 2x, https://<?=$link1 ?>/luna/luna@p3x.jpg 3x" <?=$lazy ?> />
+<source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$data ?>srcset="https://<?=$link1 ?>/luna/luna@1x.jpg, https://<?=$link1 ?>/luna/luna@2x.jpg 2x, https://<?=$link1 ?>/luna/luna@3x.jpg 3x" <?=$lazy ?> />
+<img alt="Луна" <?=$lazy ?> <?=$data ?>src="https://<?=$link1 ?>/luna/luna@1x.jpg" rel="preconnect"
+title="Луна, миниатюрная красивая куколка" longdesc="/spb/attractive/luna/#description">
+</picture>
+<a href="/spb/attractive/luna/" title="Луна, миниатюрная красивая куколка">
+<div class="mask">
+<h3>Луна</h3><h5>Санкт-Петербург</h5><p>19 лет, рост: 160, вес: 50 кг</p>
+</div>
+</a>
+<a href="https://<?=$link1 ?>/luna/21.jpg" class="pP[MissBliss]"  rel="preconnect" title="Луна">
+<i class="fas fa-gem"></i></a>
+</div>
+
+<li class="item" data-id=id-13 data-type="молодая модель блондинка мск"><!-- Александра -->
+<div class="view overlay">
+<picture>
+<source  rel="preconnect" media="(max-width: 499px)  and  (orientation: portrait)" <?=$data ?>srcset="https://<?=$link6 ?>/alexandra/alexandra@p1x.jpg, https://<?=$link6 ?>/alexandra/alexandra@p2x.jpg 2x, https://<?=$link6 ?>/alexandra/alexandra@p3x.jpg 3x"  <?=$lazy ?>/>
+<source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$data ?>srcset="https://<?=$link6 ?>/alexandra/alexandra@1x.jpg, https://<?=$link6 ?>/alexandra/alexandra@2x.jpg 2x, https://<?=$link6 ?>/alexandra/alexandra@3x.jpg 3x" <?=$lazy ?> />
+<img alt="Александра" <?=$lazy ?> <?=$data ?>src="https://<?=$link6 ?>/alexandra/alexandra@1x.jpg" rel="preconnect"
+title="Александра, стройная сексуальная нежная" longdesc="/moscow/attractive/alexandra/#description">
+</picture>
+<a href="/moscow/attractive/alexandra/" title="Александра, стройная сексуальная нежная">
+<div class="mask">
+<h3>Александра</h3><h6>Москва</h6><p>20 лет, рост: 168, вес: 46 кг</p>
+</div>
+</a>
+<a href="https://<?=$link6 ?>/alexandra/15.jpg" class="pP[MissBliss]"  rel="preconnect" title="Александра">
+<i class="fas fa-gem"></i></a>
+</div>
+
+<li class="item <?=$veronica ?>" data-id=id-12 data-type="молодая  модель брюнетка спб"><!-- Вероника -->
+<div class="view overlay">
+<picture>
+<source rel="preconnect" media="(max-width: 499px)  and  (orientation: portrait)" <?=$data ?>srcset="https://<?=$link1 ?>/veronica/veronica@p1x.jpg, https://<?=$link1 ?>/veronica/veronica@p2x.jpg 2x, https://<?=$link1 ?>/veronica/veronica@p3x.jpg 3x" <?=$lazy ?>/>
+<source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$data ?>srcset="https://<?=$link1 ?>/veronica/veronica@1x.jpg, https://<?=$link1 ?>/veronica/veronica@2x.jpg 2x, https://<?=$link1 ?>/veronica/veronica@3x.jpg 3x" <?=$lazy ?> />   <img alt="Лесби шоу" <?=$lazy ?> <?=$data ?>src="https://<?=$link1 ?>/veronica/veronica@1x.jpg" rel="preconnect"
+title="Вероника, красивая сексуальная девушка" longdesc="/spb/attractive/veronica/#description">
+</picture>
+<a href="/spb/attractive/veronica/" title="Вероника, красивая сексуальная девушка">
+<div class="mask">
+<h3>Вероника</h3><h5>Санкт-Петербург</h5><p>23 года, рост: 170 см, вес: 55 кг</p>
+</div>
+</a>
+<a href="https://<?=$link1 ?>/veronica/17.jpg" class="pP[MissBliss]"  rel="preconnect" title="Вероника">
+<i class="fas fa-gem"></i></a>
+</div>
+
+<li class="item" data-id=id-11 data-type="молодая модель busty блондинка спб"><!--  Мария -->
+<div class="view overlay">
+<picture>
+ <source rel="preconnect" media="(max-width: 499px)  and  (orientation: portrait)" <?=$data ?>srcset="https://<?=$link3 ?>/maria/maria@p1x.jpg, https://<?=$link3 ?>/maria/maria@p2x.jpg 2x, https://<?=$link3 ?>/maria/maria@p3x.jpg 3x" <?=$lazy ?>/>
+<source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$data ?>srcset="https://<?=$link3 ?>/maria/maria@1x.jpg, https://<?=$link3 ?>/maria/maria@2x.jpg 2x, https://<?=$link3 ?>/maria/maria@3x.jpg 3x" <?=$lazy ?> />
+<img alt="Мария" <?=$lazy ?> <?=$data ?>src="https://<?=$link2 ?>/maria/maria@1x.jpg" rel="preconnect"
+title="Мария, стильная сексуальная девушка с шикарной фигурой" longdesc="/spb/attractive/maria/#description">
+</picture>
+<a href="/spb/attractive/maria/" title="Мария, стильная сексуальная девушка с шикарной фигурой">
+<div class="mask">
+<h3>Мария</h3><h5>Санкт-Петербург</h5><p>21 год, рост: 165 см, вес: 55 кг</p>
+</div>
+</a>
+<a href="https://<?=$link1 ?>/maria/4.jpg" class="pP[MissBliss]"  rel="preconnect" title="Мария">
+<i class="fas fa-gem"></i></a>
+</div>
+
+<li class="item" data-id=id-10 data-type="молодая модель рекомендую busty брюнетка би мск"><!-- Яна -->
+<div class="view overlay">
+<picture>
+<source rel="preconnect" media="(max-width: 499px)  and  (orientation: portrait)" <?=$data ?>srcset="https://<?=$link5 ?>/yana/yana@p1x.jpg, https://<?=$link5 ?>/yana/yana@p2x.jpg 2x, https://<?=$link5 ?>/yana/yana@p3x.jpg 3x" <?=$lazy ?>/>
+<source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$data ?>srcset="https://<?=$link5 ?>/yana/yana@1x.jpg, https://<?=$link5 ?>/yana/yana@2x.jpg 2x, https://<?=$link5 ?>/yana/yana@3x.jpg 3x" <?=$lazy ?> />
+    <img alt="Яна" <?=$lazy ?> <?=$data ?>src="https://<?=$link5 ?>/yana/yana@1x.jpg" rel="preconnect"
+  title="Яна, миниатюрная яркая брюнетка с красивой сексуальной фигуркой" longdesc="/moscow/attractive/yana/#description">
+</picture>
+<a href="/moscow/attractive/yana/" title="Яна, миниатюрная яркая брюнетка с красивой сексуальной фигуркой">
+<div class="mask">
+<h3>Яна</h3><h6>Москва</h6><p>18 лет, рост: 160 cm, вес: 48 кг</p>
+</div>
+</a>
+<a href="https://<?=$link4 ?>/yana/22.jpg" class="pP[MissBliss]"  rel="preconnect" title="Яна">
+<i class="fas fa-gem"></i></a>
+</div>
+
+<li class="item <?=$lily ?>" data-id=id-9 data-type="новенькая взрослая модель блондинка мск"><!-- Лиля -->
+<div class="view overlay">
+<picture>
+<source rel="preconnect" as="image" media="(max-width: 499px)  and  (orientation: portrait)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link4 ?>/lily/lily@p1x.jp2, https://<?=$link4 ?>/lily/lily@p2x.jp2 2x, https://<?=$link4 ?>/lily/lily@p3x.jp2 3x"     />
+<source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link4 ?>/lily/lily@1x.jp2, https://<?=$link4 ?>/lily/lily@2x.jp2 2x, https://<?=$link4 ?>/lily/lily@3x.jp2 3x"   /> <img alt="Лиля, взрослая красивая кокетка" rel="preconnect" <?=$lazy ?> <?=$data ?>src="https://<?=$link4 ?>/lily/lily@1x.jp2" title="Лиля, взрослая красивая кокетка" longdesc="/moscow/attractive/lily/#description">
+</picture>
+<a href="/moscow/attractive/lily/" title="Лиля, взрослая красивая кокетка">
+<div class="mask">
+<h3>Лиля</h3><h6>Москва</h6><p>29 лет, рост: 170 см, вес: 58 кг</p>
+</div>
+</a>
+<a href="https://<?=$link4 ?>/lily/1.jp2" class="pP[MissBliss]" rel="preconnect" title="Лиля">
+<i class="fas fa-gem"></i></a>
+</div>
+
+<li class="item" data-id=id-8 data-type="молодая модель рекомендую брюнетка спб"><!--  Нина -->
+<div class="view overlay">
+<picture>
+<source rel="preconnect" media="(max-width: 499px)  and  (orientation: portrait)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link3 ?>/nina/nina@p1x.jpg, https://<?=$link3 ?>/nina/nina@p2x.jpg 2x, https://<?=$link3 ?>/nina/nina@p3x.jpg 3x"  />
+<source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link3 ?>/nina/nina@1x.jpg, https://<?=$link3 ?>/nina/nina@2x.jpg 2x, https://<?=$link3 ?>/nina/nina@3x.jpg 3x"  />
+<img alt="Нина, веселая яркая кокетка" <?=$lazy ?> <?=$data ?>src="https://<?=$link1 ?>/nina/nina@1x.jpg" rel="preconnect" title="Нина, веселая яркая кокетка" longdesc="/spb/attractive/nina/#description">
+</picture>
+<a href="/spb/attractive/nina/" title="Нина, веселая яркая кокетка">
+<div class="mask">
+<h3>Нина</h3><h5>Санкт-Петербург</h5><p>21 лет, рост: 166 см, вес: 56 кг</p>
+</div>
+</a>
+<a href="https://<?=$link2 ?>/nina/19.jpg" class="pP[MissBliss]"  rel="preconnect" title="Нина">
+<i class="fas fa-gem"></i></a>
+</div>
+
+<li class="item <?=$mia ?>" data-id=id-7 data-type="новенькая молодая модель брюнетка мск"><!-- Мия -->
+<div class="view overlay">
+<picture>
+<source rel="preconnect" as="image" media="(max-width: 499px)  and  (orientation: portrait)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link6 ?>/mia/mia@p1x.jp2, https://<?=$link6 ?>/mia/mia@p2x.jp2 2x, https://<?=$link6 ?>/mia/mia@p3x.jp2 3x"     />
+<source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link6 ?>/mia/mia@1x.jp2, https://<?=$link6 ?>/mia/mia@2x.jp2 2x, https://<?=$link6 ?>/mia/mia@3x.jp2 3x"   /> <img alt="Юная горячая и веселая брюнетка" rel="preconnect" <?=$lazy ?> <?=$data ?>src="https://<?=$link6 ?>/mia/mia@1x.jp2" title="Юная горячая и веселая брюнетка" longdesc="/moscow/attractive/mia/#description">
+</picture>
+<a href="/moscow/attractive/mia/" title="Юная горячая и веселая брюнетка">
+<div class="mask">
+<h3>Мия</h3><h6>Москва</h6><p>19 лет, рост: 170 см, вес: 50 кг</p>
+</div>
+</a>
+<a href="https://<?=$link6 ?>/mia/3.jp2" class="pP[MissBliss]" rel="preconnect" title=Мия>
+<i class="fas fa-gem"></i></a>
+</div>
+
+<li class="item" data-id=id-6 data-type="модель брюнетка би спб"><!--  Агата -->
+<div class="view overlay">
+<picture>
+ <source media="(max-width: 499px)  and  (orientation: portrait)" <?=$data ?>srcset="https://<?=$link2 ?>/agatha/agatha@p1x.jpg, https://<?=$link2 ?>/agatha/agatha@p2x.jpg 2x, https://<?=$link2 ?>/agatha/agatha@p3x.jpg 3x" <?=$lazy ?> />
+ <source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$data ?>srcset="https://<?=$link2 ?>/agatha/agatha@1x.jpg, https://<?=$link2 ?>/agatha/agatha@2x.jpg 2x, https://<?=$link2 ?>/agatha/agatha@3x.jpg 3x" <?=$lazy ?> />
+<img alt="Агата" <?=$lazy ?> <?=$data ?>src="https://<?=$link2 ?>/agatha/agatha@1x.jpg"
+title="Агата- изысканная утонченная интеллигентная спутница в Санкт-Петербурге" longdesc="/spb/attractive/agatha/#description">
+</picture>
+<a href="/spb/attractive/agatha/" title="Агата- изысканная утонченная интеллигентная спутница в Санкт-Петербурге">
+<div class="mask">
+<h3>Агата</h3><h5>Санкт-Петербург</h5><p>19 лет, рост: 168 см, вес: 56 кг</p>
+</div>
+</a>
+<a href="https://<?=$link2 ?>/agatha/14.jpg" class="pP[MissBliss]"  rel="preconnect" title="Агата">
+<i class="fas fa-gem"></i></a>
+</div>
+
+<li class="item" data-id=id-5 data-type="новенькая модель  busty брюнетка мск"><!-- Николь -->
+<div class="view overlay">
+<picture>
+<source media="(max-width: 499px)  and  (orientation: portrait)" <?=$data ?>srcset="https://<?=$link5 ?>/nicole/nicole@p1x.jp2, https://<?=$link5 ?>/nicole/nicole@p2x.jp2 2x, https://<?=$link5 ?>/nicole/nicole@p3x.jp2 3x" <?=$lazy ?> />
+<source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link4 ?>/nicole/nicole@1x.jp2, https://<?=$link4 ?>/nicole/nicole@2x.jp2 2x, https://<?=$link4 ?>/nicole/nicole@3x.jp2 3x"   />
+<img alt="Николь, роскошная пышная дама" <?=$lazy ?> <?=$data ?>src="https://<?=$link5 ?>/nicole/nicole@1x.jp2" title="Николь, роскошная пышная дама!" longdesc="/moscow/attractive/nicole/#description">
+</picture>
+<a href="/moscow/attractive/nicole/" title="Николь, роскошная пышная дама!">
+<div class="mask">
+<h3>Николь</h3> <h6>Москва</h6><p>31 год, рост: 168, вес: 76 кг</p>
+</div>
+</a>
+<a href=https://<?=$link4 ?>/nicole/3.jp2 class="pP[MissBliss]"   title="Николь">
+<i class="fas fa-gem"></i></a>
+</div>
+
+<li class="item" data-id=id-4 data-type="молодая модель блондинка мск"><!-- Алина -->
+<div class="view overlay">
+<picture>
+<source rel="preconnect" media="(max-width: 499px)  and  (orientation: portrait)" <?=$data ?>srcset="https://<?=$link4 ?>/alina/alina@p1x.jp2, https://<?=$link4 ?>/alina/alina@p2x.jp2 2x, https://<?=$link4 ?>/alina/alina@p3x.jp2 3x" <?=$lazy ?> />
+<img rel="preconnect" alt="Алина" <?=$lazy ?> <?=$data ?>src="https://<?=$link4 ?>/alina/alina@1x.jp2", <?=$data ?>srcset="https://<?=$link4 ?>/alina/alina@2x.jp2 2x, https://<?=$link4 ?>/alina/alina@3x.jp2 3x"
+  title="Алина, роскошная красивая девушка" longdesc="/spb/attractive/alina/#description">
+</picture>
+<a href="/moscow/attractive/alina/" title="Алина, роскошная красивая девушка">
+<div class="mask">
+<h3>Алина</h3><h6>Москва</h6><p>21 год, рост: 170, вес: 50 кг</p>
+</div>
+</a>
+<a href="https://<?=$link4 ?>/alina/3.jp2" class="pP[MissBliss]"  rel="preconnect" title="Алина">
+<i class="fas fa-gem"></i></a>
+</div>
+
+
+<li class="item" data-id=id-3 data-type="модель блондинка рекомендую спб"><!-- Анжелика -->
+<div class="view overlay">
+<picture>
+<source rel="preconnect" media="(max-width: 499px)  and  (orientation: portrait)" <?=$data ?>srcset="https://<?=$link2 ?>/angelica/angelica@p1x.jpg, https://<?=$link2 ?>/angelica/angelica@p2x.jpg 2x, https://<?=$link2 ?>/angelica/angelica@p3x.jpg 3x" <?=$lazy ?>/>
+<source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link2 ?>/angelica/angelica@1x.jpg, https://<?=$link2 ?>/angelica/angelica@2x.jpg 2x, https://<?=$link2 ?>/angelica/angelica@3x.jpg 3x"  />
+<img rel="preconnect" alt="Ажелика" <?=$lazy ?> <?=$data ?>src="https://<?=$link2 ?>/angelica/angelica@1x.jpg" title="Анжелика, роскошная девушка" longdesc="/spb/attractive/angelica/#description">
+</picture>
+<a href="/spb/attractive/angelica/" title="Анжелика, роскошная девушка">
+<div class="mask">
+<h3>Анжелика</h3><h5>Санкт-Петербург</h5><p>25 лет, рост: 175, вес: 56 кг</p>
+</div>
+</a>
+<a href="https://<?=$link1 ?>/angelica/20.jpg" class="pP[MissBliss]"  rel="preconnect" title="Анжелика">
+<i class="fas fa-gem"></i></a>
+</div>
+
+<li class="item" data-id=id-2 data-type="модель брюнетка мск"><!-- Нина -->
+<div class="view overlay">
+<picture>
+<source rel="preconnect" media="(max-width: 499px)  and  (orientation: portrait)" <?=$data ?>srcset="https://<?=$link54 ?>/nina/nina@p1x.jpg, https://<?=$link4 ?>/nina/nina@p2x.jpg 2x, https://<?=$link4 ?>/nina/nina@p3x.jpg 3x" <?=$lazy ?>/>
+<source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link4 ?>/nina/nina@1x.jpg, https://<?=$link4 ?>/nina/nina@2x.jpg 2x, https://<?=$link4 ?>/nina/nina@3x.jpg 3x"  />
+<img rel="preconnect" alt="Нина" <?=$lazy ?> <?=$data ?>src="https://<?=$link6 ?>/nina/nina@1x.jpg"
+title="Нина, элегантная трепетная красивая девушка" longdesc="/moscow/attractive/nina/#description">
+</picture>
+<a href="/moscow/attractive/nina/" title="Нина, элегантная трепетная красивая девушка">
+<div class="mask">
+<h3>Нина</h3><h6>Москва</h6><p>22 года, рост: 180, вес: 59 кг</p>
+</div>
+</a>
+<a href="https://<?=$link4 ?>/nina/16.jpg" class="pP[MissBliss]"  rel="preconnect" title="Нина">
+<i class="fas fa-gem"></i></a>
+</div>
+
+<li class="item <?=$masha_spb ?>" data-id=id-1 data-type="взрослая модель брюнетка спб"><!--  Маша -->
+<div class="view overlay">
+<picture>
+<source rel="preconnect" media="(max-width: 499px)  and  (orientation: portrait)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link3 ?>/masha/masha@p1x.jpg, https://<?=$link3 ?>/masha/masha@p2x.jpg 2x, https://<?=$link3 ?>/masha/masha@p3x.jpg 3x"  />
+<source rel="preconnect"  media="(min-width: 500px)  and  (orientation: landscape)" <?=$lazy ?> <?=$data ?>srcset="https://<?=$link3 ?>/masha/masha@1x.jpg, https://<?=$link3 ?>/masha/masha@2x.jpg 2x, https://<?=$link3 ?>/masha/masha@3x.jpg 3x"  />
+<img alt="Маша, веселая стройная брюнетка" <?=$lazy ?> <?=$data ?>src="https://<?=$link1 ?>/masha/masha@1x.jpg" rel="preconnect" title="Маша, веселая стройная брюнетка" longdesc="/spb/attractive/masha/#description">
+</picture>
+<a href="/spb/attractive/masha/" title="Маша, веселая стройная брюнетка">
+<div class="mask">
+<h3>Маша</h3> <p>26 лет, рост: 166 см, вес: 46 кг</p>
+</div>
+</a>
+<a href="https://<?=$link2 ?>/masha/11.jpg" class="pP[MissBliss]"  rel="preconnect" title="Маша">
+<i class="fas fa-gem"></i></a>
+
+</ul>
+</div>
+</div>
+</div>
+<div id="footer" class="clearfix">
+<div id="footer-center" class="container">
+<div class="footer-left">
+<ul class="footer-menu">
+<li><a href="/favorites/" title="Фаворитки, элитные эскорт модели, эскорт агентство Миссблисс">Фаворитки</a>
+<li><a href='javascript:location.assign("/attractive/")'  title="Фотомодели,модели эскорта, эскортницы, эскорт агентство МиссБлисс">Модели</a>
+<li><a href='javascript:location.assign("/casting/")' title="Работа для девушек в эскорт агентстве МиссБлисс">Работа для девушек</a>
+<li class="footer-last"><a href='javascript:location.assign("/contact/")' title="Контакты эскорт агентства МиссБлисс">Контакт</a>
+<li><a href='javascript:location.assign("https://missbliss.vip/")' title="вип эскорт">VIP каталог</a>
+</ul>
+<ul class="footer-address">
+<li><i class="fab fa-fort-awesome"></i> <a href='javascript:location.assign("/moscow/")' title="Эскорт агентство в Москве, Эскорт услуги от агентства МиссБлисс Москва">Москва</a>
+<li><i class="fas fa-university"></i> <a href='javascript:location.assign("/spb/")' title="Эскорт улсуги, эскорт агентство в Санкт-Петербурге, агентство МиссБлисс">Санкт-Петербург</a>
+<li><i class="fab fa-apple"></i><a href="tel:+<?=$phone ?>" title="Можно звонить круглосуточно" ><?=$iPhone ?></a>
+<li><i class="fa fa-comments" aria-hidden="true"></i><a href="sms:+<?=$phone ?>" title="Отправить СМС">SMS</a>
+<li><i class="fab fa-whatsapp"></i><a href="https://wa.me/<?=$phone ?>?text=<?=$time ?>,%20Я%20хочу%20уточнить%20/" title="24/7 очень внимательно читаем ваши сообщения">WhatsApp</a>
+    <li><i class="fab fa-telegram-plane"></i><a href="https://telegram.im/@<?=$telegram ?>">Telegram</a>
+<li><i class="fab fa-viber"></i><?=$viber ?>
+<li><a href='javascript:location.assign("/en/attractive/")' title="English"><i class="en-icon"></i></a>
+</ul>
+</div>
+</div>
+<div id="footer-bottom">
+<div id="footer-center-bottom" class="container">
+<ul class="copyright">
+<li><a href='javascript:location.assign("/about/")'>2003 - 2020 © Агентство &laquo;MissBliss&raquo;. Сокровенная Мечта</a>
+</ul>
+</div>
+</div>
+</div>
+</div><!-- /p c -->
+</div><!-- /p -->
+
+<script  src="/min/g=jsmin" as="script" ></script>
+
+<script   src="/min/g=js_pic" ></script>
+
+<link rel="preconnect" href="https://www.google-analytics.com" crossorigin="anonymous">
+<script>$(document).ready(function(){$("#back-top").hide();$(function(){$(window).scroll(function(){if($(this).scrollTop()>100){$('#back-top').fadeIn();}else{$('#back-top').fadeOut();}});$('#back-top a').click(function(){$('body,html').animate({scrollTop:0},800);return false;});});});</script>
+<script src="/min/g=js_pic"></script>
+
+<script>$(document).ready(function(){$("a[class^='pP']").prettyPhoto();$(".portfolio:first a[class^='pP']").prettyPhoto({animation_speed:'fast',theme:'pp_default',slideshow:4000,opacity:0.60,deeplinking:false,overlay_gallery:false,autoplay_slideshow:false});});</script>
+
+<!-- Rating@Mail.ru counter -->
+<script type="text/javascript">
+var _tmr = _tmr || [];
+_tmr.push({id: "1193665", type: "pageView", start: (new Date()).getTime()});
+(function (d, w) {
+   var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true;
+   ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+   var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+   if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window);
+</script><noscript><div style="position:absolute;left:-10000px;">
+<img src="//top-fwz1.mail.ru/counter?id=1193665;js=na" style="border:0;" height="1" width="1" alt="�������@Mail.ru" />
+</div></noscript>
+<!-- //Rating@Mail.ru counter -->
+</html>

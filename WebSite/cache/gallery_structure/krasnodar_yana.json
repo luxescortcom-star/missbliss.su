@@ -1,0 +1,178 @@
+{
+    "root": {
+        "files": {
+            "yana@p1x": "jpg",
+            "yana@1x": "jpg",
+            "yana@p2x": "jpg",
+            "yana@2x": "jpg",
+            "yana@p3x": "jpg",
+            "yana@3x": "jpg"
+        },
+        "priority_extension": "jpg",
+        "file_count": 6,
+        "folder_path": "krasnodar\/yana",
+        "generated": true
+    },
+    "folders": {
+        "b": {
+            "files": {
+                "1": "jpg",
+                "2": "jpg",
+                "3": "jpg",
+                "4": "jpg",
+                "5": "jpg",
+                "6": "jpg",
+                "7": "jpg",
+                "8": "jpg",
+                "9": "jpg",
+                "10": "jpg",
+                "11": "jpg",
+                "12": "jpg",
+                "13": "jpg",
+                "14": "jpg"
+            },
+            "priority_extension": "jpg",
+            "file_count": 14,
+            "min_number": 1,
+            "max_number": 14,
+            "folder_path": "krasnodar\/yana\/b",
+            "generated": true
+        },
+        "b3": {
+            "files": {
+                "1": "jpg",
+                "2": "jpg",
+                "3": "jpg",
+                "4": "jpg",
+                "5": "jpg",
+                "6": "jpg",
+                "7": "jpg",
+                "8": "jpg",
+                "9": "jpg",
+                "10": "jpg",
+                "11": "jpg",
+                "12": "jpg",
+                "13": "jpg",
+                "14": "jpg"
+            },
+            "priority_extension": "jpg",
+            "file_count": 14,
+            "min_number": 1,
+            "max_number": 14,
+            "folder_path": "krasnodar\/yana\/b3",
+            "generated": true
+        },
+        "f2": {
+            "files": {
+                "1": "jpg",
+                "2": "jpg",
+                "3": "jpg",
+                "4": "jpg",
+                "5": "jpg",
+                "6": "jpg",
+                "7": "jpg",
+                "8": "jpg",
+                "9": "jpg",
+                "10": "jpg",
+                "11": "jpg",
+                "12": "jpg",
+                "13": "jpg",
+                "14": "jpg"
+            },
+            "priority_extension": "jpg",
+            "file_count": 14,
+            "min_number": 1,
+            "max_number": 14,
+            "folder_path": "krasnodar\/yana\/f2",
+            "generated": true
+        },
+        "f3": {
+            "files": {
+                "1": "jpg",
+                "2": "jpg",
+                "3": "jpg",
+                "4": "jpg",
+                "5": "jpg",
+                "6": "jpg",
+                "7": "jpg",
+                "8": "jpg",
+                "9": "jpg",
+                "10": "jpg",
+                "11": "jpg",
+                "12": "jpg",
+                "13": "jpg",
+                "14": "jpg"
+            },
+            "priority_extension": "jpg",
+            "file_count": 14,
+            "min_number": 1,
+            "max_number": 14,
+            "folder_path": "krasnodar\/yana\/f3",
+            "generated": true
+        },
+        "b2": {
+            "files": {
+                "1": "jpg",
+                "2": "jpg",
+                "3": "jpg",
+                "4": "jpg",
+                "5": "jpg",
+                "6": "jpg",
+                "7": "jpg",
+                "8": "jpg",
+                "9": "jpg",
+                "10": "jpg",
+                "11": "jpg",
+                "12": "jpg",
+                "13": "jpg",
+                "14": "jpg"
+            },
+            "priority_extension": "jpg",
+            "file_count": 14,
+            "min_number": 1,
+            "max_number": 14,
+            "folder_path": "krasnodar\/yana\/b2",
+            "scanned": true
+        }
+    },
+    "scan_time": "2025-11-21 13:02:32",
+    "total_files": 76,
+    "debug_info": {
+        "base_directory": "\/",
+        "trying_b": "krasnodar\/yana\/b",
+        "found_b": false,
+        "trying_b2": "krasnodar\/yana\/b2",
+        "found_b2": true,
+        "scanned_folder": "b2",
+        "scanned_data": {
+            "files": {
+                "1": "jpg",
+                "2": "jpg",
+                "3": "jpg",
+                "4": "jpg",
+                "5": "jpg",
+                "6": "jpg",
+                "7": "jpg",
+                "8": "jpg",
+                "9": "jpg",
+                "10": "jpg",
+                "11": "jpg",
+                "12": "jpg",
+                "13": "jpg",
+                "14": "jpg"
+            },
+            "file_count": 14,
+            "min_number": 1,
+            "max_number": 14
+        },
+        "detected_extension": "jpg",
+        "detected_file_count": 14,
+        "file_numbers_range": {
+            "min": 1,
+            "max": 14
+        }
+    },
+    "city": "krasnodar",
+    "model_name": "yana",
+    "display_name": "yana"
+}

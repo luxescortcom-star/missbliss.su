@@ -1,0 +1,156 @@
+{
+    "domains": {
+        "main": "missbliss.su",
+        "cities": {
+            "saint-petersburg": {
+                "aliases": [
+                    "st-petersburg",
+                    "\u043f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433"
+                ],
+                "domain": "missbliss.su"
+            },
+            "moscow": {
+                "aliases": [
+                    "moscow",
+                    "msk",
+                    "\u043c\u043e\u0441\u043a\u0432\u0430"
+                ],
+                "domain": "missbliss.su"
+            },
+            "ekaterinburg": {
+                "aliases": [
+                    "ekaterinburg",
+                    "\u0435\u043a\u0430\u0442\u0435\u0440\u0438\u043d\u0431\u0443\u0440\u0433"
+                ],
+                "domain": "missbliss.su"
+            },
+            "krasnodar": {
+                "aliases": [
+                    "\u043a\u0440\u0430\u0441\u043d\u043e\u0434\u0430\u0440",
+                    "krd",
+                    "\u043a\u0440\u0434"
+                ],
+                "domain": "missbliss.su"
+            },
+            "new-york": {
+                "aliases": [
+                    "nyc",
+                    "new-york",
+                    "\u043d\u044c\u044e-\u0439\u043e\u0440\u043a"
+                ],
+                "domain": "missbliss.su"
+            }
+        }
+    },
+    "routes": {
+        "sections": [
+            "attractive",
+            "favorites",
+            "vip-models",
+            "elite-models",
+            "en"
+        ]
+    },
+    "models": {
+        "main": {
+            "pages": {
+                "about": "/about/",
+                "casting": "/casting/",
+                "contact": "/contact/",
+                "rates": "/rates/",
+                "vip": "/vip/"
+            },
+            "en": {
+                "about": "/en/about/",
+                "casting": "/en/casting/",
+                "contact": "/en/contact/",
+                "occupazione": "/en/occupazione/",
+                "rates": "/en/rates/",
+                "vip": "/en/vip/"
+            }
+        },
+        "ekaterinburg": {
+            "attractive": {
+                "eveline": "/vip-models/ekaterinburg/attractive/eveline/",
+                "kira": "/vip-models/ekaterinburg/attractive/kira/",
+                "milana": "/vip-models/ekaterinburg/attractive/milana/",
+                "sonia": "/vip-models/ekaterinburg/attractive/sonia/"
+            }
+        },
+        "krasnodar": {
+            "attractive": {
+                "caroline": "/vip-models/krasnodar/attractive/caroline/",
+                "olly": "/vip-models/krasnodar/attractive/olly/",
+                "yana": "/vip-models/krasnodar/attractive/yana/"
+            }
+        },
+        "moscow": {
+            "attractive": {
+                "alice": "/vip-models/moscow/attractive/alice/",
+                "alina": "/vip-models/moscow/attractive/alina/",
+                "alyona": "/vip-models/moscow/attractive/alyona/",
+                "bella": "/vip-models/moscow/attractive/bella/",
+                "elina": "/vip-models/moscow/attractive/elina/",
+                "elina2": "/vip-models/moscow/attractive/elina2/",
+                "elisha": "/vip-models/moscow/attractive/elisha/",
+                "eva": "/vip-models/moscow/attractive/eva/",
+                "ira": "/vip-models/moscow/attractive/ira/",
+                "lily": "/vip-models/moscow/attractive/lily/",
+                "lola": "/vip-models/moscow/attractive/lola/",
+                "lolita": "/vip-models/moscow/attractive/lolita/",
+                "masha": "/vip-models/moscow/attractive/masha/",
+                "milana": "/vip-models/moscow/attractive/milana/",
+                "oxana": "/vip-models/moscow/attractive/oxana/",
+                "polina": "/vip-models/moscow/attractive/polina/",
+                "varvara": "/vip-models/moscow/attractive/varvara/",
+                "yana": "/vip-models/moscow/attractive/yana/"
+            },
+            "favorites": {
+                "adele": "/vip-models/moscow/favorites/adele/",
+                "aleana": "/vip-models/moscow/favorites/aleana/",
+                "alina-busty": "/vip-models/moscow/favorites/alina-busty/",
+                "alinabusty": "/vip-models/moscow/favorites/alina-busty/",
+                "alina": "/vip-models/moscow/favorites/alina/",
+                "genie": "/vip-models/moscow/favorites/genie/",
+                "mila": "/vip-models/moscow/favorites/mila/",
+                "mila_doll": "/vip-models/moscow/favorites/mila_doll/",
+                "miladoll": "/vip-models/moscow/favorites/mila_doll/",
+                "sasha": "/vip-models/moscow/favorites/sasha/",
+                "superblondie": "/vip-models/moscow/favorites/superblondie/",
+                "tatiana": "/vip-models/moscow/favorites/tatiana/"
+            }
+        },
+        "new-york": {
+            "favorites": {
+                "natasha": "/vip-models/new-york/favorites/natasha/"
+            }
+        },
+        "saint-petersburg": {
+            "attractive": {
+                "alexandra": "/vip-models/saint-petersburg/attractive/alexandra/",
+                "alice": "/vip-models/saint-petersburg/attractive/alice/",
+                "anna": "/vip-models/saint-petersburg/attractive/anna/",
+                "diana_blondie": "/vip-models/saint-petersburg/attractive/diana_blondie/",
+                "dianablondie": "/vip-models/saint-petersburg/attractive/diana_blondie/",
+                "julia": "/vip-models/saint-petersburg/attractive/julia/",
+                "katrin": "/vip-models/saint-petersburg/attractive/katrin/",
+                "lera": "/vip-models/saint-petersburg/attractive/lera/",
+                "linda": "/vip-models/saint-petersburg/attractive/linda/",
+                "margarita": "/vip-models/saint-petersburg/attractive/margarita/",
+                "olly": "/vip-models/saint-petersburg/attractive/olly/",
+                "rose": "/vip-models/saint-petersburg/attractive/rose/",
+                "slava": "/vip-models/saint-petersburg/attractive/slava/",
+                "tatyana": "/vip-models/saint-petersburg/attractive/tatyana/",
+                "vika": "/vip-models/saint-petersburg/attractive/vika/"
+            },
+            "favorites": {
+                "alina": "/vip-models/saint-petersburg/favorites/alina/",
+                "alla": "/vip-models/saint-petersburg/favorites/alla/",
+                "aurora": "/vip-models/saint-petersburg/favorites/aurora/",
+                "kristine": "/vip-models/saint-petersburg/favorites/kristine/",
+                "masha": "/vip-models/saint-petersburg/favorites/masha/",
+                "nicole": "/vip-models/saint-petersburg/favorites/nicole/"
+            }
+        }
+    }
+}

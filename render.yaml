@@ -1,0 +1,32 @@
+cat > render.yaml << 'EOF'
+services:
+  - type: web
+    name: missbliss-site
+    env: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: free
+    region: frankfurt
+    envVars:
+      - key: PHP_ERROR_REPORTING
+        value: "22527"
+      - key: display_errors
+        value: "0"
+      - key: PHP_MEMORY_LIMIT
+        value: "256M"
+      - key: PHP_UPLOAD_MAX_FILESIZE
+        value: "64M"
+      - key: PHP_POST_MAX_SIZE
+        value: "64M"
+      - key: TZ
+        value: "Europe/Moscow"
+    healthCheckPath: /
+    healthCheckTimeout: 30
+    autoDeploy: true
+    buildCommand: docker build -t missbliss .
+    startCommand: /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf
+    disk:
+      name: site-data
+      mountPath: /var/www/html/cache
+      sizeGB: 1
+EOF

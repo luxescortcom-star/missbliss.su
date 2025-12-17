@@ -1,0 +1,184 @@
+{
+    "root": {
+        "files": {
+            "alexandra@p1x": "jp2",
+            "alexandra@1x": "jp2",
+            "alexandra@p2x": "jp2",
+            "alexandra@2x": "jp2",
+            "alexandra@p3x": "jp2",
+            "alexandra@3x": "jp2"
+        },
+        "priority_extension": "jp2",
+        "file_count": 6,
+        "folder_path": "spb\/alexandra2",
+        "generated": true
+    },
+    "folders": {
+        "b": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "jp2",
+                "4": "jp2",
+                "5": "jp2",
+                "6": "jp2",
+                "7": "jp2",
+                "8": "jp2",
+                "9": "jp2",
+                "10": "jp2",
+                "11": "jp2",
+                "12": "jp2",
+                "13": "jp2",
+                "14": "jp2",
+                "15": "jp2"
+            },
+            "priority_extension": "jp2",
+            "file_count": 15,
+            "min_number": 1,
+            "max_number": 15,
+            "folder_path": "spb\/alexandra2\/b",
+            "generated": true
+        },
+        "b3": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "jp2",
+                "4": "jp2",
+                "5": "jp2",
+                "6": "jp2",
+                "7": "jp2",
+                "8": "jp2",
+                "9": "jp2",
+                "10": "jp2",
+                "11": "jp2",
+                "12": "jp2",
+                "13": "jp2",
+                "14": "jp2",
+                "15": "jp2"
+            },
+            "priority_extension": "jp2",
+            "file_count": 15,
+            "min_number": 1,
+            "max_number": 15,
+            "folder_path": "spb\/alexandra2\/b3",
+            "generated": true
+        },
+        "f2": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "jp2",
+                "4": "jp2",
+                "5": "jp2",
+                "6": "jp2",
+                "7": "jp2",
+                "8": "jp2",
+                "9": "jp2",
+                "10": "jp2",
+                "11": "jp2",
+                "12": "jp2",
+                "13": "jp2",
+                "14": "jp2",
+                "15": "jp2"
+            },
+            "priority_extension": "jp2",
+            "file_count": 15,
+            "min_number": 1,
+            "max_number": 15,
+            "folder_path": "spb\/alexandra2\/f2",
+            "generated": true
+        },
+        "f3": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "jp2",
+                "4": "jp2",
+                "5": "jp2",
+                "6": "jp2",
+                "7": "jp2",
+                "8": "jp2",
+                "9": "jp2",
+                "10": "jp2",
+                "11": "jp2",
+                "12": "jp2",
+                "13": "jp2",
+                "14": "jp2",
+                "15": "jp2"
+            },
+            "priority_extension": "jp2",
+            "file_count": 15,
+            "min_number": 1,
+            "max_number": 15,
+            "folder_path": "spb\/alexandra2\/f3",
+            "generated": true
+        },
+        "b2": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "jp2",
+                "4": "jp2",
+                "5": "jp2",
+                "6": "jp2",
+                "7": "jp2",
+                "8": "jp2",
+                "9": "jp2",
+                "10": "jp2",
+                "11": "jp2",
+                "12": "jp2",
+                "13": "jp2",
+                "14": "jp2",
+                "15": "jp2"
+            },
+            "priority_extension": "jp2",
+            "file_count": 15,
+            "min_number": 1,
+            "max_number": 15,
+            "folder_path": "spb\/alexandra2\/b2",
+            "scanned": true
+        }
+    },
+    "scan_time": "2025-11-21 13:16:39",
+    "total_files": 81,
+    "debug_info": {
+        "base_directory": "\/",
+        "trying_b": "spb\/alexandra2\/b",
+        "found_b": false,
+        "trying_b2": "spb\/alexandra2\/b2",
+        "found_b2": true,
+        "scanned_folder": "b2",
+        "scanned_data": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "jp2",
+                "4": "jp2",
+                "5": "jp2",
+                "6": "jp2",
+                "7": "jp2",
+                "8": "jp2",
+                "9": "jp2",
+                "10": "jp2",
+                "11": "jp2",
+                "12": "jp2",
+                "13": "jp2",
+                "14": "jp2",
+                "15": "jp2"
+            },
+            "file_count": 15,
+            "min_number": 1,
+            "max_number": 15
+        },
+        "detected_extension": "jp2",
+        "detected_file_count": 15,
+        "file_numbers_range": {
+            "min": 1,
+            "max": 15
+        }
+    },
+    "city": "spb",
+    "model_name": "alexandra2",
+    "display_name": "alexandra"
+}

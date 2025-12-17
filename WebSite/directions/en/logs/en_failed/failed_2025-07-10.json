@@ -1,0 +1,22 @@
+[
+    {
+        "date": "2025-07-10 10:02:43",
+        "name": null,
+        "comments": null,
+        "email": null,
+        "phone": null,
+        "ip": null,
+        "user_agent": null,
+        "reason": "Несуществующий e-mail"
+    },
+    {
+        "date": "2025-07-10 20:42:22",
+        "name": null,
+        "comments": null,
+        "email": null,
+        "phone": null,
+        "ip": null,
+        "user_agent": null,
+        "reason": "Несуществующий e-mail"
+    }
+]

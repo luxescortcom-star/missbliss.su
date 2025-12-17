@@ -1,0 +1,164 @@
+{
+    "root": {
+        "files": {
+            "varvara@p1x": "jpg",
+            "varvara@1x": "jpg",
+            "varvara@p2x": "jpg",
+            "varvara@2x": "jpg",
+            "varvara@p3x": "jpg",
+            "varvara@3x": "jpg"
+        },
+        "priority_extension": "jpg",
+        "file_count": 6,
+        "folder_path": "varvara",
+        "generated": true
+    },
+    "folders": {
+        "b2": {
+            "files": {
+                "1": "jpg",
+                "2": "jpg",
+                "3": "jpg",
+                "4": "jpg",
+                "5": "jpg",
+                "6": "jpg",
+                "7": "jpg",
+                "8": "jpg",
+                "9": "jpg",
+                "10": "jpg",
+                "11": "jpg",
+                "12": "jpg"
+            },
+            "priority_extension": "jpg",
+            "file_count": 12,
+            "min_number": 1,
+            "max_number": 12,
+            "folder_path": "varvara\/b2",
+            "generated": true
+        },
+        "b3": {
+            "files": {
+                "1": "jpg",
+                "2": "jpg",
+                "3": "jpg",
+                "4": "jpg",
+                "5": "jpg",
+                "6": "jpg",
+                "7": "jpg",
+                "8": "jpg",
+                "9": "jpg",
+                "10": "jpg",
+                "11": "jpg",
+                "12": "jpg"
+            },
+            "priority_extension": "jpg",
+            "file_count": 12,
+            "min_number": 1,
+            "max_number": 12,
+            "folder_path": "varvara\/b3",
+            "generated": true
+        },
+        "f2": {
+            "files": {
+                "1": "jpg",
+                "2": "jpg",
+                "3": "jpg",
+                "4": "jpg",
+                "5": "jpg",
+                "6": "jpg",
+                "7": "jpg",
+                "8": "jpg",
+                "9": "jpg",
+                "10": "jpg",
+                "11": "jpg",
+                "12": "jpg"
+            },
+            "priority_extension": "jpg",
+            "file_count": 12,
+            "min_number": 1,
+            "max_number": 12,
+            "folder_path": "varvara\/f2",
+            "generated": true
+        },
+        "f3": {
+            "files": {
+                "1": "jpg",
+                "2": "jpg",
+                "3": "jpg",
+                "4": "jpg",
+                "5": "jpg",
+                "6": "jpg",
+                "7": "jpg",
+                "8": "jpg",
+                "9": "jpg",
+                "10": "jpg",
+                "11": "jpg",
+                "12": "jpg"
+            },
+            "priority_extension": "jpg",
+            "file_count": 12,
+            "min_number": 1,
+            "max_number": 12,
+            "folder_path": "varvara\/f3",
+            "generated": true
+        },
+        "b": {
+            "files": {
+                "1": "jpg",
+                "2": "jpg",
+                "3": "jpg",
+                "4": "jpg",
+                "5": "jpg",
+                "6": "jpg",
+                "7": "jpg",
+                "8": "jpg",
+                "9": "jpg",
+                "10": "jpg",
+                "11": "jpg",
+                "12": "jpg"
+            },
+            "priority_extension": "jpg",
+            "file_count": 12,
+            "min_number": 1,
+            "max_number": 12,
+            "folder_path": "varvara\/b",
+            "scanned": true
+        }
+    },
+    "scan_time": "2025-11-20 18:15:37",
+    "total_files": 66,
+    "debug_info": {
+        "initial_directory": "\/",
+        "trying_b": "varvara\/b",
+        "found_b": true,
+        "scanned_folder": "b",
+        "scanned_data": {
+            "files": {
+                "1": "jpg",
+                "2": "jpg",
+                "3": "jpg",
+                "4": "jpg",
+                "5": "jpg",
+                "6": "jpg",
+                "7": "jpg",
+                "8": "jpg",
+                "9": "jpg",
+                "10": "jpg",
+                "11": "jpg",
+                "12": "jpg"
+            },
+            "file_count": 12,
+            "min_number": 1,
+            "max_number": 12
+        },
+        "detected_extension": "jpg",
+        "detected_file_count": 12,
+        "file_numbers_range": {
+            "min": 1,
+            "max": 12
+        }
+    },
+    "city": "msk",
+    "model_name": "varvara",
+    "display_name": "Варя"
+}

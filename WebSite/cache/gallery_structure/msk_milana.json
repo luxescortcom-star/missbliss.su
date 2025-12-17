@@ -1,0 +1,148 @@
+{
+    "root": {
+        "files": {
+            "milana@p1x": "avif",
+            "milana@1x": "avif",
+            "milana@p2x": "avif",
+            "milana@2x": "avif",
+            "milana@p3x": "avif",
+            "milana@3x": "avif"
+        },
+        "priority_extension": "avif",
+        "file_count": 6,
+        "folder_path": "milana",
+        "generated": true
+    },
+    "folders": {
+        "b": {
+            "files": {
+                "1": "avif",
+                "2": "avif",
+                "3": "avif",
+                "4": "avif",
+                "5": "avif",
+                "6": "avif",
+                "7": "avif",
+                "8": "avif",
+                "9": "avif"
+            },
+            "priority_extension": "avif",
+            "file_count": 9,
+            "min_number": 1,
+            "max_number": 9,
+            "folder_path": "milana\/b",
+            "generated": true
+        },
+        "b3": {
+            "files": {
+                "1": "avif",
+                "2": "avif",
+                "3": "avif",
+                "4": "avif",
+                "5": "avif",
+                "6": "avif",
+                "7": "avif",
+                "8": "avif",
+                "9": "avif"
+            },
+            "priority_extension": "avif",
+            "file_count": 9,
+            "min_number": 1,
+            "max_number": 9,
+            "folder_path": "milana\/b3",
+            "generated": true
+        },
+        "f2": {
+            "files": {
+                "1": "avif",
+                "2": "avif",
+                "3": "avif",
+                "4": "avif",
+                "5": "avif",
+                "6": "avif",
+                "7": "avif",
+                "8": "avif",
+                "9": "avif"
+            },
+            "priority_extension": "avif",
+            "file_count": 9,
+            "min_number": 1,
+            "max_number": 9,
+            "folder_path": "milana\/f2",
+            "generated": true
+        },
+        "f3": {
+            "files": {
+                "1": "avif",
+                "2": "avif",
+                "3": "avif",
+                "4": "avif",
+                "5": "avif",
+                "6": "avif",
+                "7": "avif",
+                "8": "avif",
+                "9": "avif"
+            },
+            "priority_extension": "avif",
+            "file_count": 9,
+            "min_number": 1,
+            "max_number": 9,
+            "folder_path": "milana\/f3",
+            "generated": true
+        },
+        "b2": {
+            "files": {
+                "1": "avif",
+                "2": "avif",
+                "3": "avif",
+                "4": "avif",
+                "5": "avif",
+                "6": "avif",
+                "7": "avif",
+                "8": "avif",
+                "9": "avif"
+            },
+            "priority_extension": "avif",
+            "file_count": 9,
+            "min_number": 1,
+            "max_number": 9,
+            "folder_path": "milana\/b2",
+            "scanned": true
+        }
+    },
+    "scan_time": "2025-11-20 19:40:54",
+    "total_files": 51,
+    "debug_info": {
+        "initial_directory": "\/",
+        "trying_b": "milana\/b",
+        "found_b": false,
+        "trying_b2": "milana\/b2",
+        "found_b2": true,
+        "scanned_folder": "b2",
+        "scanned_data": {
+            "files": {
+                "1": "avif",
+                "2": "avif",
+                "3": "avif",
+                "4": "avif",
+                "5": "avif",
+                "6": "avif",
+                "7": "avif",
+                "8": "avif",
+                "9": "avif"
+            },
+            "file_count": 9,
+            "min_number": 1,
+            "max_number": 9
+        },
+        "detected_extension": "avif",
+        "detected_file_count": 9,
+        "file_numbers_range": {
+            "min": 1,
+            "max": 9
+        }
+    },
+    "city": "msk",
+    "model_name": "milana",
+    "display_name": "milana"
+}

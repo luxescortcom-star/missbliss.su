@@ -1,0 +1,32 @@
+# Используем официальный образ PHP с FPM (FastCGI Process Manager)
+FROM php:8.2-fpm-alpine
+
+# 1. Устанавливаем системные пакеты: Nginx и инструменты для сборки PHP-модулей
+RUN apk update && apk add --no-cache \
+    nginx \
+    curl \
+    git \
+    zip \
+    unzip \
+    supervisor
+
+# 2. Устанавливаем необходимые PHP-расширения (pdo_mysql для работы с MySQL)
+RUN docker-php-ext-install pdo pdo_mysql
+
+# 3. Копируем нашу конфигурацию Nginx внутрь контейнера
+COPY nginx.conf /etc/nginx/nginx.conf
+
+# 4. Копируем скрипт для запуска supervisor (который будет управлять Nginx и PHP-FPM)
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
+# 5. Копируем ВЕСЬ код вашего сайта в рабочую директорию контейнера
+COPY . /var/www/html
+
+# 6. Устанавливаем правильные права на папку с сайтом (www-data - пользователь по умолчанию для веб-сервера)
+RUN chown -R www-data:www-data /var/www/html
+
+# 7. Указываем порт, который будет "слушать" контейнер
+EXPOSE 80
+
+# 8. Команда запуска. Supervisor будет следить за работой обоих служб (Nginx и PHP-FPM).
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]

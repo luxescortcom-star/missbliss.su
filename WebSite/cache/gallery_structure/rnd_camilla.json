@@ -1,0 +1,184 @@
+{
+    "root": {
+        "files": {
+            "camilla@p1x": "avif",
+            "camilla@1x": "avif",
+            "camilla@p2x": "avif",
+            "camilla@2x": "avif",
+            "camilla@p3x": "avif",
+            "camilla@3x": "avif"
+        },
+        "priority_extension": "avif",
+        "file_count": 6,
+        "folder_path": "rnd\/camilla",
+        "generated": true
+    },
+    "folders": {
+        "b": {
+            "files": {
+                "1": "avif",
+                "2": "avif",
+                "3": "avif",
+                "4": "avif",
+                "5": "avif",
+                "6": "avif",
+                "7": "avif",
+                "8": "avif",
+                "9": "avif",
+                "10": "avif",
+                "11": "avif",
+                "12": "avif",
+                "13": "avif",
+                "14": "avif",
+                "15": "avif"
+            },
+            "priority_extension": "avif",
+            "file_count": 15,
+            "min_number": 1,
+            "max_number": 15,
+            "folder_path": "rnd\/camilla\/b",
+            "generated": true
+        },
+        "b3": {
+            "files": {
+                "1": "avif",
+                "2": "avif",
+                "3": "avif",
+                "4": "avif",
+                "5": "avif",
+                "6": "avif",
+                "7": "avif",
+                "8": "avif",
+                "9": "avif",
+                "10": "avif",
+                "11": "avif",
+                "12": "avif",
+                "13": "avif",
+                "14": "avif",
+                "15": "avif"
+            },
+            "priority_extension": "avif",
+            "file_count": 15,
+            "min_number": 1,
+            "max_number": 15,
+            "folder_path": "rnd\/camilla\/b3",
+            "generated": true
+        },
+        "f2": {
+            "files": {
+                "1": "avif",
+                "2": "avif",
+                "3": "avif",
+                "4": "avif",
+                "5": "avif",
+                "6": "avif",
+                "7": "avif",
+                "8": "avif",
+                "9": "avif",
+                "10": "avif",
+                "11": "avif",
+                "12": "avif",
+                "13": "avif",
+                "14": "avif",
+                "15": "avif"
+            },
+            "priority_extension": "avif",
+            "file_count": 15,
+            "min_number": 1,
+            "max_number": 15,
+            "folder_path": "rnd\/camilla\/f2",
+            "generated": true
+        },
+        "f3": {
+            "files": {
+                "1": "avif",
+                "2": "avif",
+                "3": "avif",
+                "4": "avif",
+                "5": "avif",
+                "6": "avif",
+                "7": "avif",
+                "8": "avif",
+                "9": "avif",
+                "10": "avif",
+                "11": "avif",
+                "12": "avif",
+                "13": "avif",
+                "14": "avif",
+                "15": "avif"
+            },
+            "priority_extension": "avif",
+            "file_count": 15,
+            "min_number": 1,
+            "max_number": 15,
+            "folder_path": "rnd\/camilla\/f3",
+            "generated": true
+        },
+        "b2": {
+            "files": {
+                "1": "avif",
+                "2": "avif",
+                "3": "avif",
+                "4": "avif",
+                "5": "avif",
+                "6": "avif",
+                "7": "avif",
+                "8": "avif",
+                "9": "avif",
+                "10": "avif",
+                "11": "avif",
+                "12": "avif",
+                "13": "avif",
+                "14": "avif",
+                "15": "avif"
+            },
+            "priority_extension": "avif",
+            "file_count": 15,
+            "min_number": 1,
+            "max_number": 15,
+            "folder_path": "rnd\/camilla\/b2",
+            "scanned": true
+        }
+    },
+    "scan_time": "2025-11-20 23:48:23",
+    "total_files": 81,
+    "debug_info": {
+        "base_directory": "\/",
+        "trying_b": "rnd\/camilla\/b",
+        "found_b": false,
+        "trying_b2": "rnd\/camilla\/b2",
+        "found_b2": true,
+        "scanned_folder": "b2",
+        "scanned_data": {
+            "files": {
+                "1": "avif",
+                "2": "avif",
+                "3": "avif",
+                "4": "avif",
+                "5": "avif",
+                "6": "avif",
+                "7": "avif",
+                "8": "avif",
+                "9": "avif",
+                "10": "avif",
+                "11": "avif",
+                "12": "avif",
+                "13": "avif",
+                "14": "avif",
+                "15": "avif"
+            },
+            "file_count": 15,
+            "min_number": 1,
+            "max_number": 15
+        },
+        "detected_extension": "avif",
+        "detected_file_count": 15,
+        "file_numbers_range": {
+            "min": 1,
+            "max": 15
+        }
+    },
+    "city": "rnd",
+    "model_name": "camilla",
+    "display_name": "camilla"
+}

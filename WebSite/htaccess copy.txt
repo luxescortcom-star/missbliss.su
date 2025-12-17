@@ -1,0 +1,232 @@
+Options -Indexes  +FollowSymLinks
+
+ErrorDocument 401 /access/
+ErrorDocument 404 /404/
+ErrorDocument 403 /access/
+
+DirectoryIndex index.php index.html 
+AddType application/x-httpd-php .html
+
+
+<IfModule mod_setenvif.c>
+	SetEnv TZ Europe/Moscow
+</IfModule>
+ServerSignature Off
+AddDefaultCharset UTF-8
+
+
+AddType image/webp .webp
+AddType image/jpeg .jp2
+
+<Files> "sitemap-generator.php">
+    Allow from all
+    <LimitExcept GET>
+        Require all granted
+    </LimitExcept>
+</Files>
+# Блокируем прямой доступ к .php файлам, кроме наших скриптов
+<FilesMatch "^(index|sitemap-generator|save-sitemap|redirect-handler|get_prices|geo_api)\.php$">
+    allow from all
+    <LimitExcept GET>
+        Require all granted
+    </LimitExcept>
+</FilesMatch>
+
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+
+    # Правило 2: Для URL с любым "мусором" после последнего слэша
+    RewriteCond %{REQUEST_URI} ^(.+)/[^/]+$
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ %1/ [R=301,L]
+
+RewriteRule ^/?xxx/?en/?(.*)?$ en/xxx/$1 [R=301,L]
+
+RewriteRule ^/?xxx/?moscow/en/?(.*)?$ en/xxx/moscow/$1 [R=301,L]
+
+RewriteRule ^/?spb/?spb/?(.*)?$ spb/$1 [R=301,L]
+
+RewriteRule ^/?xxx/?$ xxx/escorts/$1 [R=301,L]
+RewriteRule ^/?en/xxx/?$ en/xxx/escorts/$1 [R=301,L]
+
+RewriteRule ^/?en/xxx/spb/escorts/?$ en/xxx/spb/$1 [R=301,L]
+RewriteRule ^/?en/xxx/moscow/escorts/?$ en/xxx/moscow/$1 [R=301,L]
+
+RewriteRule ^/?xxx/spb/escorts/?$ xxx/spb/$1 [R=301,L]
+RewriteRule ^/?xxx/moscow/escorts/?$ xxx/moscow/$1 [R=301,L]
+
+#RewriteCond %{SERVER_PORT} !^443$
+#RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+
+#RewriteCond %{TIME_WDAY} [12345]
+#RewriteCond %{TIME_HOUR}%{TIME_MIN} >0800 
+#RewriteCond %{TIME_HOUR}%{TIME_MIN} <2200
+#RewriteCond %{REQUEST_URI} !^robots.txt$
+#RewriteCond %{REQUEST_URI} ^/(en)?/?(escorts|krasnodar|rnd|ekb|favorites|attractive)/(.*)?$
+#RewriteRule ^(.*)$ /xxx/$1 [L,R=307]
+
+RewriteCond %{HTTP_ACCEPT} image/webp
+RewriteCond %{DOCUMENT_ROOT}/$1.webp -f
+RewriteRule (.+)\.(jpg|jpeg|png|jp2)$ $1.webp [T=image/webp,E=accept:1]
+
+RewriteCond %{ENV:NS}	!=1
+RewriteCond %{IS_SUBREQ} =true
+RewriteRule (.*) $1 [L,QSA]
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/robots\.txt$
+RewriteCond %{HTTP_REFERER} !^http(s)?://([a-zA-Z]+\.)?\.missbliss\.su [NC]
+RewriteCond %{REQUEST_URI} \.(shtml|css|js|yml|woff2?|swp|env|txt|jpe?g|png|gif|ico|pdf|jp2|png|gif|webp|webm|mp4|mp3)(.*)?$
+RewriteRule ^(.*)$ redirect-handler.php?url=$1 [L,QSA]
+
+
+#Code to add forward slash
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(?:\.\w+|/)$
+RewriteRule (.*) $1/ [R=301,L]
+
+#To check whether a .html appended string is a file existing on the system
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule (.*)/ $1.html [L]
+
+RewriteCond %{DOCUMENT_ROOT}/$1.php -f
+RewriteRule (.*)/ $1.php [L]
+
+
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteRule ^(.+)\.html$ /$1 [R=301,L]
+
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteCond %{REQUEST_URI} !^(.*)?sitemap(.*)?\.php$
+RewriteCond %{REQUEST_URI} !^(.*)?redirect-handler(.*)?\.php$
+RewriteCond %{REQUEST_URI} !^(.*)?geo_api(.*)?\.php$
+RewriteCond %{REQUEST_URI} !^get_prices\.php$
+RewriteRule ^(.+)\.php$ /$1 [R=301,L]
+
+
+
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/Hello\!?$ [OR]
+RewriteCond %{REQUEST_URI} ^/Privet\!?$ [OR]
+RewriteCond %{REQUEST_URI} ^/wp.login\.php/?$ [OR]
+RewriteCond %{REQUEST_URI} ^/admin\.php/?$ [OR]
+RewriteCond %{REQUEST_URI} ^/welcome/?$ [OR]
+RewriteCond %{REQUEST_URI} ^(.+)?wp-includes(.+)?$ [OR]
+RewriteCond %{REQUEST_URI} ^(.*)?post(.*)?$ [OR]
+RewriteCond %{REQUEST_URI} ^/agency/?$
+RewriteRule ^.*$ /? [R=301,L]
+
+
+RewriteCond %{HTTP_HOST} !=""
+RewriteCond %{THE_REQUEST} [A-Z]+\s/{2,}+(.*)\sHTTP/[0-9.]+ [OR]
+RewriteCond %{THE_REQUEST} [A-Z]+\s(.*)/{2,}+\sHTTP/[0-9.]+
+RewriteRule .* http://%{HTTP_HOST}/%1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} !=""
+RewriteCond %{THE_REQUEST} [A-Z]+\s(.+)/{2,}+(.+)\sHTTP/[0-9.]+
+RewriteRule .* http://%{HTTP_HOST}/%1/%2 [R=301,L]
+
+RewriteCond %{THE_REQUEST} ([^\s]*)\/{2,}(\?[^\s]*)?
+RewriteRule (.*) %1 [R=301,L]
+
+
+RewriteCond %{THE_REQUEST} \?
+RewriteRule ^(.*)$ /$1? [R=301,L]
+
+
+
+    # Убираем повторяющиеся /en/ в URL
+    RewriteCond %{REQUEST_URI} ^(/en/en/)
+    RewriteRule ^(en/)+ /en/ [R=301,L]
+
+    # Альтернативный вариант, если первый не сработает
+    RewriteCond %{THE_REQUEST} /en/(en/)+ [NC]
+    RewriteRule ^en/(en/)+ /en/ [R=301,L]
+	
+	
+    # Правило 1: Для URL с точкой после последнего слэша (но не настоящих файлов)
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)/[^/]+\.[^/]+$ $1/ [R=301,L]
+
+    # Перенаправление на обработчик
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ redirect-handler.php [L]
+
+
+
+
+
+
+
+</IfModule>
+
+AddHandler application/x-httpd-php .html
+AddHandler cgi-script .pl .py .jsp .asp .htm .shtml .sh .cgi
+AddType application/x-javascript .js
+AddType text/css .css
+AddType text/xml .xml
+AddType application/octet-stream .doc .mov .avi .pdf .xls
+# ForceType application/x-httpd-php
+
+
+<ifModule mod_headers.c>
+    #кэшировать html и htm файлы на один день
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "max-age=43200"
+    </FilesMatch>
+    #кэшировать css, javascript и текстовые файлы на одну неделю
+    <FilesMatch "\.(js|css|txt|woff|woff2|ttf|otf|eot)$">
+        Header set Cache-Control "max-age=2592000, must-revalidate"
+    </FilesMatch>
+    #кэшировать флэш и изображения на неделю
+    <FilesMatch "\.(flv|swf|ico|gif|jp2|jpe?g|webp|png)$">
+        Header set Cache-Control "max-age=2592000"
+    </FilesMatch>
+
+    #отключить кэширование
+    <FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
+        Header unset Cache-Control
+    </FilesMatch>
+</IfModule>
+
+
+<ifModule mod_expires.c>
+    ExpiresActive On
+    #по умолчанию кеш в 5 секунд
+    ExpiresDefault "access plus 5 seconds"
+    #кэшировать флэш и изображения на месяц
+    ExpiresByType image/x-icon "access plus 2592000 seconds"
+    ExpiresByType image/jpeg "access plus 604800 seconds"
+    ExpiresByType image/png "access plus 2592000 seconds"
+    ExpiresByType image/webp "access plus 2592000 seconds"
+    ExpiresByType image/jp2 "access plus 2592000 seconds"
+    ExpiresByType image/gif "access plus 2592000 seconds"
+    ExpiresByType application/x-shockwave-flash "access plus 2592000 seconds"
+    #кэшировать css, javascript и текстовые файлы на одну неделю
+    ExpiresByType text/css "access plus 604800 seconds"
+    ExpiresByType text/javascript "access plus 604800 seconds"
+    ExpiresByType application/javascript "access plus 604800 seconds"
+    ExpiresByType application/x-javascript "access plus 604800 seconds"
+    #кэшировать xml файлы на десять минут
+    ExpiresByType application/xhtml+xml "access plus 600 seconds"
+</ifModule>
+
+<IfModule mod_deflate.c>
+  <filesMatch "\.(js|css|html)$">
+    SetOutputFilter DEFLATE
+  </filesMatch>
+</IfModule>
+
+
+

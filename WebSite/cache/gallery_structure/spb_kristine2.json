@@ -1,0 +1,136 @@
+{
+    "root": {
+        "files": {
+            "kristine@p1x": "jp2",
+            "kristine@1x": "jp2",
+            "kristine@p2x": "jp2",
+            "kristine@2x": "jp2",
+            "kristine@p3x": "jp2",
+            "kristine@3x": "jp2"
+        },
+        "priority_extension": "jp2",
+        "file_count": 6,
+        "folder_path": "spb\/kristine2",
+        "generated": true
+    },
+    "folders": {
+        "b": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "jp2",
+                "4": "jp2",
+                "5": "jp2",
+                "6": "jp2",
+                "7": "jp2"
+            },
+            "priority_extension": "jp2",
+            "file_count": 7,
+            "min_number": 1,
+            "max_number": 7,
+            "folder_path": "spb\/kristine2\/b",
+            "generated": true
+        },
+        "b3": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "jp2",
+                "4": "jp2",
+                "5": "jp2",
+                "6": "jp2",
+                "7": "jp2"
+            },
+            "priority_extension": "jp2",
+            "file_count": 7,
+            "min_number": 1,
+            "max_number": 7,
+            "folder_path": "spb\/kristine2\/b3",
+            "generated": true
+        },
+        "f2": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "jp2",
+                "4": "jp2",
+                "5": "jp2",
+                "6": "jp2",
+                "7": "jp2"
+            },
+            "priority_extension": "jp2",
+            "file_count": 7,
+            "min_number": 1,
+            "max_number": 7,
+            "folder_path": "spb\/kristine2\/f2",
+            "generated": true
+        },
+        "f3": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "jp2",
+                "4": "jp2",
+                "5": "jp2",
+                "6": "jp2",
+                "7": "jp2"
+            },
+            "priority_extension": "jp2",
+            "file_count": 7,
+            "min_number": 1,
+            "max_number": 7,
+            "folder_path": "spb\/kristine2\/f3",
+            "generated": true
+        },
+        "b2": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "jp2",
+                "4": "jp2",
+                "5": "jp2",
+                "6": "jp2",
+                "7": "jp2"
+            },
+            "priority_extension": "jp2",
+            "file_count": 7,
+            "min_number": 1,
+            "max_number": 7,
+            "folder_path": "spb\/kristine2\/b2",
+            "scanned": true
+        }
+    },
+    "scan_time": "2025-11-21 13:12:24",
+    "total_files": 41,
+    "debug_info": {
+        "base_directory": "\/",
+        "trying_b": "spb\/kristine2\/b",
+        "found_b": false,
+        "trying_b2": "spb\/kristine2\/b2",
+        "found_b2": true,
+        "scanned_folder": "b2",
+        "scanned_data": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "jp2",
+                "4": "jp2",
+                "5": "jp2",
+                "6": "jp2",
+                "7": "jp2"
+            },
+            "file_count": 7,
+            "min_number": 1,
+            "max_number": 7
+        },
+        "detected_extension": "jp2",
+        "detected_file_count": 7,
+        "file_numbers_range": {
+            "min": 1,
+            "max": 7
+        }
+    },
+    "city": "spb",
+    "model_name": "kristine2",
+    "display_name": "kristine"
+}

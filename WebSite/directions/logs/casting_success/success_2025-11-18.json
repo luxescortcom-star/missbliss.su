@@ -1,0 +1,26 @@
+[
+    {
+        "date": "2025-11-18 10:39:19",
+        "name": "Виктория",
+        "comments": "Проверка sqli работы файла",
+        "email": "kepko@mail.ru",
+        "phone": "+7 921 900-03-18",
+        "city": "Saint Petersburg",
+        "region": "St.-Petersburg",
+        "country": "Russia",
+        "ip": "95.161.239.37",
+        "user_agent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36"
+    },
+    {
+        "date": "2025-11-18 11:09:02",
+        "name": "Анна",
+        "comments": "bavjshbfv;kehuvg",
+        "email": "kepko@mail.ru",
+        "phone": "+7 921 900-03-28",
+        "city": "Saint Petersburg",
+        "region": "St.-Petersburg",
+        "country": "Russia",
+        "ip": "95.161.239.37",
+        "user_agent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36"
+    }
+]

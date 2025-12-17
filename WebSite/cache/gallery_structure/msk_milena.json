@@ -1,0 +1,136 @@
+{
+    "root": {
+        "files": {
+            "milena@p1x": "avif",
+            "milena@1x": "avif",
+            "milena@p2x": "avif",
+            "milena@2x": "avif",
+            "milena@p3x": "avif",
+            "milena@3x": "avif"
+        },
+        "priority_extension": "avif",
+        "file_count": 6,
+        "folder_path": "milena",
+        "generated": true
+    },
+    "folders": {
+        "b": {
+            "files": {
+                "1": "avif",
+                "2": "avif",
+                "3": "avif",
+                "4": "avif",
+                "5": "avif",
+                "6": "avif",
+                "7": "avif"
+            },
+            "priority_extension": "avif",
+            "file_count": 7,
+            "min_number": 1,
+            "max_number": 7,
+            "folder_path": "milena\/b",
+            "generated": true
+        },
+        "b3": {
+            "files": {
+                "1": "avif",
+                "2": "avif",
+                "3": "avif",
+                "4": "avif",
+                "5": "avif",
+                "6": "avif",
+                "7": "avif"
+            },
+            "priority_extension": "avif",
+            "file_count": 7,
+            "min_number": 1,
+            "max_number": 7,
+            "folder_path": "milena\/b3",
+            "generated": true
+        },
+        "f2": {
+            "files": {
+                "1": "avif",
+                "2": "avif",
+                "3": "avif",
+                "4": "avif",
+                "5": "avif",
+                "6": "avif",
+                "7": "avif"
+            },
+            "priority_extension": "avif",
+            "file_count": 7,
+            "min_number": 1,
+            "max_number": 7,
+            "folder_path": "milena\/f2",
+            "generated": true
+        },
+        "f3": {
+            "files": {
+                "1": "avif",
+                "2": "avif",
+                "3": "avif",
+                "4": "avif",
+                "5": "avif",
+                "6": "avif",
+                "7": "avif"
+            },
+            "priority_extension": "avif",
+            "file_count": 7,
+            "min_number": 1,
+            "max_number": 7,
+            "folder_path": "milena\/f3",
+            "generated": true
+        },
+        "b2": {
+            "files": {
+                "1": "avif",
+                "2": "avif",
+                "3": "avif",
+                "4": "avif",
+                "5": "avif",
+                "6": "avif",
+                "7": "avif"
+            },
+            "priority_extension": "avif",
+            "file_count": 7,
+            "min_number": 1,
+            "max_number": 7,
+            "folder_path": "milena\/b2",
+            "scanned": true
+        }
+    },
+    "scan_time": "2025-11-20 13:27:28",
+    "total_files": 41,
+    "debug_info": {
+        "initial_directory": "\/",
+        "trying_b": "milena\/b",
+        "found_b": false,
+        "trying_b2": "milena\/b2",
+        "found_b2": true,
+        "scanned_folder": "b2",
+        "scanned_data": {
+            "files": {
+                "1": "avif",
+                "2": "avif",
+                "3": "avif",
+                "4": "avif",
+                "5": "avif",
+                "6": "avif",
+                "7": "avif"
+            },
+            "file_count": 7,
+            "min_number": 1,
+            "max_number": 7
+        },
+        "detected_extension": "avif",
+        "detected_file_count": 7,
+        "file_numbers_range": {
+            "min": 1,
+            "max": 7
+        }
+    },
+    "city": "msk",
+    "model_name": "milena",
+    "display_name": "milena"
+}

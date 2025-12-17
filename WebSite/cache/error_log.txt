@@ -1,0 +1,9 @@
+[2025-11-20 15:31:52] Ошибка при записи в БД: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+[2025-11-20 16:28:01] Соединение с БД разорвано: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+[2025-11-20 16:30:30] Соединение с БД разорвано: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+[2025-11-20 16:30:32] Соединение с БД разорвано: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+[2025-11-20 16:30:43] Соединение с БД разорвано: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+[2025-11-20 16:30:55] Соединение с БД разорвано: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+[2025-11-20 16:31:07] Соединение с БД разорвано: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+[2025-11-20 17:15:29] Ошибка при записи в БД: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+[2025-11-20 17:19:16] Ошибка при записи в БД: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away

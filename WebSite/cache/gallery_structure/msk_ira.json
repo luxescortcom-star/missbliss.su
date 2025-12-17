@@ -1,0 +1,154 @@
+{
+    "root": {
+        "files": {
+            "ira@p1x": "jp2",
+            "ira@1x": "jp2",
+            "ira@p2x": "jp2",
+            "ira@2x": "jp2",
+            "ira@p3x": "jp2",
+            "ira@3x": "jp2"
+        },
+        "priority_extension": "jp2",
+        "file_count": 6,
+        "folder_path": "ira",
+        "generated": true
+    },
+    "folders": {
+        "b": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "jp2",
+                "4": "jp2",
+                "5": "jp2",
+                "6": "jp2",
+                "7": "jp2",
+                "8": "jp2",
+                "9": "jp2",
+                "10": "jp2"
+            },
+            "priority_extension": "jp2",
+            "file_count": 10,
+            "min_number": 1,
+            "max_number": 10,
+            "folder_path": "ira\/b",
+            "generated": true
+        },
+        "b3": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "jp2",
+                "4": "jp2",
+                "5": "jp2",
+                "6": "jp2",
+                "7": "jp2",
+                "8": "jp2",
+                "9": "jp2",
+                "10": "jp2"
+            },
+            "priority_extension": "jp2",
+            "file_count": 10,
+            "min_number": 1,
+            "max_number": 10,
+            "folder_path": "ira\/b3",
+            "generated": true
+        },
+        "f2": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "jp2",
+                "4": "jp2",
+                "5": "jp2",
+                "6": "jp2",
+                "7": "jp2",
+                "8": "jp2",
+                "9": "jp2",
+                "10": "jp2"
+            },
+            "priority_extension": "jp2",
+            "file_count": 10,
+            "min_number": 1,
+            "max_number": 10,
+            "folder_path": "ira\/f2",
+            "generated": true
+        },
+        "f3": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "jp2",
+                "4": "jp2",
+                "5": "jp2",
+                "6": "jp2",
+                "7": "jp2",
+                "8": "jp2",
+                "9": "jp2",
+                "10": "jp2"
+            },
+            "priority_extension": "jp2",
+            "file_count": 10,
+            "min_number": 1,
+            "max_number": 10,
+            "folder_path": "ira\/f3",
+            "generated": true
+        },
+        "b2": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "jp2",
+                "4": "jp2",
+                "5": "jp2",
+                "6": "jp2",
+                "7": "jp2",
+                "8": "jp2",
+                "9": "jp2",
+                "10": "jp2"
+            },
+            "priority_extension": "jp2",
+            "file_count": 10,
+            "min_number": 1,
+            "max_number": 10,
+            "folder_path": "ira\/b2",
+            "scanned": true
+        }
+    },
+    "scan_time": "2025-11-20 18:19:09",
+    "total_files": 56,
+    "debug_info": {
+        "initial_directory": "\/",
+        "trying_b": "ira\/b",
+        "found_b": false,
+        "trying_b2": "ira\/b2",
+        "found_b2": true,
+        "scanned_folder": "b2",
+        "scanned_data": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "jp2",
+                "4": "jp2",
+                "5": "jp2",
+                "6": "jp2",
+                "7": "jp2",
+                "8": "jp2",
+                "9": "jp2",
+                "10": "jp2"
+            },
+            "file_count": 10,
+            "min_number": 1,
+            "max_number": 10
+        },
+        "detected_extension": "jp2",
+        "detected_file_count": 10,
+        "file_numbers_range": {
+            "min": 1,
+            "max": 10
+        }
+    },
+    "city": "msk",
+    "model_name": "ira",
+    "display_name": "ira"
+}

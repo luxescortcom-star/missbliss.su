@@ -1,0 +1,124 @@
+{
+    "root": {
+        "files": {
+            "eva@p1x": "jp2",
+            "eva@1x": "jp2",
+            "eva@p2x": "jp2",
+            "eva@2x": "jp2",
+            "eva@p3x": "jp2",
+            "eva@3x": "jp2"
+        },
+        "priority_extension": "jp2",
+        "file_count": 6,
+        "folder_path": "eva",
+        "generated": true
+    },
+    "folders": {
+        "b": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "webp",
+                "4": "jp2",
+                "5": "jp2"
+            },
+            "priority_extension": "jp2",
+            "file_count": 5,
+            "min_number": 1,
+            "max_number": 5,
+            "folder_path": "eva\/b",
+            "generated": true
+        },
+        "b3": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "webp",
+                "4": "jp2",
+                "5": "jp2"
+            },
+            "priority_extension": "jp2",
+            "file_count": 5,
+            "min_number": 1,
+            "max_number": 5,
+            "folder_path": "eva\/b3",
+            "generated": true
+        },
+        "f2": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "webp",
+                "4": "jp2",
+                "5": "jp2"
+            },
+            "priority_extension": "jp2",
+            "file_count": 5,
+            "min_number": 1,
+            "max_number": 5,
+            "folder_path": "eva\/f2",
+            "generated": true
+        },
+        "f3": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "webp",
+                "4": "jp2",
+                "5": "jp2"
+            },
+            "priority_extension": "jp2",
+            "file_count": 5,
+            "min_number": 1,
+            "max_number": 5,
+            "folder_path": "eva\/f3",
+            "generated": true
+        },
+        "b2": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "webp",
+                "4": "jp2",
+                "5": "jp2"
+            },
+            "priority_extension": "jp2",
+            "file_count": 5,
+            "min_number": 1,
+            "max_number": 5,
+            "folder_path": "eva\/b2",
+            "scanned": true
+        }
+    },
+    "scan_time": "2025-11-20 19:48:40",
+    "total_files": 31,
+    "debug_info": {
+        "initial_directory": "\/",
+        "trying_b": "eva\/b",
+        "found_b": false,
+        "trying_b2": "eva\/b2",
+        "found_b2": true,
+        "scanned_folder": "b2",
+        "scanned_data": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "webp",
+                "4": "jp2",
+                "5": "jp2"
+            },
+            "file_count": 5,
+            "min_number": 1,
+            "max_number": 5
+        },
+        "detected_extension": "jp2",
+        "detected_file_count": 5,
+        "file_numbers_range": {
+            "min": 1,
+            "max": 5
+        }
+    },
+    "city": "msk",
+    "model_name": "eva",
+    "display_name": "eva"
+}

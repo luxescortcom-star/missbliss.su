@@ -1,0 +1,188 @@
+{
+    "root": {
+        "files": {
+            "lily@p1x": "jp2",
+            "lily@1x": "jp2",
+            "lily@p2x": "jp2",
+            "lily@2x": "jp2",
+            "lily@p3x": "jp2",
+            "lily@3x": "jp2"
+        },
+        "priority_extension": "jp2",
+        "file_count": 6,
+        "folder_path": "lily",
+        "generated": true
+    },
+    "folders": {
+        "b2": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "jp2",
+                "4": "jp2",
+                "5": "jp2",
+                "6": "jp2",
+                "7": "jp2",
+                "8": "jp2",
+                "9": "jp2",
+                "10": "jp2",
+                "11": "jp2",
+                "12": "jp2",
+                "13": "jp2",
+                "14": "jp2",
+                "15": "jp2",
+                "16": "jp2"
+            },
+            "priority_extension": "jp2",
+            "file_count": 16,
+            "min_number": 1,
+            "max_number": 16,
+            "folder_path": "lily\/b2",
+            "generated": true
+        },
+        "b3": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "jp2",
+                "4": "jp2",
+                "5": "jp2",
+                "6": "jp2",
+                "7": "jp2",
+                "8": "jp2",
+                "9": "jp2",
+                "10": "jp2",
+                "11": "jp2",
+                "12": "jp2",
+                "13": "jp2",
+                "14": "jp2",
+                "15": "jp2",
+                "16": "jp2"
+            },
+            "priority_extension": "jp2",
+            "file_count": 16,
+            "min_number": 1,
+            "max_number": 16,
+            "folder_path": "lily\/b3",
+            "generated": true
+        },
+        "f2": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "jp2",
+                "4": "jp2",
+                "5": "jp2",
+                "6": "jp2",
+                "7": "jp2",
+                "8": "jp2",
+                "9": "jp2",
+                "10": "jp2",
+                "11": "jp2",
+                "12": "jp2",
+                "13": "jp2",
+                "14": "jp2",
+                "15": "jp2",
+                "16": "jp2"
+            },
+            "priority_extension": "jp2",
+            "file_count": 16,
+            "min_number": 1,
+            "max_number": 16,
+            "folder_path": "lily\/f2",
+            "generated": true
+        },
+        "f3": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "jp2",
+                "4": "jp2",
+                "5": "jp2",
+                "6": "jp2",
+                "7": "jp2",
+                "8": "jp2",
+                "9": "jp2",
+                "10": "jp2",
+                "11": "jp2",
+                "12": "jp2",
+                "13": "jp2",
+                "14": "jp2",
+                "15": "jp2",
+                "16": "jp2"
+            },
+            "priority_extension": "jp2",
+            "file_count": 16,
+            "min_number": 1,
+            "max_number": 16,
+            "folder_path": "lily\/f3",
+            "generated": true
+        },
+        "b": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "jp2",
+                "4": "jp2",
+                "5": "jp2",
+                "6": "jp2",
+                "7": "jp2",
+                "8": "jp2",
+                "9": "jp2",
+                "10": "jp2",
+                "11": "jp2",
+                "12": "jp2",
+                "13": "jp2",
+                "14": "jp2",
+                "15": "jp2",
+                "16": "jp2"
+            },
+            "priority_extension": "jp2",
+            "file_count": 16,
+            "min_number": 1,
+            "max_number": 16,
+            "folder_path": "lily\/b",
+            "scanned": true
+        }
+    },
+    "scan_time": "2025-11-20 19:41:50",
+    "total_files": 86,
+    "debug_info": {
+        "initial_directory": "\/",
+        "trying_b": "lily\/b",
+        "found_b": true,
+        "scanned_folder": "b",
+        "scanned_data": {
+            "files": {
+                "1": "jp2",
+                "2": "jp2",
+                "3": "jp2",
+                "4": "jp2",
+                "5": "jp2",
+                "6": "jp2",
+                "7": "jp2",
+                "8": "jp2",
+                "9": "jp2",
+                "10": "jp2",
+                "11": "jp2",
+                "12": "jp2",
+                "13": "jp2",
+                "14": "jp2",
+                "15": "jp2",
+                "16": "jp2"
+            },
+            "file_count": 16,
+            "min_number": 1,
+            "max_number": 16
+        },
+        "detected_extension": "jp2",
+        "detected_file_count": 16,
+        "file_numbers_range": {
+            "min": 1,
+            "max": 16
+        }
+    },
+    "city": "msk",
+    "model_name": "lily",
+    "display_name": "lily"
+}

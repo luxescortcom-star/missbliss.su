@@ -1,0 +1,130 @@
+{
+    "root": {
+        "files": {
+            "vika@p1x": "jpg",
+            "vika@1x": "jpg",
+            "vika@p2x": "jpg",
+            "vika@2x": "jpg",
+            "vika@p3x": "jpg",
+            "vika@3x": "jpg"
+        },
+        "priority_extension": "jpg",
+        "file_count": 6,
+        "folder_path": "spb\/vika",
+        "generated": true
+    },
+    "folders": {
+        "b": {
+            "files": {
+                "1": "jpg",
+                "2": "jpg",
+                "3": "jpg",
+                "4": "jpg",
+                "5": "jpg",
+                "6": "jpg"
+            },
+            "priority_extension": "jpg",
+            "file_count": 6,
+            "min_number": 1,
+            "max_number": 6,
+            "folder_path": "spb\/vika\/b",
+            "generated": true
+        },
+        "b3": {
+            "files": {
+                "1": "jpg",
+                "2": "jpg",
+                "3": "jpg",
+                "4": "jpg",
+                "5": "jpg",
+                "6": "jpg"
+            },
+            "priority_extension": "jpg",
+            "file_count": 6,
+            "min_number": 1,
+            "max_number": 6,
+            "folder_path": "spb\/vika\/b3",
+            "generated": true
+        },
+        "f2": {
+            "files": {
+                "1": "jpg",
+                "2": "jpg",
+                "3": "jpg",
+                "4": "jpg",
+                "5": "jpg",
+                "6": "jpg"
+            },
+            "priority_extension": "jpg",
+            "file_count": 6,
+            "min_number": 1,
+            "max_number": 6,
+            "folder_path": "spb\/vika\/f2",
+            "generated": true
+        },
+        "f3": {
+            "files": {
+                "1": "jpg",
+                "2": "jpg",
+                "3": "jpg",
+                "4": "jpg",
+                "5": "jpg",
+                "6": "jpg"
+            },
+            "priority_extension": "jpg",
+            "file_count": 6,
+            "min_number": 1,
+            "max_number": 6,
+            "folder_path": "spb\/vika\/f3",
+            "generated": true
+        },
+        "b2": {
+            "files": {
+                "1": "jpg",
+                "2": "jpg",
+                "3": "jpg",
+                "4": "jpg",
+                "5": "jpg",
+                "6": "jpg"
+            },
+            "priority_extension": "jpg",
+            "file_count": 6,
+            "min_number": 1,
+            "max_number": 6,
+            "folder_path": "spb\/vika\/b2",
+            "scanned": true
+        }
+    },
+    "scan_time": "2025-11-21 13:13:04",
+    "total_files": 36,
+    "debug_info": {
+        "base_directory": "\/",
+        "trying_b": "spb\/vika\/b",
+        "found_b": false,
+        "trying_b2": "spb\/vika\/b2",
+        "found_b2": true,
+        "scanned_folder": "b2",
+        "scanned_data": {
+            "files": {
+                "1": "jpg",
+                "2": "jpg",
+                "3": "jpg",
+                "4": "jpg",
+                "5": "jpg",
+                "6": "jpg"
+            },
+            "file_count": 6,
+            "min_number": 1,
+            "max_number": 6
+        },
+        "detected_extension": "jpg",
+        "detected_file_count": 6,
+        "file_numbers_range": {
+            "min": 1,
+            "max": 6
+        }
+    },
+    "city": "spb",
+    "model_name": "vika",
+    "display_name": "vika"
+}
