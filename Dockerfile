@@ -23,13 +23,9 @@ RUN apk add --no-cache \
     && mkdir -p /var/www/html/cache \
     && chown -R www-data:www-data /var/www/html/cache
 
-# Копируем ваш основной nginx.conf
+# Копируем конфигурации
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
-
-# Копируем дополнительные настройки site.conf (если есть)
-COPY nginx/site.conf /etc/nginx/conf.d/site.conf 2>/dev/null || echo "site.conf не найден, используем только nginx.conf"
-
-# Копируем конфигурацию Supervisor
+COPY nginx/site.conf /etc/nginx/conf.d/site.conf
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 # Копируем файлы сайта
