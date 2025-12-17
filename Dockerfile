@@ -1,4 +1,3 @@
-cat > Dockerfile << 'EOF'
 FROM php:8.2-fpm-alpine
 
 # Устанавливаем расширения PHP и зависимости
@@ -27,8 +26,8 @@ RUN apk add --no-cache \
 # Копируем ваш основной nginx.conf
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
 
-# Копируем дополнительные настройки site.conf
-COPY nginx/site.conf /etc/nginx/conf.d/site.conf
+# Копируем дополнительные настройки site.conf (если есть)
+COPY nginx/site.conf /etc/nginx/conf.d/site.conf 2>/dev/null || echo "site.conf не найден, используем только nginx.conf"
 
 # Копируем конфигурацию Supervisor
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
@@ -44,10 +43,9 @@ RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 777 /var/www/html/logs 2>/dev/null || true \
     && chmod -R 777 /var/www/html/geo_cache 2>/dev/null || true \
     && mkdir -p /var/www/html/uploads \
-    && chmod -R 777 /var/www/html/uploads \
-    && echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
+    && chmod -R 777 /var/www/html/uploads
 
-# Создаем php.ini с настройками
+# PHP настройки через php.ini
 RUN echo "memory_limit = 256M" >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini \
     && echo "upload_max_filesize = 64M" >> /usr/local/etc/php/conf.d/docker-php-upload.ini \
     && echo "post_max_size = 64M" >> /usr/local/etc/php/conf.d/docker-php-upload.ini \
@@ -68,4 +66,3 @@ EXPOSE 10000
 
 # Запускаем Supervisor
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
-EOF
