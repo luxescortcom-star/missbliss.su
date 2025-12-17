@@ -20,8 +20,8 @@ RUN apk add --no-cache \
         bcmath \
     && mkdir -p /run/nginx \
     && mkdir -p /var/log/supervisor \
-    && mkdir -p /var/www/html/cache \
-    && chown -R www-data:www-data /var/www/html/cache
+    && mkdir -p /var/www/html \
+    && chown -R www-data:www-data /var/www/html
 
 # Копируем конфигурации
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
@@ -35,11 +35,24 @@ COPY WebSite/ /var/www/html/
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html \
     && find /var/www/html -type f -exec chmod 644 {} \; \
+    && mkdir -p /var/www/html/cache \
     && chmod -R 777 /var/www/html/cache \
+    && mkdir -p /var/www/html/logs \
     && chmod -R 777 /var/www/html/logs 2>/dev/null || true \
-    && chmod -R 777 /var/www/html/geo_cache 2>/dev/null || true \
     && mkdir -p /var/www/html/uploads \
     && chmod -R 777 /var/www/html/uploads
+
+# Создаем php-fpm пул с правильным пользователем
+RUN echo '[www]' > /usr/local/etc/php-fpm.d/www.conf \
+    && echo 'user = www-data' >> /usr/local/etc/php-fpm.d/www.conf \
+    && echo 'group = www-data' >> /usr/local/etc/php-fpm.d/www.conf \
+    && echo 'listen = 127.0.0.1:9000' >> /usr/local/etc/php-fpm.d/www.conf \
+    && echo 'pm = dynamic' >> /usr/local/etc/php-fpm.d/www.conf \
+    && echo 'pm.max_children = 5' >> /usr/local/etc/php-fpm.d/www.conf \
+    && echo 'pm.start_servers = 2' >> /usr/local/etc/php-fpm.d/www.conf \
+    && echo 'pm.min_spare_servers = 1' >> /usr/local/etc/php-fpm.d/www.conf \
+    && echo 'pm.max_spare_servers = 3' >> /usr/local/etc/php-fpm.d/www.conf \
+    && echo 'clear_env = no' >> /usr/local/etc/php-fpm.d/www.conf
 
 # PHP настройки через php.ini
 RUN echo "memory_limit = 256M" >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini \
