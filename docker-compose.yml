@@ -5,11 +5,12 @@ services:
     image: nginx:alpine
     container_name: missbliss-nginx
     ports:
-      - "8080:1000"
+      - "8080:80"  # Исправлено: 8080:80 вместо 8080:1000
     volumes:
-      - ./var/www/html
-      - ./etc/nginx/nginx.conf:ro
-      - /var/cache/nginx
+      - ./WebSite:/var/www/html:ro  # Исправлено путь и добавлено :ro
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro  # Правильный путь
+      - ./nginx/site.conf:/etc/nginx/conf.d/default.conf:ro  # Добавлено
+      - nginx_cache:/var/cache/nginx
       - /run
     restart: unless-stopped
     depends_on:
@@ -17,13 +18,13 @@ services:
     networks:
       - missbliss-network
 
-  php:  # ← ЭТО ДОЛЖНО БЫТЬ НА УРОВНЕ nginx:
+  php:
     image: php:8.2-fpm-alpine
     container_name: missbliss-php
     volumes:
-      - ./var/www/html
+      - ./WebSite:/var/www/html  # Исправлено: добавил :/var/www/html
     environment:
-      - PHP_ERROR_REPORTING=22527  # E_ALL & ~E_WARNING & ~E_NOTICE
+      - PHP_ERROR_REPORTING=22527
       - display_errors=0
     networks:
       - missbliss-network
@@ -33,4 +34,4 @@ networks:
     driver: bridge
 
 volumes:
-  nginx_cache:  # ← Убрать "null"
+  nginx_cache:
