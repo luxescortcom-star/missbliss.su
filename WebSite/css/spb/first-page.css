@@ -122,6 +122,14 @@ background: url('https://ic.m-b.su/spritesheet_en.png') -69px -75px;
 	height: 21px;
 background-position: -69px -75px
 }
+
+#wall img {
+    display: block;
+    max-width: 100%;
+    height: auto;      /* Это заставит высоту быть пропорциональной ширине */
+    object-fit: cover; /* Чтобы рандомные фото не сплющивались */
+}
+
 #navigation{float:right;margin-right:20px;background:url(https://ic.m-b.su/nav-border.png) repeat-y left 100%;}
 #navigation li{float:left;position:relative;width:130px;text-align:center;padding-top:5px;background:url(https://ic.m-b.su/nav-border.png) repeat-y right 100%;}
 #navigation li.current, #navigation li:hover{border-top:red solid 5px;height:67px;padding-top:0px;}
