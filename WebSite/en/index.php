@@ -54,10 +54,11 @@ if (file_exists(__ROOT__ . '/includes/en/banner-casting.php')) {
 </div>
 </div>
 </div>
-  <div id=wall>
-<a href="/elite-models/all_vip_escorts/" title="The MissBliss Agency"><img alt="The MissBliss Escort Agency, Russia" src="https://m-b.su/social/agency/closed_lips.avif"
-title="Escort Agency MissBliss, Russian escorts" max-width="100%" width="526"
-  max-height="fill-available"; height="300"></a>
+<div id="wall">
+    <a href="/vip-models/all_vip_escorts/" title="VIP escorts from agency MissBliss">
+        <!-- Теперь ссылка ведет на виртуальный файл, который рандомизирует PHP -->
+        <img src="/social/agency/random_wall.avif" width="600" height="450" alt="VIP Escorts">
+    </a>
 </div>
 <div id="body-wrap">
 <div id="content" class="container clearfix">
