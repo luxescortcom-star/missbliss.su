@@ -90,10 +90,9 @@ if (file_exists(__ROOT__ . '/includes/' . $casting)) {
 </div>
 
 <div id="wall">
-<a href="/vip-models/all_vip_escorts/" title="Эскорт Агентство МиссБлисс">
-<img alt="Сексуальные красивые девушки Эскортницы, эскорт услуги" src="https://m-b.su/social/agency/closed_lips.avif"
-title="Сексуальные красивые девушки Эскортницы, эскорт услуги" width="526" height="300">
-</a>
+    <a href="/vip-models/all_vip_escorts/" title="ВИП Эскорт Модели гентства МиссБлисс">
+    <img src="/social/agency/random_wall.avif" width="600" height="450" alt="VIP Escorts">
+    </a>
 </div>
 
 <div id="body-wrap">
