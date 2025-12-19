@@ -588,9 +588,9 @@ private function show404() {
     
     // Редиректим на страницу 404
     if ($isEnglishVersion) {
-        header("Location: /en/404/", true, 301); // Используем 302 для 404
+        header("Location: /en/404/", true, 302); // Используем 302 для 404
     } else {
-        header("Location: /404/", true, 301);
+        header("Location: /404/", true, 302);
     }
     exit;
 }
