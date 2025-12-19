@@ -577,23 +577,29 @@ private function extractCityFromPath($path) {
  */
 
 private function show404() {
-    // Сначала отправляем код 404
-    header("HTTP/1.0 404 Not Found");
+    // 1. Устанавливаем правильный код ответа
+    http_response_code(404);
     
-    // Получаем текущий URL
+    // 2. Определяем путь к файлу 404 на диске
     $requestUri = $_SERVER['REQUEST_URI'] ?? '';
-    
-    // Проверяем, запрашивается ли английская версия
     $isEnglishVersion = strpos($requestUri, '/en/') === 0;
     
-    // Редиректим на страницу 404
-    if ($isEnglishVersion) {
-        header("Location: /en/404/", true, 302); // Используем 302 для 404
+    // Путь должен быть абсолютным от корня сайта (через DOCUMENT_ROOT)
+    $basePath = $_SERVER['DOCUMENT_ROOT'];
+    $errorFile = $isEnglishVersion ? $basePath . '/en/404.php' : $basePath . '/404.php';
+    
+    // 3. Проверяем существование файла и подключаем его
+    if (file_exists($errorFile)) {
+        include($errorFile);
     } else {
-        header("Location: /404/", true, 302);
+        // Запасной вариант, если сам файл 404.php пропал
+        echo "<h1>404 Not Found</h1><p>The page you are looking for does not exist.</p>";
     }
+    
+    // Прекращаем выполнение основного скрипта
     exit;
 }
+
 
 	
 	
