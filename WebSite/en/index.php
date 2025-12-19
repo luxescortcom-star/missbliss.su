@@ -55,9 +55,8 @@ if (file_exists(__ROOT__ . '/includes/en/banner-casting.php')) {
 </div>
 </div>
 <div id="wall">
-    <a href="/vip-models/all_vip_escorts/" title="VIP escorts from agency MissBliss">
-        <!-- Теперь ссылка ведет на виртуальный файл, который рандомизирует PHP -->
-        <img src="/social/agency/random_wall.avif" width="600" height="450" alt="VIP Escorts">
+    <a href="/elite-models/all_vip_escorts/" title="VIP Escorts and Hi-Class Models of The MissBliss Agency">
+     <img src="/social/agency/random_wall.avif" width="600" height="450" alt="VIP Escorts">
     </a>
 </div>
 <div id="body-wrap">
