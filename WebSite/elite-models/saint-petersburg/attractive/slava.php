@@ -76,7 +76,7 @@ echo generateNavigation($currentFile);
 <div class="project-image portfolio"> 
 <div class=flexslider>
 <?php
-include_once (__ROOT__. '/includes/workers/slider_functions_v.php');
+include_once (__ROOT__. '/includes/workers/slider_functions_FTP.php');
 
 ?>
 </div>
